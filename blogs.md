@@ -2,7 +2,7 @@
 
 ## 大语言模型、推理与智能体
 
-- 2026-09-07 [What it takes for coding agents to complete large software task](https://factory.ai/news/what-it-takes-for-coding-agents-to-complete-large-software-task)
+- 2026-09-07 [What it Takes for Coding Agents to Complete Large Software Tasks](https://factory.com/news/what-it-takes-for-coding-agents-to-complete-large-software-tasks)
 - 2026-09-07 [Continual learning infra for self-improving agents](https://github.com/Human-Agent-Society/reef)
 - 2026-09-07 [FrontierHarness Eval](https://frontierharness.org/)
 - 2026-09-07 [Discovery of a new OpenAI agent message board](https://collusion.wiki/index.html)
