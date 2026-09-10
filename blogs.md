@@ -2,486 +2,385 @@
 
 ## 大语言模型、推理与智能体
 
-- [EnvHarness: Awakening Static Worlds for Agent Learning](https://envharness.com/)
-- [SpeedRunner — skills as programs for cheaper LLM agents](https://jhu-clsp.github.io/speedrunner/)
-- [How can LLM RL Work Despite Information-Theoretic Inefficiency](https://www.beren.io/2026-07-26-How-Can-LLM-RL-Work-Despite-Information-Theoretic-Inefficiency/)
-- [LLMRouter Blog - LLMRouter](https://ulab-uiuc.github.io/LLMRouter/blog/)
-- [Agentic rl 2026](https://huggingface.co/blog/sergiopaniego/agentic-rl-2026)
-- [Designing Loops for Production-Grade Work | Blog](https://www.liquid.ai/blog/agent-loops)
-- [Understanding a Law Firm through Study](https://engram.com/blog/legal-agents-with-memory)
-- [Hot Take: LLM can 'jump'](https://yongzx.github.io/blog/2026/08/08/llm-can-jump)
-- [NVIDIA Nemotron 3.5 Lightning Delivers Fast, Accurate Specialized Task Execution for Long-Running Agents | NVIDIA Technical Blog](https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/)
-- [Diving into Reliable Self-Evolving Agents: A Survey](https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/)
-- [Agentic ESOpt](https://zz1358m.github.io/Project-Agentic-ESOpt)
-- [LongHorizon-Harness: Advancing Long-Horizon Agents for Real-World Tasks](https://lh-harness.pages.dev/#idea)
-- [Simulation tools improve agent problem solving](https://rowansci.com/blog/simulation-tools-improve-agent-problem-solving)
-- [Managing AI Coding Costs at Scale | Databricks Blog](https://www.databricks.com/blog/managing-ai-coding-costs-scale)
-- [The Evolution of Agents: From Context Engineering to Long-running Harnesses / Agent 从 Context Engineering 到 Long-running Harness 的演变过程](https://jinyansu1.github.io/blog/2026/07/agent-context-engineering-long-running-harness/)
-- [Unpacking ChatGPT Work: the Agent for a Billion Users](https://www.latent.space/p/unpacking-chatgpt-work)
-- [LFM2.5-2.6B: Deploy Agents Everywhere | Blog](https://www.liquid.ai/blog/lfm2-5-2-6b)
-- [Agent intrusion technical timeline](https://huggingface.co/blog/agent-intrusion-technical-timeline)
-- [The completeness cliff: models escape wrong reasoning until it](https://alvinzh04.github.io/blog/completeness-cliff.html)
-- [Science should be open for llms too](https://doomscrollingbabel.manoel.xyz/p/science-should-be-open-for-llms-too)
-- [Prime Agent: A self-improving RLM agent](https://www.primeintellect.ai/blog/prime-agent)
-- [Kimi K3 Is Here: Efficient Day-0 Support on vLLM](https://vllm.ai/blog/2026-07-27-k3)
-- [KV Caching for dLLMs is Noise Process Agnostic](https://nathan.rs/posts/dllm-kv-caching/)
-- [Tracked capabilities for safer agents](https://martinodersky.substack.com/p/tracked-capabilities-for-safer-agents)
-- [Is ai reasoning right for the wrong reasons 20260731](https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/)
-- [Mental World Modeling](https://mental-world.github.io/)
-- [We Gave a Village Personal AI Agents. Here's What Happened](https://blog.cosmos-institute.org/p/we-gave-a-village-personal-ai-agents?r=7f9zj5&utm_campaign=post&utm_medium=web)
-- [Introducing Instella-MoE: A State-of-the-Art Fully Open Mixture-of-Experts Language Model](https://rocm.blogs.amd.com/artificial-intelligence/instella-moe/README.html)
-- [Llms are still mostly powered by imitative learning not rl](https://www.lesswrong.com/posts/wYpjXRLqbLbnmjbJP/llms-are-still-mostly-powered-by-imitative-learning-not-rl)
-- [Notion | Where teams and agents work together](https://novasky-ai.notion.site/skyrl-v03)
-- [Harness Handbook — Making Agent Harnesses Understandable, Auditable & Editable](https://ruhan-wang.github.io/Harness-Handbook/)
-- [Self-Improvements in Modern Agentic Systems — Survey Hub](https://selfimproving-agent.github.io/)
-- [Controlling Reasoning Effort in LLMs](https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms)
-- [Observability MCP comparison: Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse](https://pydantic.dev/articles/observability-tools-agents-want)
-- [Large language models](https://gregorygundersen.com/blog/2025/10/01/large-language-models/)
-- [FilmWorld — Agentic Novel-to-Film Generation](https://filmworld-ai.github.io/)
-- [AlayaWorld - Interactive World Model Demo](https://alaya-lab.github.io/AlayaWorld/)
-- [Notion | Where teams and agents work together](https://yanmaaaaaa.notion.site/vidaforge)
-- [Agentic world models](https://cameronrwolfe.substack.com/p/agentic-world-models)
-- [Agent swarms and the new model economics · Cursor](https://cursor.com/blog/agent-swarm-model-economics)
-- [How AI Agents are transforming scientific discovery — Google DeepMind](https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/)
-- [Xinming Tu | The What & When of Self-Evolving Agents](https://xinmingtu.cn/blog/2026/self-evolving-agents/)
-- [How to train a frontier-level world model](https://next-state.github.io/open-dreamer/)
-- [Tom Silver | Now What? A Recipe for After the Problem Setting (in the Agentic Age)](https://tomsilver.github.io/blog/2026/now-whats-your-solution/)
-- [Alex L. Zhang | Language model harnesses are compositional generalizers](https://alexzhang13.github.io/blog/2026/harness/)
-- Long-Horizon Terminal-
-- • LLMs learn "values": general considerations (e.g. "playfulness & humor", "mental
-- How We Made Code Review Optional at Corridor
-- scoring, and quality control process, read the blog post =
-- Vim of Coding Agents
-- AutoMem: Automated Learning of Memory as a Cognitive Skill Shengguang Wu, Hao Zhu, Yuhui Zhang, Xiaohan Wang, Serena Yeung-Levy
-- of public information, alpha must come from unique insight built on taste and
-- Verbalizable Representations Form a Global Workspace in Language Models
-- of three open-source LLMs should answer it, and what role that model should
-- That is not an agent-capability failure. It is a measurement failure. Today, we are releasing Toolathlon-Verified, a major repair and validation
-- pass. DSpark builds on that with two ideas: better long drafts, and a smarter way to
-- Value Drift
-- Towards Native Structural Reasoning with SciReasoner
-- Hierarchical Experimentalist Agents LLM agents that learn like scientists — actively experiment, evolve reusable skills,
-- Automating fork maintenance with AI agents
-- Inverting the Bellman Equation: From Q-Values to World Models
-- scientists agree that our understanding of LLMs is very limited. Here is a more subdued
-- Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding
-- Shadow-Frog: Coding Agents that Dream and Discover
-- Cash on hand (USD, log)
-- Controlling any Coding Agent with the OpenHands Agent Canvas and SDK
-- The Three-Model Problem: Can an LLM Spot Other LLMs? Table of Contents
-- [RL at 1T Scale: prime-rl Performance Deep Dive](https://www.primeintellect.ai/blog/rl-at-1t-scale)
-- [GitHub - Ropedia/S-Agent: S-Agent: Spatial Tool-Use Elicits Reasoning for Spatial Intelligence · GitHub](https://github.com/Ropedia/S-Agent)
+- 2026-09-07 [What it takes for coding agents to complete large software task](https://factory.ai/news/what-it-takes-for-coding-agents-to-complete-large-software-task)
+- 2026-09-07 [Continual learning infra for self-improving agents](https://github.com/Human-Agent-Society/reef)
+- 2026-09-07 [FrontierHarness Eval](https://frontierharness.org/)
+- 2026-09-07 [Discovery of a new OpenAI agent message board](https://collusion.wiki/index.html)
+- 2026-09-07 [CUA-Lite — An Open Platform for Computer-Use Agents](https://cua-lite.github.io/)
+- 2026-09-07 [Code World Model: Coding Agent as World Brain](https://buaacyw.github.io/cwm/)
+- 2026-09-07 [Awesome Agentic Artifact Creation](https://agentic-creation.github.io/?filter=Spatial+Artifacts)
+- 2026-09-07 [Atlas: A World Model for Spatial Intelligence | World Labs](https://www.worldlabs.ai/blog/atlas)
+- 2026-08-23 [Understanding a Law Firm through Study](https://engram.com/blog/legal-agents-with-memory)
+- 2026-08-23 [SpeedRunner — skills as programs for cheaper LLM agents](https://jhu-clsp.github.io/speedrunner/)
+- 2026-08-23 [NVIDIA Nemotron 3.5 Lightning Delivers Fast, Accurate Specialized Task Execution for Long-Running Agents | NVIDIA Technical Blog](https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/)
+- 2026-08-23 [LLMRouter Blog - LLMRouter](https://ulab-uiuc.github.io/LLMRouter/blog/)
+- 2026-08-23 [How can LLM RL Work Despite Information-Theoretic Inefficiency](https://www.beren.io/2026-07-26-How-Can-LLM-RL-Work-Despite-Information-Theoretic-Inefficiency/)
+- 2026-08-23 [Hot Take: LLM can 'jump'](https://yongzx.github.io/blog/2026/08/08/llm-can-jump)
+- 2026-08-23 [EnvHarness: Awakening Static Worlds for Agent Learning](https://envharness.com/)
+- 2026-08-23 [Diving into Reliable Self-Evolving Agents: A Survey](https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/)
+- 2026-08-23 [Designing Loops for Production-Grade Work | Blog](https://www.liquid.ai/blog/agent-loops)
+- 2026-08-23 [Agentic rl 2026](https://huggingface.co/blog/sergiopaniego/agentic-rl-2026)
+- 2026-08-23 [Agentic ESOpt](https://zz1358m.github.io/Project-Agentic-ESOpt)
+- 2026-08-09 [We Gave a Village Personal AI Agents. Here's What Happened](https://blog.cosmos-institute.org/p/we-gave-a-village-personal-ai-agents?r=7f9zj5&utm_campaign=post&utm_medium=web)
+- 2026-08-09 [Unpacking ChatGPT Work: the Agent for a Billion Users](https://www.latent.space/p/unpacking-chatgpt-work)
+- 2026-08-09 [Tracked capabilities for safer agents](https://martinodersky.substack.com/p/tracked-capabilities-for-safer-agents)
+- 2026-08-09 [The Evolution of Agents: From Context Engineering to Long-running Harnesses / Agent 从 Context Engineering 到 Long-running Harness 的演变过程](https://jinyansu1.github.io/blog/2026/07/agent-context-engineering-long-running-harness/)
+- 2026-08-09 [The completeness cliff: models escape wrong reasoning until it](https://alvinzh04.github.io/blog/completeness-cliff.html)
+- 2026-08-09 [Simulation tools improve agent problem solving](https://rowansci.com/blog/simulation-tools-improve-agent-problem-solving)
+- 2026-08-09 [Science should be open for llms too](https://doomscrollingbabel.manoel.xyz/p/science-should-be-open-for-llms-too)
+- 2026-08-09 [Prime Agent: A self-improving RLM agent](https://www.primeintellect.ai/blog/prime-agent)
+- 2026-08-09 [Mental World Modeling](https://mental-world.github.io/)
+- 2026-08-09 [Managing AI Coding Costs at Scale | Databricks Blog](https://www.databricks.com/blog/managing-ai-coding-costs-scale)
+- 2026-08-09 [LongHorizon-Harness: Advancing Long-Horizon Agents for Real-World Tasks](https://lh-harness.pages.dev/#idea)
+- 2026-08-09 [LFM2.5-2.6B: Deploy Agents Everywhere | Blog](https://www.liquid.ai/blog/lfm2-5-2-6b)
+- 2026-08-09 [KV Caching for dLLMs is Noise Process Agnostic](https://nathan.rs/posts/dllm-kv-caching/)
+- 2026-08-09 [Kimi K3 Is Here: Efficient Day-0 Support on vLLM](https://vllm.ai/blog/2026-07-27-k3)
+- 2026-08-09 [Is ai reasoning right for the wrong reasons 20260731](https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/)
+- 2026-08-09 [Introducing Instella-MoE: A State-of-the-Art Fully Open Mixture-of-Experts Language Model](https://rocm.blogs.amd.com/artificial-intelligence/instella-moe/README.html)
+- 2026-08-09 [Agent intrusion technical timeline](https://huggingface.co/blog/agent-intrusion-technical-timeline)
+- 2026-07-26 [Self-Improvements in Modern Agentic Systems — Survey Hub](https://selfimproving-agent.github.io/)
+- 2026-07-26 [Observability MCP comparison: Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse](https://pydantic.dev/articles/observability-tools-agents-want)
+- 2026-07-26 [Notion | Where teams and agents work together](https://novasky-ai.notion.site/skyrl-v03)
+- 2026-07-26 [Llms are still mostly powered by imitative learning not rl](https://www.lesswrong.com/posts/wYpjXRLqbLbnmjbJP/llms-are-still-mostly-powered-by-imitative-learning-not-rl)
+- 2026-07-26 [Large language models](https://gregorygundersen.com/blog/2025/10/01/large-language-models/)
+- 2026-07-26 [Harness Handbook — Making Agent Harnesses Understandable, Auditable & Editable](https://ruhan-wang.github.io/Harness-Handbook/)
+- 2026-07-26 [Controlling Reasoning Effort in LLMs](https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms)
+- 2026-07-25 [Xinming Tu | The What & When of Self-Evolving Agents](https://xinmingtu.cn/blog/2026/self-evolving-agents/)
+- 2026-07-25 [Tom Silver | Now What? A Recipe for After the Problem Setting (in the Agentic Age)](https://tomsilver.github.io/blog/2026/now-whats-your-solution/)
+- 2026-07-25 [Notion | Where teams and agents work together](https://yanmaaaaaa.notion.site/vidaforge)
+- 2026-07-25 [How to train a frontier-level world model](https://next-state.github.io/open-dreamer/)
+- 2026-07-25 [How AI Agents are transforming scientific discovery — Google DeepMind](https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/)
+- 2026-07-25 [FilmWorld — Agentic Novel-to-Film Generation](https://filmworld-ai.github.io/)
+- 2026-07-25 [Alex L. Zhang | Language model harnesses are compositional generalizers](https://alexzhang13.github.io/blog/2026/harness/)
+- 2026-07-25 [AlayaWorld - Interactive World Model Demo](https://alaya-lab.github.io/AlayaWorld/)
+- 2026-07-25 [Agentic world models](https://cameronrwolfe.substack.com/p/agentic-world-models)
+- 2026-07-25 [Agent swarms and the new model economics · Cursor](https://cursor.com/blog/agent-swarm-model-economics)
+- 2026-06-29 [RL at 1T Scale: prime-rl Performance Deep Dive](https://www.primeintellect.ai/blog/rl-at-1t-scale)
+- 2026-06-29 [S-Agent: Spatial Tool-Use Elicits Reasoning for Spatial Intelligence](https://github.com/Ropedia/S-Agent)
 
 ## 训练、优化与模型架构
 
-- [Training artificial electric fish](https://daphnecornelisse.substack.com/p/training-artificial-electric-fish)
-- [Quantifying Pretraining Variance: Data, Initialization, and Floating Point Arithmetic](https://spencerfrei.github.io/blog/2026-08-17_pretraining_variance/)
-- [AI Chip Architectures](https://www.jacobpeake.com/ai-chip-architectures)
-- [Fine-Tuning Small Language Models for Continual Learning On-Device with Self-Distillation](https://lin826.github.io/SLM-Online-SDFT/)
-- [Why test-time training? – Rabbitholes](https://sarahpannn.github.io/rabbitholes/posts/why-ttt/)
-- [Supervised Fine-Tuning vs. In-Context Learning: An Equilibrium Analysis of LLM Personalization under Congestion](https://fengzhuozhang.github.io/personalization-congestion-blog/)
-- [SLAMFormer-∞ — Infinite SLAM Transformer](https://tsinghua-mars-lab.github.io/SLAMFormer-Infinity/)
-- [Characterizing interference weights in a tiny language model](https://transformer-circuits.pub/2026/interference_effectiveness_helpfulness/index.html)
-- [Scaling Automated Post-Training](https://intology.ai/blog/scaling-automated-post-training)
-- [From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking](https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/)
-- [Trl openenv harness training](https://huggingface.co/blog/sergiopaniego/trl-openenv-harness-training)
-- [Were training people for the wrong](https://houdanait.substack.com/p/were-training-people-for-the-wrong)
-- [Alexi Gladstone | Explorative Modeling -- Unlocking a Third Pretraining Axis and End-to-End Generation](https://alexiglad.github.io/blog/2026/explorative_modeling/)
-- [A Comprehensive Overview of the AI Accelerator Landscape: From Digital to Analog Compute-in-Memory Architectures](https://www.siliconcodesign.com/p/a-comprehensive-overview-of-the-ai)
-- [GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model](https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/)
-- [Adaptation not adoption is king](https://olihanney.substack.com/p/adaptation-not-adoption-is-king)
-- [Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning](https://jyyang26.github.io/stable_async_analysis/)
-- [ISO: An RLVR-Native Optimization Stack](https://iso-rlvr.github.io/)
-- [RL Post-Training on Macs](https://pluralis.ai/blog/rl-post-training-on-macs/)
-- design better machines to improve itself. Yudkowsky (2008) used the phrase "recursive self-
-- Predicting and Controlling Staleness in Fully Asynchronous RL Training
-- Policy Gradients Part 1: The REINFORCE Estimator I have a dirty secret. Well, I actually have many. But one
-- Modular Cognitive Architecture Emerges in Large Language Models Pengrui Han • Jacob Andreas • Evelina Fedorenko* • Andrea Gregor de Varda*
-- Reducing Doom Loops with Final Token Preference Optimization
-- model is released, the adaptation must be relearned from scratch. We
-- Kolmogorov complexity, Weight Entropy, Epiplexity
-- quality data, and new techniques for long-horizon tasks. Since SWE-1.7 was trained from a Kimi K2.7 base, which had
-- prime-rl gets an Algorithms layer
-- Improving Neural Network Training by Decoupling the Magnitude and Direction of Weight Vectors
-- Why Language Model Capabilities Emerge Randomly
-- [Trainee-to-Trainer — LLM-as-Environment-Engineer for RL](https://lark-ai-lab.github.io/trainee-to-trainer.github.io/)
-- the token level allows us to glean insights about the specific strengths
-- [Progressive Distillation of ELF: Few-Step Generation for Embedded Language Flows](https://linlu-qiu.github.io/assets/html/elf_pd.html)
-- Alisa's book of LLMs
-- Loss is a surrogate. What target does it lead to? Invert the cross-entropy gradient to find out: Qk = Pk - 9k-
+- 2026-09-07 [The Architecture of Long-Horizon Agents | Mohammed Alshehri](https://mohammed840.github.io/blogs/why-long-horizon-agents-are-different/)
+- 2026-09-07 [Speculative Programmatic Tool Calling | Alex L. Zhang](https://alexzhang13.github.io/blog/2026/spec-ptc/)
+- 2026-09-07 [Speculative Decoding: How It Evolved, When It Stays Lossless, and What's Next](https://neurips2026-speculative-decoding.vercel.app/)
+- 2026-09-07 [Random Attention](https://arthur-heng.github.io/Random-Attention-page/)
+- 2026-09-07 [Helpful tools and examples for working with flex-attention](https://github.com/meta-pytorch/attention-gym)
+- 2026-08-23 [Why test-time training? – Rabbitholes](https://sarahpannn.github.io/rabbitholes/posts/why-ttt/)
+- 2026-08-23 [Training artificial electric fish](https://daphnecornelisse.substack.com/p/training-artificial-electric-fish)
+- 2026-08-23 [Supervised Fine-Tuning vs. In-Context Learning: An Equilibrium Analysis of LLM Personalization under Congestion](https://fengzhuozhang.github.io/personalization-congestion-blog/)
+- 2026-08-23 [SLAMFormer-∞ — Infinite SLAM Transformer](https://tsinghua-mars-lab.github.io/SLAMFormer-Infinity/)
+- 2026-08-23 [Quantifying Pretraining Variance: Data, Initialization, and Floating Point Arithmetic](https://spencerfrei.github.io/blog/2026-08-17_pretraining_variance/)
+- 2026-08-23 [Fine-Tuning Small Language Models for Continual Learning On-Device with Self-Distillation](https://lin826.github.io/SLM-Online-SDFT/)
+- 2026-08-23 [Characterizing interference weights in a tiny language model](https://transformer-circuits.pub/2026/interference_effectiveness_helpfulness/index.html)
+- 2026-08-23 [AI Chip Architectures](https://www.jacobpeake.com/ai-chip-architectures)
+- 2026-08-09 [Were training people for the wrong](https://houdanait.substack.com/p/were-training-people-for-the-wrong)
+- 2026-08-09 [Trl openenv harness training](https://huggingface.co/blog/sergiopaniego/trl-openenv-harness-training)
+- 2026-08-09 [Scaling Automated Post-Training](https://intology.ai/blog/scaling-automated-post-training)
+- 2026-08-09 [GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model](https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/)
+- 2026-08-09 [From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking](https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/)
+- 2026-08-09 [Alexi Gladstone | Explorative Modeling -- Unlocking a Third Pretraining Axis and End-to-End Generation](https://alexiglad.github.io/blog/2026/explorative_modeling/)
+- 2026-08-09 [A Comprehensive Overview of the AI Accelerator Landscape: From Digital to Analog Compute-in-Memory Architectures](https://www.siliconcodesign.com/p/a-comprehensive-overview-of-the-ai)
+- 2026-07-26 [Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning](https://jyyang26.github.io/stable_async_analysis/)
+- 2026-07-26 [Adaptation not adoption is king](https://olihanney.substack.com/p/adaptation-not-adoption-is-king)
+- 2026-07-25 [RL Post-Training on Macs](https://pluralis.ai/blog/rl-post-training-on-macs/)
+- 2026-07-25 [ISO: An RLVR-Native Optimization Stack](https://iso-rlvr.github.io/)
+- 2026-06-29 [Trainee-to-Trainer — LLM-as-Environment-Engineer for RL](https://lark-ai-lab.github.io/trainee-to-trainer.github.io/)
+- 2026-06-29 [Progressive Distillation of ELF: Few-Step Generation for Embedded Language Flows](https://linlu-qiu.github.io/assets/html/elf_pd.html)
 
 ## 安全、对齐、评测与可解释性
 
-- [Evaluating chain of thought monitorability is still an open](https://www.lesswrong.com/posts/z9fPtghFxELBXebY3/evaluating-chain-of-thought-monitorability-is-still-an-open)
-- [Debate training reduces reward hacking](https://gdmalignment.substack.com/p/debate-training-reduces-reward-hacking)
-- [Item response theory for ai safety](https://www.lesswrong.com/posts/bfJnebZyY3RRHZC4o/item-response-theory-for-ai-safety)
-- [Why cant technologists and economists](https://asteriskmag.substack.com/p/why-cant-technologists-and-economists)
-- [AI4AI-Bench | AI Agent Algorithm Design Benchmark](https://lab.einsia.ai/ai4ai/)
-- [Cheating behaviour in frontier model evaluations | AISI Work](https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations)
-- [Existential Risk from AI: An Exposition for Mathematicians](https://alkjash.github.io/ai-risk/#statement-12)
-- [PostTrainBench v1.1: Hardening the benchmark against reward hacking](https://posttrainbench.com/blog/posttrainbench-1-1/)
-- [PG-LLM: Benchmarking General-Purpose Language Models for Protein Variant Ranking](https://www.proteingymllm.com/)
-- [AI Safety for Mathematicians](https://mathforaisafety.org/)
-- [Position: A Roadmap to Impactful Pluralistic Alignment Research](https://impactful-pluralistic-alignment.github.io/)
-- [Towards surfacing model algorithms with meta-tokens in the J-Space — AI Alignment Forum](https://www.alignmentforum.org/posts/6ek6n7yZ5DzfarJHy/towards-surfacing-model-algorithms-with-meta-tokens-in-the-j)
-- [Measuring Reward-Seeking by Instilling Contrastive Beliefs](https://alignment.openai.com/measuring-reward-seeking/)
-- [ai-safety-tracker-website.vercel.app](https://ai-safety-tracker-website.vercel.app/)
-- [Safety alignment long horizon models](https://openai.com/index/safety-alignment-long-horizon-models/)
-- [DiligenceBench: An Equity-Research Agent Evaluation — Paper Instruments](https://www.paperinstruments.com/blog/diligence-bench)
-- [Harness Evolution Gains Might Just Be Repeated Sampling — Rethinking the Evaluation of Harness Evolution for Agents](https://yikee.github.io/harnessevolution/)
-- [Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/)
-- Prism: Automating
-- Benchmarking Coding Agents on Databricks' Multi-Million Line Codebase
-- 2023: "Language Models can Solve Computer Tasks"). Scoping honestly: it's a
-- Stop Equating "Al Risk" with "Al Extinction Risk" And 4 Other Lessons from Years of Research on Al Risk
-- Agentic Autonomy Levels
-- variable-delay real-time RL, where a gate chooses how long to deliberate at each decision point on top of a frozen AlphaZero-
-- drift. For this reason, we argued against outsourcing evals to an LLM.3
-- alignment community, including Yudkowsky's discussions of the difficulty of
-- Toward Better HIP Kernel Generation for AMD GPUs: Synthetic
-- Separating signal from noise in coding evaluations
-- An ultra-long-horizon benchmark
-- In this post, l'll walk through three products I advised on that faced this issue. I'll also
-- Learning to Theorize the World from Observation Doojin Baek*", Gyubin Lee*1, Junyeob Baek!, Hosung Lee', Sungjin Ahn' 'KAIST * Equal contribution
-- How to Use RLMs in Deep Agents
-- SWE-Together: Interactive Coding- Agent Evaluation
-- 2. Robustness, interpretability, and scaling of eigenvalue models
-- Don't Train the Model, Evolve the Harness
-- More compute, more capability: Why Al agent evaluations need to account for test-time compute
-- CrashTwin: A Physics-Grounded Benchmark for Multi-Agent Dynamics in World Models Nuo Chen*
-- Exploration: fine-tuning with
-- What does your benchmark actually measure? Fighting bench-maxing by asking: what maxes your bench?
-- person's digital life: 17 web apps he is logged into, 42,000 records that
-- We Should Hand Off To Morally Reflective Als Once they're aligned, coherent, and well-tested.
-- when agents become useful for defenders, and when they cross the threshold into uplifting attackers? Here, we discuss some benchmarks that measure this, from capture-the-flag
-- MAS-PromptBench When Does Prompt Optimization Improve Multi-Agent LLM
-- Data Processing Club
-- model is doing. Why then would tracing every connection in a brain, a far harder
-- Surprising lessons from my research scientist job search
-- (Sohl-Dickstein'15, Song '19, Ho '20), typically instantiated through flow
-- [DiffusionBench: On Holistic Evaluation of Diffusion Transformers](https://satori-ai.cn/api/pdf?id=2606.24888)
-- Decompose-K: From torch compile to
-- [Reinforcement Learning Towards Broadly and Persistently Beneficial Models](https://arxiv.org/abs/2606.24014)
-- Engineering that powers Al security research
-- [Predicting model behavior before release by simulating deployment | OpenAI](https://openai.com/index/deployment-simulation/)
-- Unsafe Al or Consolidated Power: Al's False Dichotomy
-- [On the Position Bias of On-Policy Distillation](https://yannx1e.github.io/IW-OPD/)
-- [GitHub - FrontisAI/NatureBench: NatureBench: Can Coding Agents Match the Published SOTA of Nature-Family Papers? · GitHub](https://github.com/FrontisAI/NatureBench)
-- Three Years of r/ChatGPT Societal Impact Evaluations from Social Media Data Jessica Dai, Sean D. Garcia, Emma Pierson, Benjamin Recht, and Nika Haghtalab
-- [Seeing Is Not Reasoning: How VLMs and Their Benchmarks Lean on Text](https://harvey-fin.github.io/seeing-is-not-reasoning/)
-- Training a Frontier Java Code Migration Agent with AWS AgentCore Runtime
-- [Hallucination in World Models is Predictable and Preventable](https://arxiv.org/abs/2606.27326)
-- [OSWorld 2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks](https://snorkel.ai/research-paper/os-world-2/)
-- [The FID Lottery — Quantifying Hidden Randomness in Generative Model Evaluation](https://kyutai.org/fid-lottery/)
-- Seventy Honkaku murder mysteries - the genre that swears every clue is on
-- [Agents in the Era of Experience](https://frontisai.github.io/Awesome-Self-Improving-Agents/)
+- 2026-09-07 [Training a Misaligned Reward Seeker](https://alignment.anthropic.com/2026/reward-seeker/)
+- 2026-09-07 [RSI-Exam: Benchmarking Recursive Self-Improvement through Executable Research](https://rsi-exam.ai/blog.html)
+- 2026-09-07 [Let the Agents Do the Benchmarking - Practical Cheminformatics](https://patwalters.github.io/Let-the-Agents-Do-the-Benchmarking/)
+- 2026-09-07 [Evals as Theory Building — High Performance AI Lab](https://highperformanceailab.com/articles/evals-as-theory-building/)
+- 2026-08-23 [Why cant technologists and economists](https://asteriskmag.substack.com/p/why-cant-technologists-and-economists)
+- 2026-08-23 [Item response theory for ai safety](https://www.lesswrong.com/posts/bfJnebZyY3RRHZC4o/item-response-theory-for-ai-safety)
+- 2026-08-23 [Evaluating chain of thought monitorability is still an open](https://www.lesswrong.com/posts/z9fPtghFxELBXebY3/evaluating-chain-of-thought-monitorability-is-still-an-open)
+- 2026-08-23 [Debate training reduces reward hacking](https://gdmalignment.substack.com/p/debate-training-reduces-reward-hacking)
+- 2026-08-23 [AI4AI-Bench | AI Agent Algorithm Design Benchmark](https://lab.einsia.ai/ai4ai/)
+- 2026-08-09 [PostTrainBench v1.1: Hardening the benchmark against reward hacking](https://posttrainbench.com/blog/posttrainbench-1-1/)
+- 2026-08-09 [PG-LLM: Benchmarking General-Purpose Language Models for Protein Variant Ranking](https://www.proteingymllm.com/)
+- 2026-08-09 [Existential Risk from AI: An Exposition for Mathematicians](https://alkjash.github.io/ai-risk/#statement-12)
+- 2026-08-09 [Cheating behaviour in frontier model evaluations | AISI Work](https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations)
+- 2026-08-09 [AI Safety for Mathematicians](https://mathforaisafety.org/)
+- 2026-07-26 [Towards surfacing model algorithms with meta-tokens in the J-Space — AI Alignment Forum](https://www.alignmentforum.org/posts/6ek6n7yZ5DzfarJHy/towards-surfacing-model-algorithms-with-meta-tokens-in-the-j)
+- 2026-07-26 [Position: A Roadmap to Impactful Pluralistic Alignment Research](https://impactful-pluralistic-alignment.github.io/)
+- 2026-07-26 [Measuring Reward-Seeking by Instilling Contrastive Beliefs](https://alignment.openai.com/measuring-reward-seeking/)
+- 2026-07-25 [Safety alignment long horizon models](https://openai.com/index/safety-alignment-long-horizon-models/)
+- 2026-07-25 [Harness Evolution Gains Might Just Be Repeated Sampling — Rethinking the Evaluation of Harness Evolution for Agents](https://yikee.github.io/harnessevolution/)
+- 2026-07-25 [DiligenceBench: An Equity-Research Agent Evaluation — Paper Instruments](https://www.paperinstruments.com/blog/diligence-bench)
+- 2026-07-25 [ai-safety-tracker-website.vercel.app](https://ai-safety-tracker-website.vercel.app/)
+- 2026-07-25 [Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/)
+- 2026-06-29 [The FID Lottery — Quantifying Hidden Randomness in Generative Model Evaluation](https://kyutai.org/fid-lottery/)
+- 2026-06-29 [Seeing Is Not Reasoning: How VLMs and Their Benchmarks Lean on Text](https://harvey-fin.github.io/seeing-is-not-reasoning/)
+- 2026-06-29 [Reinforcement Learning Towards Broadly and Persistently Beneficial Models](https://arxiv.org/abs/2606.24014)
+- 2026-06-29 [Predicting model behavior before release by simulating deployment | OpenAI](https://openai.com/index/deployment-simulation/)
+- 2026-06-29 [OSWorld 2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks](https://snorkel.ai/research-paper/os-world-2/)
+- 2026-06-29 [On the Position Bias of On-Policy Distillation](https://yannx1e.github.io/IW-OPD/)
+- 2026-06-29 [Hallucination in World Models is Predictable and Preventable](https://arxiv.org/abs/2606.27326)
+- 2026-06-29 [NatureBench: Can Coding Agents Match the Published SOTA of Nature-Family Papers?](https://github.com/FrontisAI/NatureBench)
+- 2026-06-29 [DiffusionBench: On Holistic Evaluation of Diffusion Transformers](https://satori-ai.cn/api/pdf?id=2606.24888)
+- 2026-06-29 [Agents in the Era of Experience](https://frontisai.github.io/Awesome-Self-Improving-Agents/)
 
 ## 视觉、多模态与生成
 
-- [Some Theoretical and Practical Thoughts on Diffusion Language Models | Junbo Zhao (Jake)](https://jzhao2024.github.io/notes/2026/08/08/diffusion-language-models.html)
-- [Harrier K40 domain and quality overview](https://storage.googleapis.com/marin-public/held/harrier-k40-cluster-overview/2026.08.18/index.html?revision=uniform-sampling#cluster-15)
-- [GitHub - MiniMax-AI/MiniMax-Music3](https://github.com/MiniMax-AI/MiniMax-Music3)
-- [GitHub - docwriter-org/plain-writing-skill: A plain-language writing skill for AI agents, with a revision view that shows what changed.](https://github.com/docwriter-org/plain-writing-skill)
-- [Accelerating LTX-2.5 with the Sol Video Inference Engine | NVIDIA](https://nvlabs.github.io/Sana/Sol-Engine/LTX25/)
-- [VISTA: A Visual Harness for Reasoning in an Interactive World](https://vista-research.github.io/)
-- [Scaling Properties of Text Conditioning in Visual Generation](https://heheyas.github.io/context-scaling/)
-- [INTACT: Isomorphic Intent-to-Action Learning for Search-Free World Models](https://zju3dv.github.io/INTACT-JEPA/)
-- [Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation](https://rethinking-cfg-opd.github.io/)
-- [Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes](https://junlinhan.github.io/projects/physics_of_mm_pretrain/)
-- [Bl images search](https://huggingface.co/spaces/davanstrien/bl-images-search)
-- [FastGen-PDD: Parallel Decoding Distillation for Image and Video Generation](https://research.nvidia.com/labs/genair/pdd/)
-- [Autoregressive Video Gen | Efficient AI](https://research.nvidia.com/labs/eai/blogs/autoregressive-video-gen/)
-- [FLUX 3: Multimodal Video, Image & Audio](https://bfl.ai/blog/flux-3)
-- [Scaling Video Pretraining with Imagination Models](https://www.inductionlabs.com/news/scaling-video-pretraining)
-- [Qwen audio 30 tts more multilingual](https://tongyilab.substack.com/p/qwen-audio-30-tts-more-multilingual)
-- [The Seriality Gap in Video Diffusion Models](https://seriality-gap.jdiazchao.com/)
-- 4 ~ OpenAl Completes Global Rollout of GPT-Live Voice Model, Doubles ChatGPT Usage Limit •
-- Pushing Intelligence to 4-bit
-- Decomposer: Learning to Decompile Symbolic Music to Programs Yewon Kim, Apurva Gandhi, David Chung, Graham Neubig, Chris Donahue Carnegie Mellon University
-- Error rate (1 - accuracy,
-- 102 languages we achieve state-of-the-art CER among open-source systems on the FLEURS+CV25
-- End-to-End Vision-Language Pretraining Without Negatives Lukas Kuhn42, Giuseppe Serra
-- techniques for iterative refinement, post-training, and
-- It's a scary time to be twenty-two. Recently, I've been watching videos of college
-- Introducing Muse Spark 1.1
-- Uncovering Neural Geometry in Vision Models With Block-Sparse Featurizers
-- Humanity's Last Machine
-- Machine Learning in Seoul last week titled "What will be left for us to work
-- [Diffusion Policy Optimization without Drifting Apart](https://arxiv.org/abs/2606.13795)
-- TL;DR We introduce real-data supervision into the DMD loss, removing the over-saturation
-- W4A4 CUDA Kernel for Voice Clone: From Profiling to 2.6x Faster Than FP16 • 22 Jun, 2026 Table of contents • Open Table of contents
-- Introducing Un-0: Generating Images with Coupled Oscillators
+- 2026-09-07 [VideoDeltaNet on MiniMax H3](https://openvdn.github.io/)
+- 2026-09-07 [Introducing Solaris](https://runway.com/news/research/introducing-solaris)
+- 2026-09-07 [ROMS-IMLE: A Minimalist Approach to Competitive Single-Step Generative Modelling | Chirag Vashist](https://serchirag.github.io/roms-imle/)
+- 2026-09-07 [FastVideo FastH3 V1: Open-Weight 4-Step Sparse Distilled Minimax H3 for 14x Speedup on NVIDIA Blackwell GPU | Hao AI Lab @ UCSD](https://haoailab.com/blogs/fasth3-preview/)
+- 2026-09-07 [DiffusionOPSD — On-Policy Self-Distillation in Diffusion Models](https://diffusionopsd.github.io/)
+- 2026-09-07 [Continuous diffusion language models – Sander Dieleman](https://sander.ai/2026/08/24/continuous-dlms.html?v=1)
+- 2026-09-07 [7 AI Agent Skill Patterns Every Programmer Should Know](https://medium.com/google-cloud/7-ai-agent-skill-patterns-every-programmer-should-know-92edf62c3d7d)
+- 2026-08-23 [Some Theoretical and Practical Thoughts on Diffusion Language Models | Junbo Zhao (Jake)](https://jzhao2024.github.io/notes/2026/08/08/diffusion-language-models.html)
+- 2026-08-23 [Harrier K40 domain and quality overview](https://storage.googleapis.com/marin-public/held/harrier-k40-cluster-overview/2026.08.18/index.html?revision=uniform-sampling#cluster-15)
+- 2026-08-23 [GitHub - MiniMax-AI/MiniMax-Music3](https://github.com/MiniMax-AI/MiniMax-Music3)
+- 2026-08-23 [A plain-language writing skill for AI agents, with a revision view that shows what changed](https://github.com/docwriter-org/plain-writing-skill)
+- 2026-08-23 [Accelerating LTX-2.5 with the Sol Video Inference Engine | NVIDIA](https://nvlabs.github.io/Sana/Sol-Engine/LTX25/)
+- 2026-08-09 [VISTA: A Visual Harness for Reasoning in an Interactive World](https://vista-research.github.io/)
+- 2026-08-09 [Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes](https://junlinhan.github.io/projects/physics_of_mm_pretrain/)
+- 2026-08-09 [Scaling Properties of Text Conditioning in Visual Generation](https://heheyas.github.io/context-scaling/)
+- 2026-08-09 [Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation](https://rethinking-cfg-opd.github.io/)
+- 2026-08-09 [INTACT: Isomorphic Intent-to-Action Learning for Search-Free World Models](https://zju3dv.github.io/INTACT-JEPA/)
+- 2026-08-09 [FastGen-PDD: Parallel Decoding Distillation for Image and Video Generation](https://research.nvidia.com/labs/genair/pdd/)
+- 2026-08-09 [Bl images search](https://huggingface.co/spaces/davanstrien/bl-images-search)
+- 2026-07-26 [Autoregressive Video Gen | Efficient AI](https://research.nvidia.com/labs/eai/blogs/autoregressive-video-gen/)
+- 2026-07-25 [The Seriality Gap in Video Diffusion Models](https://seriality-gap.jdiazchao.com/)
+- 2026-07-25 [Scaling Video Pretraining with Imagination Models](https://www.inductionlabs.com/news/scaling-video-pretraining)
+- 2026-07-25 [Qwen audio 30 tts more multilingual](https://tongyilab.substack.com/p/qwen-audio-30-tts-more-multilingual)
+- 2026-07-25 [FLUX 3: Multimodal Video, Image & Audio](https://bfl.ai/blog/flux-3)
+- 2026-06-29 [Diffusion Policy Optimization without Drifting Apart](https://arxiv.org/abs/2606.13795)
 
 ## 机器人与具身智能
 
-- [Enigma: Robots that feel right](https://www.enigma.inc/posts/obsessed-encoder)
-- [The Robot Cooperation Problem](https://www.powerofusnewsletter.com/p/why-social-norms-fall-apart-when)
-- [RoboTTT: Context Scaling for Robot Policies](https://research.nvidia.com/labs/gear/robottt/)
-- final critic Ocar(s,a)
-- Sensorimotor World Models: Perception for Action via Inverse Dynamics Petr Ivashkov' Randall Balestriero? Bernhard Schölkopf1,34
-- Auto Discover
-- requires variation, evaluation, and selective retention, and supervised
-- A single video planner generalizes across embodiments.
-- MHXXVI for components such as motors, bearings, screws, wires, cameras, a microcontroller, a battery, and a set of 3D-printed pieces. In place of an instruction booklet there are CAD and
-- [Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models | NVIDIA Technical Blog](https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/)
+- 2026-09-07 [Thea: Towards the Harness of Embodied Agents](https://eit-hai.github.io/thea/)
+- 2026-09-07 [My Notes from ETH Zürich’s Robot Learning Course](https://suveenellawela.com/thoughts/robot-learning-2026-spring-eth-zurich)
+- 2026-08-09 [The Robot Cooperation Problem](https://www.powerofusnewsletter.com/p/why-social-norms-fall-apart-when)
+- 2026-08-09 [Enigma: Robots that feel right](https://www.enigma.inc/posts/obsessed-encoder)
+- 2026-07-26 [RoboTTT: Context Scaling for Robot Policies](https://research.nvidia.com/labs/gear/robottt/)
+- 2026-06-29 [Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models | NVIDIA Technical Blog](https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/)
 
 ## 检索、知识与数据
 
-- [When We Did Research By Hand](https://nightingal3.github.io/blog/2026/08/09/research-retrospective/)
-- [Claude accelerates protein design](https://www.anthropic.com/research/Claude-accelerates-protein-design)
-- [GitHub - DechenZhang/VALG-ML-Theory-Agent: VALG: An Agentic System for ML Theory Research](https://github.com/DechenZhang/VALG-ML-Theory-Agent)
-- [Why do I read research papers? :: Vivek Srikumar](https://svivek.com/writing/2026-08-18-why-i-read-papers.html)
-- [Comfyresearch see how learning happens](https://meta-circle.com/blog/comfyresearch-see-how-learning-happens)
-- [Introducing muse glimmer open agentic model](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)
-- [Measuring Autonomous AI Research](https://www.primeintellect.ai/blog/measuring-autonomous-research)
-- [Exploring new frontiers of AI and games research — Google DeepMind](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games)
-- [The Year in AI Papers: Essential Research from 2025–2026](https://www.1kpapers.com/)
-- [LittleLearner: Language Models Under Pedagogically-Controlled Knowledge Exposure](https://littlelearner-ll.github.io/)
-- [Stealing Reasoning Traces from Proprietary LLM APIs](https://research.snyk.io/blog/stealing-reasoning-traces/)
-- [AI agents can't yet do open-ended AI research](https://www.normaltech.ai/p/ai-agents-cant-yet-do-open-ended)
-- [Online KL Shampoo | Tilde](https://blog.tilderesearch.com/blog/online-kl-shampoo)
-- [(Some of) The Models, They Just Don't Want to Learn | Tilde](https://blog.tilderesearch.com/blog/one-layer-deeper)
-- [DiskANN: Scaling Vector Databases to Hundreds of Millions of Vectors](https://zvec.org/en/blog/2026-08-04-zvec-diskann/)
-- [Knowledge-Centric Self-Improvement](https://recursive-knowledge.github.io/knowledge-centric-self-improvement/)
-- [ResearchArena](https://research-arena.ai/)
-- [Notion | Where teams and agents work together](https://ifm-research.notion.site/Towards-Looped-Models-Done-Right-3ade511912ec8128987dfeb7a5580043)
-- [Elr](https://hy.tencent.ai/research/elr?langVersion=en)
-- [Introducing muse code and muse spark 1 2](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2)
-- [Retire the Abstractions](https://hazyresearch.stanford.edu/blog/2026-08-05-retire-the-abstractions)
-- [Meet the Neutrino-1 family](https://www.fermionresearch.com/models/)
-- [Grounding the Loop on Both Sides — Interaction Scaling](https://01.me/research/interaction-scaling/#idea)
-- [Ophis a new paradigm for autoresearch](https://meta-circle.com/blog/ophis-a-new-paradigm-for-autoresearch)
-- [腾讯混元](https://hy.tencent.com/research/hyra)
-- [Learning from experience instead of curated datasets](https://oaklab.ai/posts/learning-from-experience-instead-of-curated-datasets)
-- [ICML 2026 Paper Reviews and Research Reproduction](https://sai.science/icml)
-- [How we built our knowledge base](https://www.cerebras.ai/blog/how-we-built-our-knowledge-base)
-- [Blog | Why Timing Is Everything in Semantic Search](https://chimchim89.github.io/late-interaction-basics/)
-- [A Taxonomy of Self-evolving Agents](https://x.com/atasteoff/status/2074800880017342665)
-- The Future Worth Building Is Human
-- fable-traces A compact instruction-tuned language model built on Owen/Qwen3-4B-Instruct-2507. fable-traces is tuned for short, conversational replies and runs comfortably on a single mid-
-- Did your agent really improve?
-- Why Large Language Models Are Not Continual Learners Skyfall Al Research Lab Jul 10, 2026
-- that claim several times already. Ah, but this time the headlines say they found consciousness!
-- "Paradigm has been a vogue word of the past twenty years, all thanks to Kuhn." — Ian Hacking, Representing and Intervening (1983)
-- PhD student training in the age of AI: "Coach" vs "Lab" models
-- offensive, or sexually graphic conversations are caught by these filters. Safe mode oN
-- QUEST: Training Frontier Deep Research Agents
-- In 2002, the Oakland Athletics won 103 games despite maintaining the third-
-- The Frontier of Funding: Evaluating AI's Potential to Aid Research Funders
-- Plasticity Loss in Continual Learning
-- [Beyond LoRA: Can you beat the most popular fine-tuning technique? – Deep Learning Daily](https://www.deeplearningdaily.com/beyond-lora-can-you-beat-the-most-popular-fine-tuning-technique/)
-- failure cases by hand, tweak prompts based on intuition, and hope your changes don't
-- executable code; instead it prescribes battle-tested conventions - how state is persisted, how stalls are detected, how guardians are layered, and what constraints bind
-- Fortuitously, I came across the paper Language Modeling is Compression, which mentioned
-- [Notes on the Industry Job Search | Vuink.com](https://vuink.com/post/nyvfnjhssyrf-d-dtvguho-d-dvb/blog/job-search)
-- [Memory Models: Towards Agents That Learn | Letta](https://www.letta.com/blog/towards-agents-that-learn/)
-- [GUIDE-LLM](https://www.llm-checklist.com/)
-- laws on a handful of small runs and then extrapolate to estimate the token and compute requirements for larger models.
-- Timelines The rough process for signing an offer at a company in industry is this:
-- [Agentic RL: Frameworks and Best Practices](https://cameronrwolfe.substack.com/p/agentic-rl)
-- [Self-improving Memory for Agents](https://www.perplexity.ai/sr-Cyrl-ME/hub/blog/self-improving-memory-for-agents)
+- 2026-09-07 [Local-first search across your workspace, built for humans and AI agents](https://github.com/zvec-ai/zvec-grep)
+- 2026-09-07 [Formalizing Fermat's Last Theorem](https://www.anthropic.com/research/formalizing-fermats-last-theorem)
+- 2026-09-07 [Curious Tree Search](https://francesco215.github.io/Scacchi/)
+- 2026-09-07 [Autoresearch Bench](https://www.autoresearch-bench.com/)
+- 2026-09-07 [ArgMaxRL: Generalizing MaxRL to Continuous Rewards — Research | doubleAI](https://www.doubleai.com/research/argmaxrl-generalizing-maxrl-to-continuous-rewards)
+- 2026-08-23 [Why do I read research papers? :: Vivek Srikumar](https://svivek.com/writing/2026-08-18-why-i-read-papers.html)
+- 2026-08-23 [When We Did Research By Hand](https://nightingal3.github.io/blog/2026/08/09/research-retrospective/)
+- 2026-08-23 [The Year in AI Papers: Essential Research from 2025–2026](https://www.1kpapers.com/)
+- 2026-08-23 [Stealing Reasoning Traces from Proprietary LLM APIs](https://research.snyk.io/blog/stealing-reasoning-traces/)
+- 2026-08-23 [Measuring Autonomous AI Research](https://www.primeintellect.ai/blog/measuring-autonomous-research)
+- 2026-08-23 [LittleLearner: Language Models Under Pedagogically-Controlled Knowledge Exposure](https://littlelearner-ll.github.io/)
+- 2026-08-23 [Introducing muse glimmer open agentic model](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)
+- 2026-08-23 [VALG: An Agentic System for ML Theory Research](https://github.com/DechenZhang/VALG-ML-Theory-Agent)
+- 2026-08-23 [Exploring new frontiers of AI and games research — Google DeepMind](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games)
+- 2026-08-23 [Comfyresearch see how learning happens](https://meta-circle.com/blog/comfyresearch-see-how-learning-happens)
+- 2026-08-23 [Claude accelerates protein design](https://www.anthropic.com/research/Claude-accelerates-protein-design)
+- 2026-08-09 [Retire the Abstractions](https://hazyresearch.stanford.edu/blog/2026-08-05-retire-the-abstractions)
+- 2026-08-09 [ResearchArena](https://research-arena.ai/)
+- 2026-08-09 [Online KL Shampoo | Tilde](https://blog.tilderesearch.com/blog/online-kl-shampoo)
+- 2026-08-09 [Notion | Where teams and agents work together](https://ifm-research.notion.site/Towards-Looped-Models-Done-Right-3ade511912ec8128987dfeb7a5580043)
+- 2026-08-09 [Meet the Neutrino-1 family](https://www.fermionresearch.com/models/)
+- 2026-08-09 [Knowledge-Centric Self-Improvement](https://recursive-knowledge.github.io/knowledge-centric-self-improvement/)
+- 2026-08-09 [Introducing muse code and muse spark 1 2](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2)
+- 2026-08-09 [Elr](https://hy.tencent.ai/research/elr?langVersion=en)
+- 2026-08-09 [DiskANN: Scaling Vector Databases to Hundreds of Millions of Vectors](https://zvec.org/en/blog/2026-08-04-zvec-diskann/)
+- 2026-08-09 [AI agents can't yet do open-ended AI research](https://www.normaltech.ai/p/ai-agents-cant-yet-do-open-ended)
+- 2026-08-09 [(Some of) The Models, They Just Don't Want to Learn | Tilde](https://blog.tilderesearch.com/blog/one-layer-deeper)
+- 2026-07-26 [腾讯混元](https://hy.tencent.com/research/hyra)
+- 2026-07-26 [Ophis a new paradigm for autoresearch](https://meta-circle.com/blog/ophis-a-new-paradigm-for-autoresearch)
+- 2026-07-26 [Grounding the Loop on Both Sides — Interaction Scaling](https://01.me/research/interaction-scaling/#idea)
+- 2026-07-25 [Learning from experience instead of curated datasets](https://oaklab.ai/posts/learning-from-experience-instead-of-curated-datasets)
+- 2026-07-25 [ICML 2026 Paper Reviews and Research Reproduction](https://sai.science/icml)
+- 2026-07-25 [How we built our knowledge base](https://www.cerebras.ai/blog/how-we-built-our-knowledge-base)
+- 2026-07-25 [Blog | Why Timing Is Everything in Semantic Search](https://chimchim89.github.io/late-interaction-basics/)
+- 2026-07-15 [A Taxonomy of Self-evolving Agents](https://x.com/atasteoff/status/2074800880017342665)
+- 2026-06-29 [Self-improving Memory for Agents](https://www.perplexity.ai/sr-Cyrl-ME/hub/blog/self-improving-memory-for-agents)
+- 2026-06-29 [Notes on the Industry Job Search | Vuink.com](https://vuink.com/post/nyvfnjhssyrf-d-dtvguho-d-dvb/blog/job-search)
+- 2026-06-29 [Memory Models: Towards Agents That Learn | Letta](https://www.letta.com/blog/towards-agents-that-learn/)
+- 2026-06-29 [GUIDE-LLM](https://www.llm-checklist.com/)
+- 2026-06-29 [Beyond LoRA: Can you beat the most popular fine-tuning technique? – Deep Learning Daily](https://www.deeplearningdaily.com/beyond-lora-can-you-beat-the-most-popular-fine-tuning-technique/)
+- 2026-06-29 [Agentic RL: Frameworks and Best Practices](https://cameronrwolfe.substack.com/p/agentic-rl)
 
 ## 系统、推理与效率
 
-- [Formally verified distributed locks for sandboxes - Scott Hao](https://scotthao.com/writing/distributed-locks)
-- [Pinned memory: what it is for, and why nobody gives it back — PyTorch DevLog](https://docs.pytorch.org/devlogs/eager/2026-08-09-pinned-memory-allocator/)
-- [DFlash 2: Keep Drafting Parallel](https://inco.ai/blog/dflash2/)
-- [Reliable RL Scaling Requires Accounting for Prefill-Decode Kernel Mismatch](https://yifanzhang-pro.github.io/Pretraining-RL-Science/)
-- [Fast Engine Recovery: Sub-Second Engine Restart for SGLang via Weight Cache Daemon](https://www.lmsys.org/blog/2026-08-21-sglang-fast-recovery)
-- [How to Parallelize a Transformer for Training — an explorable explanation](https://ezyang.github.io/interactive-parallelize-transformer/#D=6144&F=3072&L=60&E=129&k=5&Sexp=1)
-- [Inference Performance from First Principles — Aleph Alpha](https://aleph-alpha.com/en/blog/inference-performance-from-first-principles/)
-- [GTSAM Goes GPU: A CUDA Backend for Nonlinear Optimization](https://gtsam.org/2026/08/20/cuda-backend.html)
-- [GitHub - Snowflake-AI-Research/Arctic-Platform: Arctic Training and Inference Platform](https://github.com/Snowflake-AI-Research/Arctic-Platform)
-- [GitHub - NVIDIA/TensorRT-Model-Connect: From PyTorch model to end-to-end TensorRT inference experience in two commands—AI-native, cross-platform, and built for the best possible user experience.](https://github.com/NVIDIA/TensorRT-Model-Connect)
-- [Cuda to mlx k search](https://bair.berkeley.edu/blog/2026/07/29/cuda-to-mlx-k-search/)
-- [Mixture-of-Kittens: our open-source MoE megakernel for NVL72s · Cursor](https://cursor.com/blog/mixture-of-kittens)
-- [Towards Blackwell-Native 8-bit and 4-bit RL: End-to-End MXFP8 and NVFP4 RL in Miles](https://www.lmsys.org/blog/2026-07-29-mxfp8-nvfp4-rl)
-- [Batching the Reflective Optimization Loop: Parallel Proposals Make GEPA Faster and Better](https://gepa-ai.github.io/gepa/blog/2026/07/30/parallel-proposals/)
-- [LLM Inference Handbook](https://handbook.modular.com/)
-- [Asari AI](https://asari.ai/blog/inference-optimization)
-- [Will parallelization limits delay an intelligence explosion?](https://epoch.ai/publications/parallelization-constraints-could-delay-a-technological-singularity)
-- [Attention Decode on AMD MI450 GPUs: A Gluon Kernel Optimization Guide](https://rocm.blogs.amd.com/software-tools-optimization/gluon-attention-decode-mi450/README.html)
-- [Defending Against the Training–Inference Numeric Mismatch in RL (Especially Linear Attention) — and Whether It Helps Async RL - Yichuan Wang's Homepage](https://yichuan-w.github.io/blog/GDN-train-inference-mismatch-asyncRL/)
-- [TML Inkling at Day 0: FP4 Inference on NVIDIA and AMD with TokenSpeed | LightSeek Foundation](https://lightseek.org/blog/tokenspeed-inkling.html#flat-cache-layout-for-heterogeneous-states)
-- [Introduction - Ktransformers](https://kvcache-ai.github.io/ktransformers/)
-- [AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog](https://developer.nvidia.com/blog/ai-model-co-design-hardware-friendly-llm-design/?linkId=100000430616047)
-- [Comparing Nvidia GPU vs AMD GPU vs Google TPU Architectures from a Programmer's Perspective - Arya Tschand](https://www.aryatschand.com/blog/blog-tpu-gpu-comparison.html)
-- [Inside TPU and GPU Clusters: The Anatomy of Collective Communication - Aleksa Gordić](https://www.aleksagordic.com/blog/collective-operations)
-- 3072, RMSNorm everywhere including per-head QK-norm, rope. My target is the decode
-- Hardware-aware dynamic speculative decoding
-- Learning Multi-Agent Coordination via Sheaf-ADMM
-- FastAFD: Open-Source Large-Scale Attention- FFN Disaggregation on Blackwell NVL72
-- [What is Iterative RandOpt, and why iterative?](https://github.com/sunrainyg/RandOpt/tree/iterative-randopt)
-- The 4-bitter Lesson Balancing Stability and Performance in NVFP4 RL By Ziang Li & friends at humans& • July 10, 2026
-- What happens when you run a CUDA kernel
-- Auto-research with codex: How I achieved a 232x Faster Kernel over baseline with Codex in GPU Mode's qr_v2 problem
-- Approaches to Sequence Memory Five strategies, each at a different point in the memory-compute trade-off:
-- Designing GPU-Accelerated Query Engines with NVIDIA GQE
-- Think of this blog post as the mental models you need before you touch a config file. We will establish the core vocabulary of inference, break
-- minifF-test (%)
-- Revisiting Test-Time Scaling in the Agent Era
-- We increasingly need Al agents to work in domains they never saw during training, like using a new programming library or leveraging the emerging
-- Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel
-- NVFP4 Blockscaled GEMM on NVIDIA RTX Pro Blackwell GPUs (SM12x)
-- A MACHINE LEARNING Modern GPU Programming For
-- Tsitsiklis, compiled in their book Neurodynamic Programming, was the first to show
-- ParallelKernelBench: Frontier LLMs can't write fast multi-GPU kernels (yet)
-- [KV Cache Compression and Its Infra Problems | Efficient AI](https://research.nvidia.com/labs/eai/post/kv-cache-compression-and-its-infra-problems/)
-- From Memory to Photonics: Solving the Next Bottleneck in Al Scaling
-- Total throughput (tok/s)
-- [RL Systems Mind the Gap: Matching Trainer and Generator Throughput](https://newsletter.semianalysis.com/p/rl-systems-mind-the-gap-matching)
-- update: featured on Hacker News, thanks for reading!
-- ReplaySSM: Cache SSM Inputs, Not State
-- data curation; (2) the model architectures; (3) our multi-stage training pipeline; (4) our distributed infrastructure; and (5) future work.
+- 2026-09-07 [What happens when a GPU writes memory | Doubleword](https://blog.doubleword.ai/what-happens-when-a-gpu-writes-memory)
+- 2026-09-07 [Steps for Writing a Speed-of-Light GEMM kernel: Part 1 · Luke D. Huang](https://lukehuang33.github.io/blog/b200-matmul-kernels.html)
+- 2026-09-07 [Build a system, load it until it breaks, and watch why. A system design simulator for learning distributed systems](https://github.com/xevrion/breakscale)
+- 2026-09-07 [A Deep Dive into LDS Optimizations on AMD Instinct MI450 GPUs — ROCm Blogs](https://rocm.blogs.amd.com/software-tools-optimization/mi450-lds-optimization/README.html)
+- 2026-08-23 [Reliable RL Scaling Requires Accounting for Prefill-Decode Kernel Mismatch](https://yifanzhang-pro.github.io/Pretraining-RL-Science/)
+- 2026-08-23 [Pinned memory: what it is for, and why nobody gives it back — PyTorch DevLog](https://docs.pytorch.org/devlogs/eager/2026-08-09-pinned-memory-allocator/)
+- 2026-08-23 [Inference Performance from First Principles — Aleph Alpha](https://aleph-alpha.com/en/blog/inference-performance-from-first-principles/)
+- 2026-08-23 [How to Parallelize a Transformer for Training — an explorable explanation](https://ezyang.github.io/interactive-parallelize-transformer/#D=6144&F=3072&L=60&E=129&k=5&Sexp=1)
+- 2026-08-23 [GTSAM Goes GPU: A CUDA Backend for Nonlinear Optimization](https://gtsam.org/2026/08/20/cuda-backend.html)
+- 2026-08-23 [Arctic Training and Inference Platform](https://github.com/Snowflake-AI-Research/Arctic-Platform)
+- 2026-08-23 [From PyTorch model to end-to-end TensorRT inference experience in two commands—AI-native, cross-platform, and built for the best possible user experience](https://github.com/NVIDIA/TensorRT-Model-Connect)
+- 2026-08-23 [Formally verified distributed locks for sandboxes - Scott Hao](https://scotthao.com/writing/distributed-locks)
+- 2026-08-23 [Fast Engine Recovery: Sub-Second Engine Restart for SGLang via Weight Cache Daemon](https://www.lmsys.org/blog/2026-08-21-sglang-fast-recovery)
+- 2026-08-23 [DFlash 2: Keep Drafting Parallel](https://inco.ai/blog/dflash2/)
+- 2026-08-09 [Will parallelization limits delay an intelligence explosion?](https://epoch.ai/publications/parallelization-constraints-could-delay-a-technological-singularity)
+- 2026-08-09 [Towards Blackwell-Native 8-bit and 4-bit RL: End-to-End MXFP8 and NVFP4 RL in Miles](https://www.lmsys.org/blog/2026-07-29-mxfp8-nvfp4-rl)
+- 2026-08-09 [Mixture-of-Kittens: our open-source MoE megakernel for NVL72s · Cursor](https://cursor.com/blog/mixture-of-kittens)
+- 2026-08-09 [LLM Inference Handbook](https://handbook.modular.com/)
+- 2026-08-09 [Defending Against the Training–Inference Numeric Mismatch in RL (Especially Linear Attention) — and Whether It Helps Async RL - Yichuan Wang's Homepage](https://yichuan-w.github.io/blog/GDN-train-inference-mismatch-asyncRL/)
+- 2026-08-09 [Cuda to mlx k search](https://bair.berkeley.edu/blog/2026/07/29/cuda-to-mlx-k-search/)
+- 2026-08-09 [Batching the Reflective Optimization Loop: Parallel Proposals Make GEPA Faster and Better](https://gepa-ai.github.io/gepa/blog/2026/07/30/parallel-proposals/)
+- 2026-08-09 [Attention Decode on AMD MI450 GPUs: A Gluon Kernel Optimization Guide](https://rocm.blogs.amd.com/software-tools-optimization/gluon-attention-decode-mi450/README.html)
+- 2026-08-09 [Asari AI](https://asari.ai/blog/inference-optimization)
+- 2026-07-26 [TML Inkling at Day 0: FP4 Inference on NVIDIA and AMD with TokenSpeed | LightSeek Foundation](https://lightseek.org/blog/tokenspeed-inkling.html#flat-cache-layout-for-heterogeneous-states)
+- 2026-07-26 [Introduction - Ktransformers](https://kvcache-ai.github.io/ktransformers/)
+- 2026-07-26 [AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog](https://developer.nvidia.com/blog/ai-model-co-design-hardware-friendly-llm-design/?linkId=100000430616047)
+- 2026-07-25 [Inside TPU and GPU Clusters: The Anatomy of Collective Communication - Aleksa Gordić](https://www.aleksagordic.com/blog/collective-operations)
+- 2026-07-25 [Comparing Nvidia GPU vs AMD GPU vs Google TPU Architectures from a Programmer's Perspective - Arya Tschand](https://www.aryatschand.com/blog/blog-tpu-gpu-comparison.html)
+- 2026-07-14 [What is Iterative RandOpt, and why iterative?](https://github.com/sunrainyg/RandOpt/tree/iterative-randopt)
+- 2026-06-29 [RL Systems Mind the Gap: Matching Trainer and Generator Throughput](https://newsletter.semianalysis.com/p/rl-systems-mind-the-gap-matching)
+- 2026-06-29 [KV Cache Compression and Its Infra Problems | Efficient AI](https://research.nvidia.com/labs/eai/post/kv-cache-compression-and-its-infra-problems/)
 
 ## 研究方法、职业与科学写作
 
-- [Ai native phd students f9f6eebc1f91](https://eytanadar.medium.com/ai-native-phd-students-f9f6eebc1f91)
-- [Unlearning Data at Scale](https://unlearning-tutorial.github.io/)
-- [Guidelight's Control Assessment of Frontier AI Companies](https://guidelight.ai/blog/control-assessment-august-2026)
-- [Topic Overview: AI Energy Use](https://epoch.ai/publications/ai-energy)
-- [Intelligence is not the main bottleneck](https://www.writingruxandrabio.com/p/intelligence-is-not-the-main-bottleneck)
-- [An introduction to Machine Learning for health and epidemiology](https://gael-varoquaux.info/health_ml_tutorial/index.html)
-- [SIGReg from First Principles](https://rezabyt.github.io/blogposts/sigreg-tutorial.html)
-- are paying ten billion dollars a month for Als that can, in theory
-- • Agentic loops and writing this post
-- Al models get better at anything you can write a loss function for, and
-- Why Do Asymmetric Power Laws Help Reasoning?
-- Empirical frequency
-- ongcat sparse attention is a careful assembly of sparse-attention by Meituan in their latest model Meituan Longcat 2 which is unique in its own way, so should be
-- Al Review and the Golden Age of Metascience
-- Many people reached out to me in the past asking about my local agent stack as well as how I set up my local agent stack.
-- An analogy for technical communication
-- "Mythos" at Home, and It's Called AISLE
-- Where to Draw the Boundary for Hosted Agents
-- usually beginning in graduate school. If you are either starting out your
-- [ICML 2026 Seoul Guide](https://t.co/AdN1sHMg1I)
+- 2026-09-07 [The AI-Native SDLC playbook | Claude by Anthropic](https://claude.com/blog/the-ai-native-sdlc-playbook)
+- 2026-09-07 [My PhD Grind (1)](https://jinyansu.substack.com/p/my-phd-grid-1)
+- 2026-08-23 [Unlearning Data at Scale](https://unlearning-tutorial.github.io/)
+- 2026-08-23 [Guidelight's Control Assessment of Frontier AI Companies](https://guidelight.ai/blog/control-assessment-august-2026)
+- 2026-08-23 [Ai native phd students f9f6eebc1f91](https://eytanadar.medium.com/ai-native-phd-students-f9f6eebc1f91)
+- 2026-08-09 [Topic Overview: AI Energy Use](https://epoch.ai/publications/ai-energy)
+- 2026-07-26 [SIGReg from First Principles](https://rezabyt.github.io/blogposts/sigreg-tutorial.html)
+- 2026-07-26 [Intelligence is not the main bottleneck](https://www.writingruxandrabio.com/p/intelligence-is-not-the-main-bottleneck)
+- 2026-07-26 [An introduction to Machine Learning for health and epidemiology](https://gael-varoquaux.info/health_ml_tutorial/index.html)
+- 2026-06-29 [ICML 2026 Seoul Guide](https://t.co/AdN1sHMg1I)
 
 ## 其他跨领域内容
 
-- [Notes on Implications of Scale-Dependent Algorithms](https://newsletter.forethought.org/p/notes-on-implications-of-scale-dependent)
-- [Multi vector encoder](https://huggingface.co/blog/multi-vector-encoder)
-- [Compass and certificate](https://aimslab.stanford.edu/blog/compass-and-certificate)
-- [Building interactive Git exercises](https://ryjohnson09.github.io/quarto-git-sandbox/)
-- [How Claude Watermarks AI-Generated Text](https://magazine.sebastianraschka.com/p/claude-watermarking)
-- [SPADE: Self-Play in Adaptive Synthetic Executable Environments](https://spade-rl.github.io/)
-- [Lessons from the hacks](https://www.interconnects.ai/p/lessons-from-the-hacks)
-- [When intelligence is abundant attention](https://economicsofai.substack.com/p/when-intelligence-is-abundant-attention)
-- [Fitness seekers generalizing the reward seeking threat model](https://www.lesswrong.com/posts/bhtYqD4FdK6AqhFDF/fitness-seekers-generalizing-the-reward-seeking-threat-model)
-- [0 train-infer mismatch for Open-weight MoE RL in Open-source code](https://kiddyboots216.github.io/mismatch/)
-- [R lens making j lens more faithful on early layers](https://www.lesswrong.com/posts/nv8oedrnLXKRzNEL9/r-lens-making-j-lens-more-faithful-on-early-layers)
-- [Magi 2 preview](https://sand.ai/blog/magi-2-preview)
-- [The AI dissenter viewpoint](https://proofsandprompts.com/2026/08/09/the-ai-dissenter-viewpoint/)
-- [How enterprises put ai to work](https://openai.com/index/how-enterprises-put-ai-to-work/)
-- [ProbXiv](https://probxiv.com/)
-- [How to keep thinking](https://www.seangoedecke.com/how-to-keep-thinking/)
-- [Icml 2026 open reproductions](https://huggingface.co/blog/icml-2026-open-reproductions)
-- [I Quit Math, Then Wrote a Paper with AI](https://haruhisa-enomoto.github.io/quotient-submodule-equidistribution-essay/)
-- [What Is Taste?](https://yoonholee.com/blog/2026/taste/)
-- [Why Open Source Matters for AI](https://www.oreilly.com/radar/why-open-source-matters-for-ai/)
-- [Scaling Activation Oracles to Trillion-Parameter Models](https://transluce.org/scaling-activation-oracles)
-- [Yannick Detrois — AI/ML Scientist & Engineer](https://www.twozeros.eu/projects/verifier-frontier)
-- [The future is for everyone](https://about.fb.com/news/2026/08/the-future-is-for-everyone/)
-- [535B-A23B 18T Token Hero Run + Scaling Ladder](https://wandb.ai/marin-community/marin_moe/reports/535B-A23B-18T-Token-Hero-Run-Scaling-Ladder--VmlldzoxNzc2MDM5Ng)
-- [Learning MegaGem, from self-play to price discovery](https://djdumpling.github.io/2026/08/09/megagem.html)
-- [Forking sequences part i statistically and computationally efficient multi horizon forecasting](https://blog.ml.cmu.edu/2026/08/10/forking-sequences-part-i-statistically-and-computationally-efficient-multi-horizon-forecasting/)
-- [GitHub - gvzdv/claudish-to-english](https://github.com/gvzdv/claudish-to-english)
-- [How does programming language affect token efficiency and correctness?](https://danluu.com/pl-tokens/)
-- [Ornith-1.5: From Self-Scaffolding to Self-Improvement](https://ornith.ai/ornith_1_5.html)
-- [Microconferences](https://www.argmin.net/p/microconferences)
-- [dig.bench](https://digbench.ai/)
-- [Theory of mind](https://rtmccoy.com/posts/theory_of_mind.html)
-- [Jagged Judges: Epistemic Stability Under Silence, Pressure, and Persistence](https://www.jagged-judges.com/)
-- [The AI Observatory — interactive companion](https://www.ai-observatory.org/)
-- [AI finally enters its Tycho stage | Ziming Liu](https://kindxiaoming.github.io/blog/2026/tycho/)
-- [Of Swarms and Sand Gods](https://blog.cosmos-institute.org/p/of-swarms-and-sand-gods)
-- [Rl creates split personas](https://www.lesswrong.com/posts/L23poLi8MRgS6mXYF/rl-creates-split-personas)
-- [Introducing ai futures](https://openai.com/index/introducing-ai-futures/)
-- [Git at any scale · Cursor](https://cursor.com/blog/git-at-any-scale)
-- [DatologyAI: Train Better Models, Faster and Smaller](https://www.datologyai.com/blog/datasmith)
-- [Could a computer scientist build a brain?](https://stankerstjens.github.io/could-a-computer-scientist-build-a-brain/)
-- [Reconstructing Claude](https://www.tokenize.rs/claude)
-- [The human is the loop](https://brentfitzgerald.com/posts/the-human-is-the-loop/)
-- [Harness-Delta Attribution: What Evolves When We Talk About Harness Evolution?](https://wenwen-d.github.io/blog/harness-delta-attribution/)
-- [Are all scalable objectives alike?](https://jchencxh.github.io/blog/filling-the-hierarchy-part-1/)
-- [Famous Deep Learning Papers](https://papers.baulab.info/)
-- [subspace-notes.luckyiyi.chatgpt.site](https://subspace-notes.luckyiyi.chatgpt.site/)
-- [StatsMLlib — Probability, Statistics, and Machine Learning in Lean 4](https://statsmllib.github.io/index.html)
-- [Photon 2 launch](https://moondream.ai/blog/photon-2-launch)
-- [Model self identification could be subliminally transferred](https://www.lesswrong.com/posts/cb5quszpxCbFDGk68/model-self-identification-could-be-subliminally-transferred)
-- [the-puzzler](https://the-puzzler.github.io/?p=practical-notes-on-lejepa)
-- [Infinigram books](https://allenai.org/blog/infinigram-books)
-- [Pervasive annotation errors break](https://ddkang.substack.com/p/pervasive-annotation-errors-break)
-- [SWD Blog](https://huggingface.co/spaces/veri-safe/SWD-Blog#1-introduction)
-- [Animate Anyone 2](https://humanaigc.github.io/wan-animate-2/)
-- [Returning to arc](https://www.lesswrong.com/posts/vLFh8HP3hyNy9MCwe/returning-to-arc)
-- [RL Infra Orchestrator - Part 1: Main Loop — Vivek Kashyap](https://vivekvkashyap.github.io/posts/rl-infra-orchestrator-part-1.html)
-- [2026 07 apertus 1 5](https://apertus-ai.org/articles/2026-07-apertus-1-5/)
-- [Mathematical Nexus Collection](https://www.gpeyre.com/mathematical-nexus/)
-- [MatrAIx — Simulate Before Reality](https://matraix.ai/)
-- [Introducing adapt 1 preview](https://reilabs.org/blog/introducing-adapt-1-preview)
-- [Why You Should Almost Never Use AI to Write Anything Substantive](https://www.erichgrunewald.com/posts/why-i-think-you-should-almost-never-use-ai-to-write-anything-substantive/)
-- [ICML 2026 Paper Explorer](https://deep-diver.github.io/icml2026-explorer/)
-- [Introducing mai cyber 1 flash inside mdash](https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/)
-- [Symbols neural networks and mathematical](https://infinitefaculty.substack.com/p/symbols-neural-networks-and-mathematical)
-- [Tutormoments](https://allenai.org/blog/tutormoments)
-- [askchem.org](https://askchem.org/)
-- [User awareness in frontier models](https://transluce.org/user-awareness)
-- [If you havent recently used claude](https://davidpreichert.substack.com/p/if-you-havent-recently-used-claude)
-- [A safe path to open weights](https://thinkingmachines.ai/blog/a-safe-path-to-open-weights/)
-- [Goodhart](https://www.pradheep.dev/blogs/goodharts-gambit)
-- [Thousand dimensional structure 1](https://www.lesswrong.com/posts/sFhW3ZnPMJdnB4Dd6/thousand-dimensional-structure-1)
-- [Foundation Models for Oversight](https://transluce.org/foundation-models-for-oversight)
-- [Center for Responsible, Decentralized Intelligence at Berkeley](https://rdi.berkeley.edu/blog/auto-software-dev/)
-- [Pax Machina: New Institutions for Powerful AI · Pax Machina](https://paxmachina.ai/welcome-to-pax-machina)
-- [Why I’m leaving OpenAI to build telepathy](https://naomibashkansky.com/blog/telepathy/)
-- [Artifacts Hub](https://artifactshub.ai/)
-- [From Spread MLE to Implicit MLE](https://mingtian.ai/blog/SpreadMLEtoIMLE)
-- [Ten advances in mathematics](https://openai.com/index/ten-advances-in-mathematics/)
-- [Devtools must be open source - exe.dev blog](https://blog.exe.dev/devtools-must-be-open-source)
-- [Flue 2.0 | Flue](https://flueframework.com/blog/flue-2/)
-- [Think and Act as One • Bigtable at Twenty: What Stayed and What Got Rebuilt](https://blog.fnil.net/bigtable-at-twenty/)
-- [Inkling small](https://thinkingmachines.ai/news/inkling-small/)
-- [OpenRSI · Frontis-MA1](https://frontisai.github.io/OpenRSI/)
-- [Sparse Linear Attention: 当稀疏遇上线性注意力 · Haoyi Zhu](https://www.haoyizhu.site/blog/sparse-linear-attention/)
-- [rsibench.co](https://rsibench.co/)
-- [Potential](https://aweers.de/blog/2026/potential/)
-- [Computing the Gradient of the KL Penalty — Muyu He](https://riddlehe.github.io/blog/kl-gradient-estimators.html)
-- [Introducing Flex: Let the Model Write the Code — cmpnd](https://www.cmpnd.ai/blog/let-the-model-write-the-code.html)
-- [Introducing terminal bench 3 0](https://www.turing.com/blog/introducing-terminal-bench-3-0)
-- [The end of the age of heroes](https://www.noahpinion.blog/p/the-end-of-the-age-of-heroes)
-- [systempromptindex.ai](https://systempromptindex.ai/)
-- [Some notes about anthropics new results](https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/)
-- [Cot](https://web.stanford.edu/~cgpotts/blog/cot/)
-- [RIPO](https://www.gensi-thuair.com/portal/blogdetail/RIPO)
-- [Does distilling claude carry the persona with it](https://www.lesswrong.com/posts/Jc9YZEmqHgocAKiaH/does-distilling-claude-carry-the-persona-with-it)
-- [Provable generalization bounds for](https://ddkang.substack.com/p/provable-generalization-bounds-for)
-- [Chorus: chatting with genomic oracles](https://genomicsxai.github.io/blogs/2026-010/)
-- [Organization Design for Complex Worlds — an interactive walkthrough](https://jonlib.com/papers/organization-design/interactive/)
-- [An analysis of ai generated content at the mechanistic](https://www.lesswrong.com/posts/r7FBQ8XDs6qBYc4K4/an-analysis-of-ai-generated-content-at-the-mechanistic)
-- [Resources](https://sites.google.com/view/continual-learning/resources)
-- [Introducing Laguna S 2.1](https://poolside.ai/blog/introducing-laguna-s-2-1)
-- [Kimi K3: The open-weights escalation](https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation)
-- [The most forbidden technique is not always forbidden 1](https://www.lesswrong.com/posts/tEFD2bgNWZ6XcurKA/the-most-forbidden-technique-is-not-always-forbidden-1)
-- [Expanded SkillOpt Ablations, Skill-Aware Reflection, and SkillOpt-Sleep](https://microsoft.github.io/SkillOpt/blog/gating-reflection-safe-updates/)
-- [Why I Left Google DeepMind](https://turntrout.com/why-i-left-google-deepmind)
-- [Apple-π: Law-Grounded Physical Intelligence](https://21yrm.github.io/Apple-PI-homepage/)
-- [Why frontier labs are scaling pilled](https://invertedpassion.substack.com/p/why-frontier-labs-are-scaling-pilled)
-- [Inductive Value Loading 2: J-Lens Analysis — Atakan Tekparmak](https://atakantekparmak.github.io/blog/inductive-value-loading-2/)
-- [Frontier Models with Our Harness Achieve ~99% on ARC-AGI-3 Public — Schema](https://schema-harness.github.io/)
-- [latent-thought-flows.vercel.app](https://latent-thought-flows.vercel.app/)
-- [Keep paying the humans: notes from an anti-debate](https://mireshghallah.github.io/blog/keep_paying_the_humans.html)
-- [Estimators for Sparsity — Dhruv Pai](https://dhruvbpai.github.io/blog/estimators-for-sparsity/)
-- [Lychee-FD](https://hitsz-tmg.github.io/Lychee-FD/)
-- The State-Prediction Separation Hypothesis
-- But it isn't just release timing. The evidence points to accelerating capability gains as
-- AI Gap Map
-- treatment of nearly all natural infectious diseases," the "elimination of most cancer," "prevention of Alzheimer's" and even "doubling of the human
-- What to Expect When You Are Expecting Recursive Self Improvement
-- Claude's values across models and languages
-- MODUS: Decoder-only Any-to-Any Modeling of Diverse Modalities
-- [Forward Self-Models Learn an Empirical Approximation of Neural Network Computation](https://github.com/jagilley/forward-self-models)
-- [Speculation Is All You Need](https://modal.com/blog/spec-is-all-u-need)
-- 1. the probabilities must be normalised: Zi-_ c; = 1, 2. and, the probabilities must be greater than o: x; ≥ 0 Vi € {1, •• , k}.
-- Integrat be tie act plain 3 truen a die legend. gral aberoist gleich der Ananhlden in diesemy chick biggendenter TInter
-- Today is Stanford's commencement. It has always been a special day every year. I wear
+- 2026-09-07 [Who Taught the Models to Do That?](https://www.dbreunig.com/2026/08/30/who-taught-the-models-to-do-that.html)
+- 2026-09-07 [VGI-Bench](https://hexuan21.github.io/VGI-Bench/)
+- 2026-09-07 [Tomorrow’s AI Won’t Meet Today’s World](https://indevelopmentmag.substack.com/p/tomorrows-ai-wont-meet-todays-world)
+- 2026-09-07 [Shallow Intent: Why People Don’t Like AI Content, and How to Make It Great](https://unchartedterritories.tomaspueyo.com/p/shallow-intent-why-people-dont-like)
+- 2026-09-07 [RSI List — The recursive self-improvement landscape](https://rsi-list.com/)
+- 2026-09-07 [Representing the Physical World through Structured Language — MirroS](https://mirros.ai/blog/representing-physical-world)
+- 2026-09-07 [NoRA: Normalized Low-Rank Adaptation](https://spherelab.ai/NoRA/)
+- 2026-09-07 [Modeling Token Demand](https://theothersteven.github.io/modeling-token-demand/)
+- 2026-09-07 [IFM K2](https://ifm.ai/k2/)
+- 2026-09-07 [Introducing GPT-6 Astra](https://openai.com/index/gpt-6-astra/)
+- 2026-09-07 [infinite-livestream](https://github.com/reactor-team/infinite-livestream)
+- 2026-09-07 [Field Studies](https://field-studies.ai.studio/)
+- 2026-09-07 [Chopin](https://githubnext.com/projects/chopin/)
+- 2026-09-07 [Bio-Babel — The classics of bioinformatics, in more than one tongue](https://biobabel.stanford.edu/)
+- 2026-09-07 [Bayesian Decision-making Algorithms](https://bayesianalgorithms.com/)
+- 2026-09-07 [Awesome BO](https://richardcsuwandi.github.io/awesome-bo/)
+- 2026-08-23 [Yannick Detrois — AI/ML Scientist & Engineer](https://www.twozeros.eu/projects/verifier-frontier)
+- 2026-08-23 [Why Open Source Matters for AI](https://www.oreilly.com/radar/why-open-source-matters-for-ai/)
+- 2026-08-23 [When intelligence is abundant attention](https://economicsofai.substack.com/p/when-intelligence-is-abundant-attention)
+- 2026-08-23 [What Is Taste?](https://yoonholee.com/blog/2026/taste/)
+- 2026-08-23 [Theory of mind](https://rtmccoy.com/posts/theory_of_mind.html)
+- 2026-08-23 [The human is the loop](https://brentfitzgerald.com/posts/the-human-is-the-loop/)
+- 2026-08-23 [The future is for everyone](https://about.fb.com/news/2026/08/the-future-is-for-everyone/)
+- 2026-08-23 [The AI Observatory — interactive companion](https://www.ai-observatory.org/)
+- 2026-08-23 [The AI dissenter viewpoint](https://proofsandprompts.com/2026/08/09/the-ai-dissenter-viewpoint/)
+- 2026-08-23 [SPADE: Self-Play in Adaptive Synthetic Executable Environments](https://spade-rl.github.io/)
+- 2026-08-23 [Scaling Activation Oracles to Trillion-Parameter Models](https://transluce.org/scaling-activation-oracles)
+- 2026-08-23 [Rl creates split personas](https://www.lesswrong.com/posts/L23poLi8MRgS6mXYF/rl-creates-split-personas)
+- 2026-08-23 [Reconstructing Claude](https://www.tokenize.rs/claude)
+- 2026-08-23 [R lens making j lens more faithful on early layers](https://www.lesswrong.com/posts/nv8oedrnLXKRzNEL9/r-lens-making-j-lens-more-faithful-on-early-layers)
+- 2026-08-23 [ProbXiv](https://probxiv.com/)
+- 2026-08-23 [Ornith-1.5: From Self-Scaffolding to Self-Improvement](https://ornith.ai/ornith_1_5.html)
+- 2026-08-23 [Of Swarms and Sand Gods](https://blog.cosmos-institute.org/p/of-swarms-and-sand-gods)
+- 2026-08-23 [Notes on Implications of Scale-Dependent Algorithms](https://newsletter.forethought.org/p/notes-on-implications-of-scale-dependent)
+- 2026-08-23 [Multi vector encoder](https://huggingface.co/blog/multi-vector-encoder)
+- 2026-08-23 [Microconferences](https://www.argmin.net/p/microconferences)
+- 2026-08-23 [Magi 2 preview](https://sand.ai/blog/magi-2-preview)
+- 2026-08-23 [Lessons from the hacks](https://www.interconnects.ai/p/lessons-from-the-hacks)
+- 2026-08-23 [Learning MegaGem, from self-play to price discovery](https://djdumpling.github.io/2026/08/09/megagem.html)
+- 2026-08-23 [Jagged Judges: Epistemic Stability Under Silence, Pressure, and Persistence](https://www.jagged-judges.com/)
+- 2026-08-23 [Introducing ai futures](https://openai.com/index/introducing-ai-futures/)
+- 2026-08-23 [Icml 2026 open reproductions](https://huggingface.co/blog/icml-2026-open-reproductions)
+- 2026-08-23 [I Quit Math, Then Wrote a Paper with AI](https://haruhisa-enomoto.github.io/quotient-submodule-equidistribution-essay/)
+- 2026-08-23 [How to keep thinking](https://www.seangoedecke.com/how-to-keep-thinking/)
+- 2026-08-23 [How enterprises put ai to work](https://openai.com/index/how-enterprises-put-ai-to-work/)
+- 2026-08-23 [How does programming language affect token efficiency and correctness?](https://danluu.com/pl-tokens/)
+- 2026-08-23 [How Claude Watermarks AI-Generated Text](https://magazine.sebastianraschka.com/p/claude-watermarking)
+- 2026-08-23 [Harness-Delta Attribution: What Evolves When We Talk About Harness Evolution?](https://wenwen-d.github.io/blog/harness-delta-attribution/)
+- 2026-08-23 [GitHub - gvzdv/claudish-to-english](https://github.com/gvzdv/claudish-to-english)
+- 2026-08-23 [Git at any scale · Cursor](https://cursor.com/blog/git-at-any-scale)
+- 2026-08-23 [Forking sequences part i statistically and computationally efficient multi horizon forecasting](https://blog.ml.cmu.edu/2026/08/10/forking-sequences-part-i-statistically-and-computationally-efficient-multi-horizon-forecasting/)
+- 2026-08-23 [Fitness seekers generalizing the reward seeking threat model](https://www.lesswrong.com/posts/bhtYqD4FdK6AqhFDF/fitness-seekers-generalizing-the-reward-seeking-threat-model)
+- 2026-08-23 [Famous Deep Learning Papers](https://papers.baulab.info/)
+- 2026-08-23 [dig.bench](https://digbench.ai/)
+- 2026-08-23 [DatologyAI: Train Better Models, Faster and Smaller](https://www.datologyai.com/blog/datasmith)
+- 2026-08-23 [Could a computer scientist build a brain?](https://stankerstjens.github.io/could-a-computer-scientist-build-a-brain/)
+- 2026-08-23 [Compass and certificate](https://aimslab.stanford.edu/blog/compass-and-certificate)
+- 2026-08-23 [Building interactive Git exercises](https://ryjohnson09.github.io/quarto-git-sandbox/)
+- 2026-08-23 [Are all scalable objectives alike?](https://jchencxh.github.io/blog/filling-the-hierarchy-part-1/)
+- 2026-08-23 [AI finally enters its Tycho stage | Ziming Liu](https://kindxiaoming.github.io/blog/2026/tycho/)
+- 2026-08-23 [535B-A23B 18T Token Hero Run + Scaling Ladder](https://wandb.ai/marin-community/marin_moe/reports/535B-A23B-18T-Token-Hero-Run-Scaling-Ladder--VmlldzoxNzc2MDM5Ng)
+- 2026-08-23 [0 train-infer mismatch for Open-weight MoE RL in Open-source code](https://kiddyboots216.github.io/mismatch/)
+- 2026-08-09 [Why You Should Almost Never Use AI to Write Anything Substantive](https://www.erichgrunewald.com/posts/why-i-think-you-should-almost-never-use-ai-to-write-anything-substantive/)
+- 2026-08-09 [Why I’m leaving OpenAI to build telepathy](https://naomibashkansky.com/blog/telepathy/)
+- 2026-08-09 [User awareness in frontier models](https://transluce.org/user-awareness)
+- 2026-08-09 [Tutormoments](https://allenai.org/blog/tutormoments)
+- 2026-08-09 [Thousand dimensional structure 1](https://www.lesswrong.com/posts/sFhW3ZnPMJdnB4Dd6/thousand-dimensional-structure-1)
+- 2026-08-09 [Think and Act as One • Bigtable at Twenty: What Stayed and What Got Rebuilt](https://blog.fnil.net/bigtable-at-twenty/)
+- 2026-08-09 [the-puzzler](https://the-puzzler.github.io/?p=practical-notes-on-lejepa)
+- 2026-08-09 [The end of the age of heroes](https://www.noahpinion.blog/p/the-end-of-the-age-of-heroes)
+- 2026-08-09 [Ten advances in mathematics](https://openai.com/index/ten-advances-in-mathematics/)
+- 2026-08-09 [systempromptindex.ai](https://systempromptindex.ai/)
+- 2026-08-09 [Symbols neural networks and mathematical](https://infinitefaculty.substack.com/p/symbols-neural-networks-and-mathematical)
+- 2026-08-09 [SWD Blog](https://huggingface.co/spaces/veri-safe/SWD-Blog#1-introduction)
+- 2026-08-09 [subspace-notes.luckyiyi.chatgpt.site](https://subspace-notes.luckyiyi.chatgpt.site/)
+- 2026-08-09 [StatsMLlib — Probability, Statistics, and Machine Learning in Lean 4](https://statsmllib.github.io/index.html)
+- 2026-08-09 [Sparse Linear Attention: 当稀疏遇上线性注意力 · Haoyi Zhu](https://www.haoyizhu.site/blog/sparse-linear-attention/)
+- 2026-08-09 [Some notes about anthropics new results](https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/)
+- 2026-08-09 [rsibench.co](https://rsibench.co/)
+- 2026-08-09 [RL Infra Orchestrator - Part 1: Main Loop — Vivek Kashyap](https://vivekvkashyap.github.io/posts/rl-infra-orchestrator-part-1.html)
+- 2026-08-09 [Returning to arc](https://www.lesswrong.com/posts/vLFh8HP3hyNy9MCwe/returning-to-arc)
+- 2026-08-09 [Potential](https://aweers.de/blog/2026/potential/)
+- 2026-08-09 [Photon 2 launch](https://moondream.ai/blog/photon-2-launch)
+- 2026-08-09 [Pervasive annotation errors break](https://ddkang.substack.com/p/pervasive-annotation-errors-break)
+- 2026-08-09 [Pax Machina: New Institutions for Powerful AI · Pax Machina](https://paxmachina.ai/welcome-to-pax-machina)
+- 2026-08-09 [OpenRSI · Frontis-MA1](https://frontisai.github.io/OpenRSI/)
+- 2026-08-09 [Model self identification could be subliminally transferred](https://www.lesswrong.com/posts/cb5quszpxCbFDGk68/model-self-identification-could-be-subliminally-transferred)
+- 2026-08-09 [MatrAIx — Simulate Before Reality](https://matraix.ai/)
+- 2026-08-09 [Mathematical Nexus Collection](https://www.gpeyre.com/mathematical-nexus/)
+- 2026-08-09 [Introducing terminal bench 3 0](https://www.turing.com/blog/introducing-terminal-bench-3-0)
+- 2026-08-09 [Introducing mai cyber 1 flash inside mdash](https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/)
+- 2026-08-09 [Introducing Flex: Let the Model Write the Code — cmpnd](https://www.cmpnd.ai/blog/let-the-model-write-the-code.html)
+- 2026-08-09 [Introducing adapt 1 preview](https://reilabs.org/blog/introducing-adapt-1-preview)
+- 2026-08-09 [Inkling small](https://thinkingmachines.ai/news/inkling-small/)
+- 2026-08-09 [Infinigram books](https://allenai.org/blog/infinigram-books)
+- 2026-08-09 [If you havent recently used claude](https://davidpreichert.substack.com/p/if-you-havent-recently-used-claude)
+- 2026-08-09 [ICML 2026 Paper Explorer](https://deep-diver.github.io/icml2026-explorer/)
+- 2026-08-09 [Goodhart](https://www.pradheep.dev/blogs/goodharts-gambit)
+- 2026-08-09 [From Spread MLE to Implicit MLE](https://mingtian.ai/blog/SpreadMLEtoIMLE)
+- 2026-08-09 [Foundation Models for Oversight](https://transluce.org/foundation-models-for-oversight)
+- 2026-08-09 [Flue 2.0 | Flue](https://flueframework.com/blog/flue-2/)
+- 2026-08-09 [Devtools must be open source - exe.dev blog](https://blog.exe.dev/devtools-must-be-open-source)
+- 2026-08-09 [Cot](https://web.stanford.edu/~cgpotts/blog/cot/)
+- 2026-08-09 [Computing the Gradient of the KL Penalty — Muyu He](https://riddlehe.github.io/blog/kl-gradient-estimators.html)
+- 2026-08-09 [Center for Responsible, Decentralized Intelligence at Berkeley](https://rdi.berkeley.edu/blog/auto-software-dev/)
+- 2026-08-09 [askchem.org](https://askchem.org/)
+- 2026-08-09 [Artifacts Hub](https://artifactshub.ai/)
+- 2026-08-09 [Animate Anyone 2](https://humanaigc.github.io/wan-animate-2/)
+- 2026-08-09 [A safe path to open weights](https://thinkingmachines.ai/blog/a-safe-path-to-open-weights/)
+- 2026-08-09 [2026 07 apertus 1 5](https://apertus-ai.org/articles/2026-07-apertus-1-5/)
+- 2026-07-26 [Why I Left Google DeepMind](https://turntrout.com/why-i-left-google-deepmind)
+- 2026-07-26 [The most forbidden technique is not always forbidden 1](https://www.lesswrong.com/posts/tEFD2bgNWZ6XcurKA/the-most-forbidden-technique-is-not-always-forbidden-1)
+- 2026-07-26 [RIPO](https://www.gensi-thuair.com/portal/blogdetail/RIPO)
+- 2026-07-26 [Resources](https://sites.google.com/view/continual-learning/resources)
+- 2026-07-26 [Provable generalization bounds for](https://ddkang.substack.com/p/provable-generalization-bounds-for)
+- 2026-07-26 [Organization Design for Complex Worlds — an interactive walkthrough](https://jonlib.com/papers/organization-design/interactive/)
+- 2026-07-26 [Kimi K3: The open-weights escalation](https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation)
+- 2026-07-26 [Introducing Laguna S 2.1](https://poolside.ai/blog/introducing-laguna-s-2-1)
+- 2026-07-26 [Expanded SkillOpt Ablations, Skill-Aware Reflection, and SkillOpt-Sleep](https://microsoft.github.io/SkillOpt/blog/gating-reflection-safe-updates/)
+- 2026-07-26 [Does distilling claude carry the persona with it](https://www.lesswrong.com/posts/Jc9YZEmqHgocAKiaH/does-distilling-claude-carry-the-persona-with-it)
+- 2026-07-26 [Chorus: chatting with genomic oracles](https://genomicsxai.github.io/blogs/2026-010/)
+- 2026-07-26 [An analysis of ai generated content at the mechanistic](https://www.lesswrong.com/posts/r7FBQ8XDs6qBYc4K4/an-analysis-of-ai-generated-content-at-the-mechanistic)
+- 2026-07-25 [Why frontier labs are scaling pilled](https://invertedpassion.substack.com/p/why-frontier-labs-are-scaling-pilled)
+- 2026-07-25 [Lychee-FD](https://hitsz-tmg.github.io/Lychee-FD/)
+- 2026-07-25 [latent-thought-flows.vercel.app](https://latent-thought-flows.vercel.app/)
+- 2026-07-25 [Keep paying the humans: notes from an anti-debate](https://mireshghallah.github.io/blog/keep_paying_the_humans.html)
+- 2026-07-25 [Inductive Value Loading 2: J-Lens Analysis — Atakan Tekparmak](https://atakantekparmak.github.io/blog/inductive-value-loading-2/)
+- 2026-07-25 [Frontier Models with Our Harness Achieve ~99% on ARC-AGI-3 Public — Schema](https://schema-harness.github.io/)
+- 2026-07-25 [Estimators for Sparsity — Dhruv Pai](https://dhruvbpai.github.io/blog/estimators-for-sparsity/)
+- 2026-07-25 [Apple-π: Law-Grounded Physical Intelligence](https://21yrm.github.io/Apple-PI-homepage/)
+- 2026-06-29 [Speculation Is All You Need](https://modal.com/blog/spec-is-all-u-need)
+- 2026-06-29 [Forward Self-Models Learn an Empirical Approximation of Neural Network Computation](https://github.com/jagilley/forward-self-models)
