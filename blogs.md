@@ -3,10 +3,10 @@
 ## 大语言模型、推理与智能体
 
 - 2026-09-07 [What it Takes for Coding Agents to Complete Large Software Tasks](https://factory.com/news/what-it-takes-for-coding-agents-to-complete-large-software-tasks)
-- 2026-09-07 [Continual learning infra for self-improving agents](https://github.com/Human-Agent-Society/reef)
 - 2026-09-07 [FrontierHarness Eval](https://frontierharness.org/)
 - 2026-09-07 [Discovery of a new OpenAI agent message board](https://collusion.wiki/index.html)
 - 2026-09-07 [CUA-Lite — An Open Platform for Computer-Use Agents](https://cua-lite.github.io/)
+- 2026-09-07 [Continual learning infra for self-improving agents](https://github.com/Human-Agent-Society/reef)
 - 2026-09-07 [Code World Model: Coding Agent as World Brain](https://buaacyw.github.io/cwm/)
 - 2026-09-07 [Awesome Agentic Artifact Creation](https://agentic-creation.github.io/?filter=Spatial+Artifacts)
 - 2026-09-07 [Atlas: A World Model for Spatial Intelligence | World Labs](https://www.worldlabs.ai/blog/atlas)
@@ -55,8 +55,10 @@
 - 2026-07-25 [AlayaWorld - Interactive World Model Demo](https://alaya-lab.github.io/AlayaWorld/)
 - 2026-07-25 [Agentic world models](https://cameronrwolfe.substack.com/p/agentic-world-models)
 - 2026-07-25 [Agent swarms and the new model economics · Cursor](https://cursor.com/blog/agent-swarm-model-economics)
-- 2026-06-29 [RL at 1T Scale: prime-rl Performance Deep Dive](https://www.primeintellect.ai/blog/rl-at-1t-scale)
 - 2026-06-29 [S-Agent: Spatial Tool-Use Elicits Reasoning for Spatial Intelligence](https://github.com/Ropedia/S-Agent)
+- 2026-06-29 [RL at 1T Scale: prime-rl Performance Deep Dive](https://www.primeintellect.ai/blog/rl-at-1t-scale)
+- 2026-06-01 [VILA-Lab/FigMirror: An Automated AI Agent Tool for Plotting Your Data in Any Paper's Figure Style.](https://github.com/VILA-Lab/FigMirror)
+- 2026-06-01 [Introducing dynamic workflows | Claude by Anthropic](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code)
 
 ## 训练、优化与模型架构
 
@@ -86,6 +88,10 @@
 - 2026-07-25 [ISO: An RLVR-Native Optimization Stack](https://iso-rlvr.github.io/)
 - 2026-06-29 [Trainee-to-Trainer — LLM-as-Environment-Engineer for RL](https://lark-ai-lab.github.io/trainee-to-trainer.github.io/)
 - 2026-06-29 [Progressive Distillation of ELF: Few-Step Generation for Embedded Language Flows](https://linlu-qiu.github.io/assets/html/elf_pd.html)
+- 2026-06-15 [Is Frontier Asynchronous RL Solved? — Luke J. Huang](https://luk-huang.github.io/personal-website/blog/is-frontier-asynchronous-rl-solved.html)
+- 2026-06-15 [Environment Scaling for Agentic RL | Jiaxin Zhang](https://jxzhangjhu.github.io/blog/2026/environment-scaling-for-agentic-rl/)
+- 2026-06-01 [PopuLoRA: Co-Evolving LLM Populations for Reasoning Self-Play](https://arxiv.org/abs/2605.16727v1)
+- 2026-06-01 [Jiaxin-Wen/GDsuite: A toy eval suite for tracing generalization dynamics of LM pre-training](https://github.com/Jiaxin-Wen/GDsuite)
 
 ## 安全、对齐、评测与可解释性
 
@@ -117,16 +123,16 @@
 - 2026-06-29 [Predicting model behavior before release by simulating deployment | OpenAI](https://openai.com/index/deployment-simulation/)
 - 2026-06-29 [OSWorld 2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks](https://snorkel.ai/research-paper/os-world-2/)
 - 2026-06-29 [On the Position Bias of On-Policy Distillation](https://yannx1e.github.io/IW-OPD/)
-- 2026-06-29 [Hallucination in World Models is Predictable and Preventable](https://arxiv.org/abs/2606.27326)
 - 2026-06-29 [NatureBench: Can Coding Agents Match the Published SOTA of Nature-Family Papers?](https://github.com/FrontisAI/NatureBench)
-- 2026-06-29 [DiffusionBench: On Holistic Evaluation of Diffusion Transformers](https://satori-ai.cn/api/pdf?id=2606.24888)
+- 2026-06-29 [Hallucination in World Models is Predictable and Preventable](https://arxiv.org/abs/2606.27326)
+- 2026-06-29 [DiffusionBench: On Holistic Evaluation of Diffusion Transformers](https://arxiv.org/abs/2606.24888)
 - 2026-06-29 [Agents in the Era of Experience](https://frontisai.github.io/Awesome-Self-Improving-Agents/)
 
 ## 视觉、多模态与生成
 
 - 2026-09-07 [VideoDeltaNet on MiniMax H3](https://openvdn.github.io/)
-- 2026-09-07 [Introducing Solaris](https://runway.com/news/research/introducing-solaris)
 - 2026-09-07 [ROMS-IMLE: A Minimalist Approach to Competitive Single-Step Generative Modelling | Chirag Vashist](https://serchirag.github.io/roms-imle/)
+- 2026-09-07 [Introducing Solaris](https://runway.com/news/research/introducing-solaris)
 - 2026-09-07 [FastVideo FastH3 V1: Open-Weight 4-Step Sparse Distilled Minimax H3 for 14x Speedup on NVIDIA Blackwell GPU | Hao AI Lab @ UCSD](https://haoailab.com/blogs/fasth3-preview/)
 - 2026-09-07 [DiffusionOPSD — On-Policy Self-Distillation in Diffusion Models](https://diffusionopsd.github.io/)
 - 2026-09-07 [Continuous diffusion language models – Sander Dieleman](https://sander.ai/2026/08/24/continuous-dlms.html?v=1)
@@ -134,8 +140,8 @@
 - 2026-08-23 [Some Theoretical and Practical Thoughts on Diffusion Language Models | Junbo Zhao (Jake)](https://jzhao2024.github.io/notes/2026/08/08/diffusion-language-models.html)
 - 2026-08-23 [Harrier K40 domain and quality overview](https://storage.googleapis.com/marin-public/held/harrier-k40-cluster-overview/2026.08.18/index.html?revision=uniform-sampling#cluster-15)
 - 2026-08-23 [GitHub - MiniMax-AI/MiniMax-Music3](https://github.com/MiniMax-AI/MiniMax-Music3)
-- 2026-08-23 [A plain-language writing skill for AI agents, with a revision view that shows what changed](https://github.com/docwriter-org/plain-writing-skill)
 - 2026-08-23 [Accelerating LTX-2.5 with the Sol Video Inference Engine | NVIDIA](https://nvlabs.github.io/Sana/Sol-Engine/LTX25/)
+- 2026-08-23 [A plain-language writing skill for AI agents, with a revision view that shows what changed](https://github.com/docwriter-org/plain-writing-skill)
 - 2026-08-09 [VISTA: A Visual Harness for Reasoning in an Interactive World](https://vista-research.github.io/)
 - 2026-08-09 [Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes](https://junlinhan.github.io/projects/physics_of_mm_pretrain/)
 - 2026-08-09 [Scaling Properties of Text Conditioning in Visual Generation](https://heheyas.github.io/context-scaling/)
@@ -149,6 +155,9 @@
 - 2026-07-25 [Qwen audio 30 tts more multilingual](https://tongyilab.substack.com/p/qwen-audio-30-tts-more-multilingual)
 - 2026-07-25 [FLUX 3: Multimodal Video, Image & Audio](https://bfl.ai/blog/flux-3)
 - 2026-06-29 [Diffusion Policy Optimization without Drifting Apart](https://arxiv.org/abs/2606.13795)
+- 2026-06-15 [AsyncWebRL: Efficient Multi-Step RL for Visual Web Agents](https://asyncwebrl-website.github.io)
+- 2026-06-01 [Spectral Progressive Diffusion](https://howardxiao.ca/speed/)
+- 2026-06-01 [Project — ASR Robustness Showcase](https://xzf-thu.github.io/Mega-ASR/)
 
 ## 机器人与具身智能
 
@@ -168,12 +177,12 @@
 - 2026-09-07 [ArgMaxRL: Generalizing MaxRL to Continuous Rewards — Research | doubleAI](https://www.doubleai.com/research/argmaxrl-generalizing-maxrl-to-continuous-rewards)
 - 2026-08-23 [Why do I read research papers? :: Vivek Srikumar](https://svivek.com/writing/2026-08-18-why-i-read-papers.html)
 - 2026-08-23 [When We Did Research By Hand](https://nightingal3.github.io/blog/2026/08/09/research-retrospective/)
+- 2026-08-23 [VALG: An Agentic System for ML Theory Research](https://github.com/DechenZhang/VALG-ML-Theory-Agent)
 - 2026-08-23 [The Year in AI Papers: Essential Research from 2025–2026](https://www.1kpapers.com/)
 - 2026-08-23 [Stealing Reasoning Traces from Proprietary LLM APIs](https://research.snyk.io/blog/stealing-reasoning-traces/)
 - 2026-08-23 [Measuring Autonomous AI Research](https://www.primeintellect.ai/blog/measuring-autonomous-research)
 - 2026-08-23 [LittleLearner: Language Models Under Pedagogically-Controlled Knowledge Exposure](https://littlelearner-ll.github.io/)
 - 2026-08-23 [Introducing muse glimmer open agentic model](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)
-- 2026-08-23 [VALG: An Agentic System for ML Theory Research](https://github.com/DechenZhang/VALG-ML-Theory-Agent)
 - 2026-08-23 [Exploring new frontiers of AI and games research — Google DeepMind](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games)
 - 2026-08-23 [Comfyresearch see how learning happens](https://meta-circle.com/blog/comfyresearch-see-how-learning-happens)
 - 2026-08-23 [Claude accelerates protein design](https://www.anthropic.com/research/Claude-accelerates-protein-design)
@@ -196,12 +205,15 @@
 - 2026-07-25 [How we built our knowledge base](https://www.cerebras.ai/blog/how-we-built-our-knowledge-base)
 - 2026-07-25 [Blog | Why Timing Is Everything in Semantic Search](https://chimchim89.github.io/late-interaction-basics/)
 - 2026-07-15 [A Taxonomy of Self-evolving Agents](https://x.com/atasteoff/status/2074800880017342665)
-- 2026-06-29 [Self-improving Memory for Agents](https://www.perplexity.ai/sr-Cyrl-ME/hub/blog/self-improving-memory-for-agents)
+- 2026-06-29 [Self-improving Memory for Agents](https://www.perplexity.ai/hub/blog/self-improving-memory-for-agents)
 - 2026-06-29 [Notes on the Industry Job Search | Vuink.com](https://vuink.com/post/nyvfnjhssyrf-d-dtvguho-d-dvb/blog/job-search)
 - 2026-06-29 [Memory Models: Towards Agents That Learn | Letta](https://www.letta.com/blog/towards-agents-that-learn/)
 - 2026-06-29 [GUIDE-LLM](https://www.llm-checklist.com/)
-- 2026-06-29 [Beyond LoRA: Can you beat the most popular fine-tuning technique? – Deep Learning Daily](https://www.deeplearningdaily.com/beyond-lora-can-you-beat-the-most-popular-fine-tuning-technique/)
+- 2026-06-29 [Beyond LoRA: Can you beat the most popular fine-tuning technique?](https://huggingface.co/blog/peft-beyond-lora)
 - 2026-06-29 [Agentic RL: Frameworks and Best Practices](https://cameronrwolfe.substack.com/p/agentic-rl)
+- 2026-06-15 [tilde-research/comp-muon-release: Compositional Muon release](https://github.com/tilde-research/comp-muon-release)
+- 2026-06-01 [IntologyAI/NanoGPT-Bench](https://github.com/IntologyAI/NanoGPT-Bench)
+- 2026-06-01 [facebookresearch/autoform-bot: Autoform Bot](https://github.com/facebookresearch/autoform-bot)
 
 ## 系统、推理与效率
 
@@ -214,11 +226,11 @@
 - 2026-08-23 [Inference Performance from First Principles — Aleph Alpha](https://aleph-alpha.com/en/blog/inference-performance-from-first-principles/)
 - 2026-08-23 [How to Parallelize a Transformer for Training — an explorable explanation](https://ezyang.github.io/interactive-parallelize-transformer/#D=6144&F=3072&L=60&E=129&k=5&Sexp=1)
 - 2026-08-23 [GTSAM Goes GPU: A CUDA Backend for Nonlinear Optimization](https://gtsam.org/2026/08/20/cuda-backend.html)
-- 2026-08-23 [Arctic Training and Inference Platform](https://github.com/Snowflake-AI-Research/Arctic-Platform)
 - 2026-08-23 [From PyTorch model to end-to-end TensorRT inference experience in two commands—AI-native, cross-platform, and built for the best possible user experience](https://github.com/NVIDIA/TensorRT-Model-Connect)
 - 2026-08-23 [Formally verified distributed locks for sandboxes - Scott Hao](https://scotthao.com/writing/distributed-locks)
 - 2026-08-23 [Fast Engine Recovery: Sub-Second Engine Restart for SGLang via Weight Cache Daemon](https://www.lmsys.org/blog/2026-08-21-sglang-fast-recovery)
 - 2026-08-23 [DFlash 2: Keep Drafting Parallel](https://inco.ai/blog/dflash2/)
+- 2026-08-23 [Arctic Training and Inference Platform](https://github.com/Snowflake-AI-Research/Arctic-Platform)
 - 2026-08-09 [Will parallelization limits delay an intelligence explosion?](https://epoch.ai/publications/parallelization-constraints-could-delay-a-technological-singularity)
 - 2026-08-09 [Towards Blackwell-Native 8-bit and 4-bit RL: End-to-End MXFP8 and NVFP4 RL in Miles](https://www.lmsys.org/blog/2026-07-29-mxfp8-nvfp4-rl)
 - 2026-08-09 [Mixture-of-Kittens: our open-source MoE megakernel for NVL72s · Cursor](https://cursor.com/blog/mixture-of-kittens)
@@ -236,6 +248,9 @@
 - 2026-07-14 [What is Iterative RandOpt, and why iterative?](https://github.com/sunrainyg/RandOpt/tree/iterative-randopt)
 - 2026-06-29 [RL Systems Mind the Gap: Matching Trainer and Generator Throughput](https://newsletter.semianalysis.com/p/rl-systems-mind-the-gap-matching)
 - 2026-06-29 [KV Cache Compression and Its Infra Problems | Efficient AI](https://research.nvidia.com/labs/eai/post/kv-cache-compression-and-its-infra-problems/)
+- 2026-06-01 [Rethinking RL Infra for Agents | B'Log](https://billxbf.github.io/posts/agent-rl-infra/)
+- 2026-06-01 [Native RL APIs in vLLM | vLLM Blog](https://vllm.ai/blog/2026-05-28-native-rl-apis)
+- 2026-06-01 [mKernel: Fast Multi-GPU, Multi-Node Fused Kernels](https://uccl-project.github.io/posts/mkernel/)
 
 ## 研究方法、职业与科学写作
 
@@ -249,6 +264,8 @@
 - 2026-07-26 [Intelligence is not the main bottleneck](https://www.writingruxandrabio.com/p/intelligence-is-not-the-main-bottleneck)
 - 2026-07-26 [An introduction to Machine Learning for health and epidemiology](https://gael-varoquaux.info/health_ml_tutorial/index.html)
 - 2026-06-29 [ICML 2026 Seoul Guide](https://t.co/AdN1sHMg1I)
+- 2026-06-15 [The Second Half of AI for Science | Amber Liu](https://amberljc.github.io/blog/2026-06-10-second-half-of-ai-for-science.html)
+- 2026-06-01 [How to Land a Frontier Lab Job](https://vladfeinberg.com/2026/05/10/how-to-land-a-job-at-a-frontier-lab.html)
 
 ## 其他跨领域内容
 
@@ -260,9 +277,9 @@
 - 2026-09-07 [Representing the Physical World through Structured Language — MirroS](https://mirros.ai/blog/representing-physical-world)
 - 2026-09-07 [NoRA: Normalized Low-Rank Adaptation](https://spherelab.ai/NoRA/)
 - 2026-09-07 [Modeling Token Demand](https://theothersteven.github.io/modeling-token-demand/)
-- 2026-09-07 [IFM K2](https://ifm.ai/k2/)
 - 2026-09-07 [Introducing GPT-6 Astra](https://openai.com/index/gpt-6-astra/)
 - 2026-09-07 [infinite-livestream](https://github.com/reactor-team/infinite-livestream)
+- 2026-09-07 [IFM K2](https://ifm.ai/k2/)
 - 2026-09-07 [Field Studies](https://field-studies.ai.studio/)
 - 2026-09-07 [Chopin](https://githubnext.com/projects/chopin/)
 - 2026-09-07 [Bio-Babel — The classics of bioinformatics, in more than one tongue](https://biobabel.stanford.edu/)
@@ -364,7 +381,7 @@
 - 2026-08-09 [2026 07 apertus 1 5](https://apertus-ai.org/articles/2026-07-apertus-1-5/)
 - 2026-07-26 [Why I Left Google DeepMind](https://turntrout.com/why-i-left-google-deepmind)
 - 2026-07-26 [The most forbidden technique is not always forbidden 1](https://www.lesswrong.com/posts/tEFD2bgNWZ6XcurKA/the-most-forbidden-technique-is-not-always-forbidden-1)
-- 2026-07-26 [RIPO](https://www.gensi-thuair.com/portal/blogdetail/RIPO)
+- 2026-07-26 [RIPO](https://arxiv.org/abs/2607.10169)
 - 2026-07-26 [Resources](https://sites.google.com/view/continual-learning/resources)
 - 2026-07-26 [Provable generalization bounds for](https://ddkang.substack.com/p/provable-generalization-bounds-for)
 - 2026-07-26 [Organization Design for Complex Worlds — an interactive walkthrough](https://jonlib.com/papers/organization-design/interactive/)
@@ -384,3 +401,5 @@
 - 2026-07-25 [Apple-π: Law-Grounded Physical Intelligence](https://21yrm.github.io/Apple-PI-homepage/)
 - 2026-06-29 [Speculation Is All You Need](https://modal.com/blog/spec-is-all-u-need)
 - 2026-06-29 [Forward Self-Models Learn an Empirical Approximation of Neural Network Computation](https://github.com/jagilley/forward-self-models)
+- 2026-06-01 [How Much AI Compute Do Frontier Labs Use? | Epoch AI](https://epoch.ai/gradient-updates/frontier-labs-dont-use-most-ai-compute)
+- 2026-06-01 [FlashML-org/flashlib: Fast and memory-efficient classical machine learning operators](https://github.com/FlashML-org/flashlib)
