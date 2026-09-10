@@ -10,3 +10,5 @@
 | `XIAOHONGSHU.md` | **从小红书抓新合集的 playbook**。用户要求更新列表时才执行；默认 gitignore，不要提交 |
 
 改列表后运行 `python3 generate.py`。不要改分类标题。不要提交 `.tmp-docx/`、cookie、`xsec_token`。未要求时不要 commit / push。
+
+页面顶部只保留主标题「Blog 推荐」，不要再加说明小标题（例如篇数、日期范围、「点标题即可打开原文」之类）。

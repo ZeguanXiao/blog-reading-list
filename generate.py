@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Turn blogs.md into a mobile-friendly index.html."""
+"""Turn blogs.md into a mobile-friendly index.html.
+
+Keep the page header as the title only. Do not add a subtitle or blurb.
+"""
 
 from __future__ import annotations
 
