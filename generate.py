@@ -48,6 +48,33 @@ def parse(markdown: str) -> list[dict]:
     return [section for section in sections if section["items"]]
 
 
+def group_by_date(sections: list[dict]) -> list[dict]:
+    items = [item for section in sections for item in section["items"]]
+    items.sort(key=lambda item: (item["date"], item["title"].lower()), reverse=True)
+    groups: list[dict] = []
+    current: dict | None = None
+    for item in items:
+        date = item["date"] or "未标注日期"
+        if current is None or current["title"] != date:
+            current = {"title": date, "items": []}
+            groups.append(current)
+        current["items"].append(item)
+    return groups
+
+
+def render_section(section: dict, *, section_id: str, extra_class: str = "") -> str:
+    items = "\n".join(render_item(item) for item in section["items"])
+    cls = f"section {extra_class}".strip()
+    return (
+        f'''    <section class="{cls}" data-section="{html.escape(section["title"], quote=True)}" id="{section_id}">
+      <h2>{html.escape(section["title"])} <em>{len(section["items"])}</em></h2>
+      <div class="items">
+{items}
+      </div>
+    </section>'''
+    )
+
+
 def render_item(item: dict) -> str:
     title = html.escape(item["title"])
     url = html.escape(item["url"], quote=True)
@@ -69,17 +96,14 @@ def render(sections: list[dict]) -> str:
         f'      <button type="button" class="chip" data-section="{html.escape(section["title"], quote=True)}">{html.escape(section["title"])} <span>{len(section["items"])}</span></button>'
         for section in sections
     )
-    blocks = []
-    for index, section in enumerate(sections):
-        items = "\n".join(render_item(item) for item in section["items"])
-        blocks.append(
-            f'''    <section class="section" data-section="{html.escape(section["title"], quote=True)}" id="sec-{index}">
-      <h2>{html.escape(section["title"])} <em>{len(section["items"])}</em></h2>
-      <div class="items">
-{items}
-      </div>
-    </section>'''
-        )
+    date_blocks = "\n".join(
+        render_section(group, section_id=f"date-{index}")
+        for index, group in enumerate(group_by_date(sections))
+    )
+    category_blocks = "\n".join(
+        render_section(section, section_id=f"sec-{index}")
+        for index, section in enumerate(sections)
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -171,6 +195,15 @@ def render(sections: list[dict]) -> str:
       color: var(--muted);
       font-weight: 500;
     }}
+    #by-date .section h2 {{
+      font-variant-numeric: tabular-nums;
+    }}
+    #by-date .item {{
+      grid-template-columns: minmax(0, 1fr);
+    }}
+    #by-date .item-date {{
+      display: none;
+    }}
     .items {{
       display: grid;
       grid-template-columns: 1fr;
@@ -240,7 +273,12 @@ def render(sections: list[dict]) -> str:
 {chips}
     </div>
     <p class="empty">没有匹配的文章</p>
-{chr(10).join(blocks)}
+    <div id="by-date">
+{date_blocks}
+    </div>
+    <div id="by-category" class="hidden">
+{category_blocks}
+    </div>
   </div>
   <script>
     const q = document.getElementById("q");
@@ -249,10 +287,14 @@ def render(sections: list[dict]) -> str:
 
     function filter() {{
       const query = q.value.trim().toLowerCase();
+      const allMode = !activeSection;
+      document.getElementById("by-date").classList.toggle("hidden", !allMode);
+      document.getElementById("by-category").classList.toggle("hidden", allMode);
+      const root = document.getElementById(allMode ? "by-date" : "by-category");
       let shown = 0;
-      document.querySelectorAll(".section").forEach((section) => {{
+      root.querySelectorAll(".section").forEach((section) => {{
         const name = section.dataset.section;
-        const sectionMatch = !activeSection || activeSection === name;
+        const sectionMatch = allMode || activeSection === name;
         let sectionShown = 0;
         section.querySelectorAll(".item").forEach((item) => {{
           const hit = !query || item.dataset.title.includes(query) || item.href.toLowerCase().includes(query);
@@ -263,7 +305,7 @@ def render(sections: list[dict]) -> str:
             shown += 1;
           }}
         }});
-        section.classList.toggle("hidden", sectionShown === 0);
+        section.classList.toggle("hidden", !sectionMatch || sectionShown === 0);
       }});
       document.body.classList.toggle("is-empty", shown === 0);
     }}
@@ -289,7 +331,11 @@ def host_of(url: str) -> str:
 def main() -> None:
     sections = parse(SRC.read_text(encoding="utf-8"))
     (ROOT / "index.html").write_text(render(sections), encoding="utf-8")
-    print(f"Wrote index.html with {sum(len(s['items']) for s in sections)} links in {len(sections)} sections.")
+    dates = group_by_date(sections)
+    print(
+        f"Wrote index.html with {sum(len(s['items']) for s in sections)} links "
+        f"in {len(sections)} categories, {len(dates)} dates."
+    )
 
 
 if __name__ == "__main__":
