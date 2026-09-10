@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f1e8">
+  <title>Blog 推荐</title>
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --ink: #1c1916;
+      --muted: #6b635a;
+      --card: rgba(255, 252, 247, 0.92);
+      --line: rgba(28, 25, 22, 0.08);
+      --accent: #b45309;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Noto Sans SC", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #ffe7c2 0%, transparent 50%),
+        radial-gradient(900px 500px at 100% 0%, #ead7c3 0%, transparent 46%),
+        var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px 16px 64px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.7rem;
+      letter-spacing: -0.03em;
+    }
+    header p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .search {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      margin: 20px 0 12px;
+      padding: 10px 0 8px;
+      background: linear-gradient(var(--bg) 70%, transparent);
+    }
+    .search input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font: inherit;
+      font-size: 16px;
+      background: var(--card);
+      box-shadow: 0 8px 24px rgba(28, 25, 22, 0.05);
+    }
+    .chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 4px 0 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .chip, .chip-all {
+      flex: 0 0 auto;
+      border: 0;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font: inherit;
+      font-size: 13px;
+      background: rgba(28, 25, 22, 0.06);
+      color: var(--ink);
+    }
+    .chip span, .count {
+      color: var(--muted);
+    }
+    .chip.active, .chip-all.active {
+      background: var(--ink);
+      color: #fff;
+    }
+    .chip.active span { color: #f3d5b0; }
+    .section { margin-top: 28px; }
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+    .section h2 em {
+      font-style: normal;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .item {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin: 0 0 8px;
+    }
+    .item-title {
+      display: block;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+    .item-host {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      word-break: break-all;
+    }
+    .empty {
+      display: none;
+      margin-top: 40px;
+      text-align: center;
+      color: var(--muted);
+    }
+    body.is-empty .empty { display: block; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Blog 推荐</h1>
+      <p>近两个月收集的博客，共 305 篇。点标题即可打开原文。</p>
+    </header>
+    <div class="search">
+      <input id="q" type="search" placeholder="搜索标题或网站" enterkeyhint="search" autocomplete="off">
+    </div>
+    <div class="chips">
+      <button type="button" class="chip-all active" data-section="">全部 <span class="count">305</span></button>
+      <button type="button" class="chip" data-section="大语言模型、推理与智能体">大语言模型、推理与智能体 <span>47</span></button>
+      <button type="button" class="chip" data-section="训练、优化与模型架构">训练、优化与模型架构 <span>21</span></button>
+      <button type="button" class="chip" data-section="安全、对齐、评测与可解释性">安全、对齐、评测与可解释性 <span>28</span></button>
+      <button type="button" class="chip" data-section="视觉、多模态与生成">视觉、多模态与生成 <span>18</span></button>
+      <button type="button" class="chip" data-section="机器人与具身智能">机器人与具身智能 <span>4</span></button>
+      <button type="button" class="chip" data-section="检索、知识与数据">检索、知识与数据 <span>36</span></button>
+      <button type="button" class="chip" data-section="系统、推理与效率">系统、推理与效率 <span>27</span></button>
+      <button type="button" class="chip" data-section="研究方法、职业与科学写作">研究方法、职业与科学写作 <span>8</span></button>
+      <button type="button" class="chip" data-section="其他跨领域内容">其他跨领域内容 <span>116</span></button>
+    </div>
+    <p class="empty">没有匹配的文章</p>
+    <section class="section" data-section="大语言模型、推理与智能体" id="sec-0">
+      <h2>大语言模型、推理与智能体 <em>47</em></h2>
+        <a class="item" href="https://envharness.com/" data-title="envharness: awakening static worlds for agent learning"><span class="item-title">EnvHarness: Awakening Static Worlds for Agent Learning</span><span class="item-host">envharness.com</span></a>
+        <a class="item" href="https://jhu-clsp.github.io/speedrunner/" data-title="speedrunner — skills as programs for cheaper llm agents"><span class="item-title">SpeedRunner — skills as programs for cheaper LLM agents</span><span class="item-host">jhu-clsp.github.io</span></a>
+        <a class="item" href="https://www.beren.io/2026-07-26-How-Can-LLM-RL-Work-Despite-Information-Theoretic-Inefficiency/" data-title="how can llm rl work despite information-theoretic inefficiency"><span class="item-title">How can LLM RL Work Despite Information-Theoretic Inefficiency</span><span class="item-host">beren.io</span></a>
+        <a class="item" href="https://ulab-uiuc.github.io/LLMRouter/blog/" data-title="llmrouter blog - llmrouter"><span class="item-title">LLMRouter Blog - LLMRouter</span><span class="item-host">ulab-uiuc.github.io</span></a>
+        <a class="item" href="https://huggingface.co/blog/sergiopaniego/agentic-rl-2026" data-title="agentic rl 2026"><span class="item-title">Agentic rl 2026</span><span class="item-host">huggingface.co</span></a>
+        <a class="item" href="https://www.liquid.ai/blog/agent-loops" data-title="designing loops for production-grade work | blog"><span class="item-title">Designing Loops for Production-Grade Work | Blog</span><span class="item-host">liquid.ai</span></a>
+        <a class="item" href="https://engram.com/blog/legal-agents-with-memory" data-title="understanding a law firm through study"><span class="item-title">Understanding a Law Firm through Study</span><span class="item-host">engram.com</span></a>
+        <a class="item" href="https://yongzx.github.io/blog/2026/08/08/llm-can-jump" data-title="hot take: llm can &#x27;jump&#x27;"><span class="item-title">Hot Take: LLM can &#x27;jump&#x27;</span><span class="item-host">yongzx.github.io</span></a>
+        <a class="item" href="https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/" data-title="nvidia nemotron 3.5 lightning delivers fast, accurate specialized task execution for long-running agents | nvidia technical blog"><span class="item-title">NVIDIA Nemotron 3.5 Lightning Delivers Fast, Accurate Specialized Task Execution for Long-Running Agents | NVIDIA Technical Blog</span><span class="item-host">developer.nvidia.com</span></a>
+        <a class="item" href="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/" data-title="diving into reliable self-evolving agents: a survey"><span class="item-title">Diving into Reliable Self-Evolving Agents: A Survey</span><span class="item-host">wkqdzkd.github.io</span></a>
+        <a class="item" href="https://zz1358m.github.io/Project-Agentic-ESOpt" data-title="agentic esopt"><span class="item-title">Agentic ESOpt</span><span class="item-host">zz1358m.github.io</span></a>
+        <a class="item" href="https://lh-harness.pages.dev/#idea" data-title="longhorizon-harness: advancing long-horizon agents for real-world tasks"><span class="item-title">LongHorizon-Harness: Advancing Long-Horizon Agents for Real-World Tasks</span><span class="item-host">lh-harness.pages.dev</span></a>
+        <a class="item" href="https://rowansci.com/blog/simulation-tools-improve-agent-problem-solving" data-title="simulation tools improve agent problem solving"><span class="item-title">Simulation tools improve agent problem solving</span><span class="item-host">rowansci.com</span></a>
+        <a class="item" href="https://www.databricks.com/blog/managing-ai-coding-costs-scale" data-title="managing ai coding costs at scale | databricks blog"><span class="item-title">Managing AI Coding Costs at Scale | Databricks Blog</span><span class="item-host">databricks.com</span></a>
+        <a class="item" href="https://jinyansu1.github.io/blog/2026/07/agent-context-engineering-long-running-harness/" data-title="the evolution of agents: from context engineering to long-running harnesses / agent 从 context engineering 到 long-running harness 的演变过程"><span class="item-title">The Evolution of Agents: From Context Engineering to Long-running Harnesses / Agent 从 Context Engineering 到 Long-running Harness 的演变过程</span><span class="item-host">jinyansu1.github.io</span></a>
+        <a class="item" href="https://www.latent.space/p/unpacking-chatgpt-work" data-title="unpacking chatgpt work: the agent for a billion users"><span class="item-title">Unpacking ChatGPT Work: the Agent for a Billion Users</span><span class="item-host">latent.space</span></a>
+        <a class="item" href="https://www.liquid.ai/blog/lfm2-5-2-6b" data-title="lfm2.5-2.6b: deploy agents everywhere | blog"><span class="item-title">LFM2.5-2.6B: Deploy Agents Everywhere | Blog</span><span class="item-host">liquid.ai</span></a>
+        <a class="item" href="https://huggingface.co/blog/agent-intrusion-technical-timeline" data-title="agent intrusion technical timeline"><span class="item-title">Agent intrusion technical timeline</span><span class="item-host">huggingface.co</span></a>
+        <a class="item" href="https://alvinzh04.github.io/blog/completeness-cliff.html" data-title="the completeness cliff: models escape wrong reasoning until it"><span class="item-title">The completeness cliff: models escape wrong reasoning until it</span><span class="item-host">alvinzh04.github.io</span></a>
+        <a class="item" href="https://doomscrollingbabel.manoel.xyz/p/science-should-be-open-for-llms-too" data-title="science should be open for llms too"><span class="item-title">Science should be open for llms too</span><span class="item-host">doomscrollingbabel.manoel.xyz</span></a>
+        <a class="item" href="https://www.primeintellect.ai/blog/prime-agent" data-title="prime agent: a self-improving rlm agent"><span class="item-title">Prime Agent: A self-improving RLM agent</span><span class="item-host">primeintellect.ai</span></a>
+        <a class="item" href="https://vllm.ai/blog/2026-07-27-k3" data-title="kimi k3 is here: efficient day-0 support on vllm"><span class="item-title">Kimi K3 Is Here: Efficient Day-0 Support on vLLM</span><span class="item-host">vllm.ai</span></a>
+        <a class="item" href="https://nathan.rs/posts/dllm-kv-caching/" data-title="kv caching for dllms is noise process agnostic"><span class="item-title">KV Caching for dLLMs is Noise Process Agnostic</span><span class="item-host">nathan.rs</span></a>
+        <a class="item" href="https://martinodersky.substack.com/p/tracked-capabilities-for-safer-agents" data-title="tracked capabilities for safer agents"><span class="item-title">Tracked capabilities for safer agents</span><span class="item-host">martinodersky.substack.com</span></a>
+        <a class="item" href="https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/" data-title="is ai reasoning right for the wrong reasons 20260731"><span class="item-title">Is ai reasoning right for the wrong reasons 20260731</span><span class="item-host">quantamagazine.org</span></a>
+        <a class="item" href="https://mental-world.github.io/" data-title="mental world modeling"><span class="item-title">Mental World Modeling</span><span class="item-host">mental-world.github.io</span></a>
+        <a class="item" href="https://blog.cosmos-institute.org/p/we-gave-a-village-personal-ai-agents?r=7f9zj5&amp;utm_campaign=post&amp;utm_medium=web" data-title="we gave a village personal ai agents. here&#x27;s what happened"><span class="item-title">We Gave a Village Personal AI Agents. Here&#x27;s What Happened</span><span class="item-host">blog.cosmos-institute.org</span></a>
+        <a class="item" href="https://rocm.blogs.amd.com/artificial-intelligence/instella-moe/README.html" data-title="introducing instella-moe: a state-of-the-art fully open mixture-of-experts language model"><span class="item-title">Introducing Instella-MoE: A State-of-the-Art Fully Open Mixture-of-Experts Language Model</span><span class="item-host">rocm.blogs.amd.com</span></a>
+        <a class="item" href="https://www.lesswrong.com/posts/wYpjXRLqbLbnmjbJP/llms-are-still-mostly-powered-by-imitative-learning-not-rl" data-title="llms are still mostly powered by imitative learning not rl"><span class="item-title">Llms are still mostly powered by imitative learning not rl</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://novasky-ai.notion.site/skyrl-v03" data-title="notion | where teams and agents work together"><span class="item-title">Notion | Where teams and agents work together</span><span class="item-host">novasky-ai.notion.site</span></a>
+        <a class="item" href="https://ruhan-wang.github.io/Harness-Handbook/" data-title="harness handbook — making agent harnesses understandable, auditable &amp; editable"><span class="item-title">Harness Handbook — Making Agent Harnesses Understandable, Auditable &amp; Editable</span><span class="item-host">ruhan-wang.github.io</span></a>
+        <a class="item" href="https://selfimproving-agent.github.io/" data-title="self-improvements in modern agentic systems — survey hub"><span class="item-title">Self-Improvements in Modern Agentic Systems — Survey Hub</span><span class="item-host">selfimproving-agent.github.io</span></a>
+        <a class="item" href="https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms" data-title="controlling reasoning effort in llms"><span class="item-title">Controlling Reasoning Effort in LLMs</span><span class="item-host">magazine.sebastianraschka.com</span></a>
+        <a class="item" href="https://pydantic.dev/articles/observability-tools-agents-want" data-title="observability mcp comparison: pydantic logfire, clickstack, langsmith, braintrust, galileo, phoenix, and langfuse"><span class="item-title">Observability MCP comparison: Pydantic Logfire, ClickStack, LangSmith, Braintrust, Galileo, Phoenix, and Langfuse</span><span class="item-host">pydantic.dev</span></a>
+        <a class="item" href="https://gregorygundersen.com/blog/2025/10/01/large-language-models/" data-title="large language models"><span class="item-title">Large language models</span><span class="item-host">gregorygundersen.com</span></a>
+        <a class="item" href="https://filmworld-ai.github.io/" data-title="filmworld — agentic novel-to-film generation"><span class="item-title">FilmWorld — Agentic Novel-to-Film Generation</span><span class="item-host">filmworld-ai.github.io</span></a>
+        <a class="item" href="https://alaya-lab.github.io/AlayaWorld/" data-title="alayaworld - interactive world model demo"><span class="item-title">AlayaWorld - Interactive World Model Demo</span><span class="item-host">alaya-lab.github.io</span></a>
+        <a class="item" href="https://yanmaaaaaa.notion.site/vidaforge" data-title="notion | where teams and agents work together"><span class="item-title">Notion | Where teams and agents work together</span><span class="item-host">yanmaaaaaa.notion.site</span></a>
+        <a class="item" href="https://cameronrwolfe.substack.com/p/agentic-world-models" data-title="agentic world models"><span class="item-title">Agentic world models</span><span class="item-host">cameronrwolfe.substack.com</span></a>
+        <a class="item" href="https://cursor.com/blog/agent-swarm-model-economics" data-title="agent swarms and the new model economics · cursor"><span class="item-title">Agent swarms and the new model economics · Cursor</span><span class="item-host">cursor.com</span></a>
+        <a class="item" href="https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/" data-title="how ai agents are transforming scientific discovery — google deepmind"><span class="item-title">How AI Agents are transforming scientific discovery — Google DeepMind</span><span class="item-host">deepmind.google</span></a>
+        <a class="item" href="https://xinmingtu.cn/blog/2026/self-evolving-agents/" data-title="xinming tu | the what &amp; when of self-evolving agents"><span class="item-title">Xinming Tu | The What &amp; When of Self-Evolving Agents</span><span class="item-host">xinmingtu.cn</span></a>
+        <a class="item" href="https://next-state.github.io/open-dreamer/" data-title="how to train a frontier-level world model"><span class="item-title">How to train a frontier-level world model</span><span class="item-host">next-state.github.io</span></a>
+        <a class="item" href="https://tomsilver.github.io/blog/2026/now-whats-your-solution/" data-title="tom silver | now what? a recipe for after the problem setting (in the agentic age)"><span class="item-title">Tom Silver | Now What? A Recipe for After the Problem Setting (in the Agentic Age)</span><span class="item-host">tomsilver.github.io</span></a>
+        <a class="item" href="https://alexzhang13.github.io/blog/2026/harness/" data-title="alex l. zhang | language model harnesses are compositional generalizers"><span class="item-title">Alex L. Zhang | Language model harnesses are compositional generalizers</span><span class="item-host">alexzhang13.github.io</span></a>
+        <a class="item" href="https://www.primeintellect.ai/blog/rl-at-1t-scale" data-title="rl at 1t scale: prime-rl performance deep dive"><span class="item-title">RL at 1T Scale: prime-rl Performance Deep Dive</span><span class="item-host">primeintellect.ai</span></a>
+        <a class="item" href="https://github.com/Ropedia/S-Agent" data-title="github - ropedia/s-agent: s-agent: spatial tool-use elicits reasoning for spatial intelligence · github"><span class="item-title">GitHub - Ropedia/S-Agent: S-Agent: Spatial Tool-Use Elicits Reasoning for Spatial Intelligence · GitHub</span><span class="item-host">github.com</span></a>
+    </section>
+    <section class="section" data-section="训练、优化与模型架构" id="sec-1">
+      <h2>训练、优化与模型架构 <em>21</em></h2>
+        <a class="item" href="https://daphnecornelisse.substack.com/p/training-artificial-electric-fish" data-title="training artificial electric fish"><span class="item-title">Training artificial electric fish</span><span class="item-host">daphnecornelisse.substack.com</span></a>
+        <a class="item" href="https://spencerfrei.github.io/blog/2026-08-17_pretraining_variance/" data-title="quantifying pretraining variance: data, initialization, and floating point arithmetic"><span class="item-title">Quantifying Pretraining Variance: Data, Initialization, and Floating Point Arithmetic</span><span class="item-host">spencerfrei.github.io</span></a>
+        <a class="item" href="https://www.jacobpeake.com/ai-chip-architectures" data-title="ai chip architectures"><span class="item-title">AI Chip Architectures</span><span class="item-host">jacobpeake.com</span></a>
+        <a class="item" href="https://lin826.github.io/SLM-Online-SDFT/" data-title="fine-tuning small language models for continual learning on-device with self-distillation"><span class="item-title">Fine-Tuning Small Language Models for Continual Learning On-Device with Self-Distillation</span><span class="item-host">lin826.github.io</span></a>
+        <a class="item" href="https://sarahpannn.github.io/rabbitholes/posts/why-ttt/" data-title="why test-time training? – rabbitholes"><span class="item-title">Why test-time training? – Rabbitholes</span><span class="item-host">sarahpannn.github.io</span></a>
+        <a class="item" href="https://fengzhuozhang.github.io/personalization-congestion-blog/" data-title="supervised fine-tuning vs. in-context learning: an equilibrium analysis of llm personalization under congestion"><span class="item-title">Supervised Fine-Tuning vs. In-Context Learning: An Equilibrium Analysis of LLM Personalization under Congestion</span><span class="item-host">fengzhuozhang.github.io</span></a>
+        <a class="item" href="https://tsinghua-mars-lab.github.io/SLAMFormer-Infinity/" data-title="slamformer-∞ — infinite slam transformer"><span class="item-title">SLAMFormer-∞ — Infinite SLAM Transformer</span><span class="item-host">tsinghua-mars-lab.github.io</span></a>
+        <a class="item" href="https://transformer-circuits.pub/2026/interference_effectiveness_helpfulness/index.html" data-title="characterizing interference weights in a tiny language model"><span class="item-title">Characterizing interference weights in a tiny language model</span><span class="item-host">transformer-circuits.pub</span></a>
+        <a class="item" href="https://intology.ai/blog/scaling-automated-post-training" data-title="scaling automated post-training"><span class="item-title">Scaling Automated Post-Training</span><span class="item-host">intology.ai</span></a>
+        <a class="item" href="https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/" data-title="from user sequences to scaling laws: a multi-stage architecture for meta’s ads ranking"><span class="item-title">From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking</span><span class="item-host">engineering.fb.com</span></a>
+        <a class="item" href="https://huggingface.co/blog/sergiopaniego/trl-openenv-harness-training" data-title="trl openenv harness training"><span class="item-title">Trl openenv harness training</span><span class="item-host">huggingface.co</span></a>
+        <a class="item" href="https://houdanait.substack.com/p/were-training-people-for-the-wrong" data-title="were training people for the wrong"><span class="item-title">Were training people for the wrong</span><span class="item-host">houdanait.substack.com</span></a>
+        <a class="item" href="https://alexiglad.github.io/blog/2026/explorative_modeling/" data-title="alexi gladstone | explorative modeling -- unlocking a third pretraining axis and end-to-end generation"><span class="item-title">Alexi Gladstone | Explorative Modeling -- Unlocking a Third Pretraining Axis and End-to-End Generation</span><span class="item-host">alexiglad.github.io</span></a>
+        <a class="item" href="https://www.siliconcodesign.com/p/a-comprehensive-overview-of-the-ai" data-title="a comprehensive overview of the ai accelerator landscape: from digital to analog compute-in-memory architectures"><span class="item-title">A Comprehensive Overview of the AI Accelerator Landscape: From Digital to Analog Compute-in-Memory Architectures</span><span class="item-host">siliconcodesign.com</span></a>
+        <a class="item" href="https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/" data-title="gem training: how meta doubled the efficiency of its llm-scale ads foundation model"><span class="item-title">GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model</span><span class="item-host">engineering.fb.com</span></a>
+        <a class="item" href="https://olihanney.substack.com/p/adaptation-not-adoption-is-king" data-title="adaptation not adoption is king"><span class="item-title">Adaptation not adoption is king</span><span class="item-host">olihanney.substack.com</span></a>
+        <a class="item" href="https://jyyang26.github.io/stable_async_analysis/" data-title="stale but stable: staleness-adaptive trust regions for stabilizing asynchronous reinforcement learning"><span class="item-title">Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning</span><span class="item-host">jyyang26.github.io</span></a>
+        <a class="item" href="https://iso-rlvr.github.io/" data-title="iso: an rlvr-native optimization stack"><span class="item-title">ISO: An RLVR-Native Optimization Stack</span><span class="item-host">iso-rlvr.github.io</span></a>
+        <a class="item" href="https://pluralis.ai/blog/rl-post-training-on-macs/" data-title="rl post-training on macs"><span class="item-title">RL Post-Training on Macs</span><span class="item-host">pluralis.ai</span></a>
+        <a class="item" href="https://lark-ai-lab.github.io/trainee-to-trainer.github.io/" data-title="trainee-to-trainer — llm-as-environment-engineer for rl"><span class="item-title">Trainee-to-Trainer — LLM-as-Environment-Engineer for RL</span><span class="item-host">lark-ai-lab.github.io</span></a>
+        <a class="item" href="https://linlu-qiu.github.io/assets/html/elf_pd.html" data-title="progressive distillation of elf: few-step generation for embedded language flows"><span class="item-title">Progressive Distillation of ELF: Few-Step Generation for Embedded Language Flows</span><span class="item-host">linlu-qiu.github.io</span></a>
+    </section>
+    <section class="section" data-section="安全、对齐、评测与可解释性" id="sec-2">
+      <h2>安全、对齐、评测与可解释性 <em>28</em></h2>
+        <a class="item" href="https://www.lesswrong.com/posts/z9fPtghFxELBXebY3/evaluating-chain-of-thought-monitorability-is-still-an-open" data-title="evaluating chain of thought monitorability is still an open"><span class="item-title">Evaluating chain of thought monitorability is still an open</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://gdmalignment.substack.com/p/debate-training-reduces-reward-hacking" data-title="debate training reduces reward hacking"><span class="item-title">Debate training reduces reward hacking</span><span class="item-host">gdmalignment.substack.com</span></a>
+        <a class="item" href="https://www.lesswrong.com/posts/bfJnebZyY3RRHZC4o/item-response-theory-for-ai-safety" data-title="item response theory for ai safety"><span class="item-title">Item response theory for ai safety</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://asteriskmag.substack.com/p/why-cant-technologists-and-economists" data-title="why cant technologists and economists"><span class="item-title">Why cant technologists and economists</span><span class="item-host">asteriskmag.substack.com</span></a>
+        <a class="item" href="https://lab.einsia.ai/ai4ai/" data-title="ai4ai-bench | ai agent algorithm design benchmark"><span class="item-title">AI4AI-Bench | AI Agent Algorithm Design Benchmark</span><span class="item-host">lab.einsia.ai</span></a>
+        <a class="item" href="https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations" data-title="cheating behaviour in frontier model evaluations | aisi work"><span class="item-title">Cheating behaviour in frontier model evaluations | AISI Work</span><span class="item-host">aisi.gov.uk</span></a>
+        <a class="item" href="https://alkjash.github.io/ai-risk/#statement-12" data-title="existential risk from ai: an exposition for mathematicians"><span class="item-title">Existential Risk from AI: An Exposition for Mathematicians</span><span class="item-host">alkjash.github.io</span></a>
+        <a class="item" href="https://posttrainbench.com/blog/posttrainbench-1-1/" data-title="posttrainbench v1.1: hardening the benchmark against reward hacking"><span class="item-title">PostTrainBench v1.1: Hardening the benchmark against reward hacking</span><span class="item-host">posttrainbench.com</span></a>
+        <a class="item" href="https://www.proteingymllm.com/" data-title="pg-llm: benchmarking general-purpose language models for protein variant ranking"><span class="item-title">PG-LLM: Benchmarking General-Purpose Language Models for Protein Variant Ranking</span><span class="item-host">proteingymllm.com</span></a>
+        <a class="item" href="https://mathforaisafety.org/" data-title="ai safety for mathematicians"><span class="item-title">AI Safety for Mathematicians</span><span class="item-host">mathforaisafety.org</span></a>
+        <a class="item" href="https://impactful-pluralistic-alignment.github.io/" data-title="position: a roadmap to impactful pluralistic alignment research"><span class="item-title">Position: A Roadmap to Impactful Pluralistic Alignment Research</span><span class="item-host">impactful-pluralistic-alignment.github.io</span></a>
+        <a class="item" href="https://www.alignmentforum.org/posts/6ek6n7yZ5DzfarJHy/towards-surfacing-model-algorithms-with-meta-tokens-in-the-j" data-title="towards surfacing model algorithms with meta-tokens in the j-space — ai alignment forum"><span class="item-title">Towards surfacing model algorithms with meta-tokens in the J-Space — AI Alignment Forum</span><span class="item-host">alignmentforum.org</span></a>
+        <a class="item" href="https://alignment.openai.com/measuring-reward-seeking/" data-title="measuring reward-seeking by instilling contrastive beliefs"><span class="item-title">Measuring Reward-Seeking by Instilling Contrastive Beliefs</span><span class="item-host">alignment.openai.com</span></a>
+        <a class="item" href="https://ai-safety-tracker-website.vercel.app/" data-title="ai-safety-tracker-website.vercel.app"><span class="item-title">ai-safety-tracker-website.vercel.app</span><span class="item-host">ai-safety-tracker-website.vercel.app</span></a>
+        <a class="item" href="https://openai.com/index/safety-alignment-long-horizon-models/" data-title="safety alignment long horizon models"><span class="item-title">Safety alignment long horizon models</span><span class="item-host">openai.com</span></a>
+        <a class="item" href="https://www.paperinstruments.com/blog/diligence-bench" data-title="diligencebench: an equity-research agent evaluation — paper instruments"><span class="item-title">DiligenceBench: An Equity-Research Agent Evaluation — Paper Instruments</span><span class="item-host">paperinstruments.com</span></a>
+        <a class="item" href="https://yikee.github.io/harnessevolution/" data-title="harness evolution gains might just be repeated sampling — rethinking the evaluation of harness evolution for agents"><span class="item-title">Harness Evolution Gains Might Just Be Repeated Sampling — Rethinking the Evaluation of Harness Evolution for Agents</span><span class="item-host">yikee.github.io</span></a>
+        <a class="item" href="https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/" data-title="agentic misalignment in summer 2026"><span class="item-title">Agentic Misalignment in Summer 2026</span><span class="item-host">alignment.anthropic.com</span></a>
+        <a class="item" href="https://satori-ai.cn/api/pdf?id=2606.24888" data-title="diffusionbench: on holistic evaluation of diffusion transformers"><span class="item-title">DiffusionBench: On Holistic Evaluation of Diffusion Transformers</span><span class="item-host">satori-ai.cn</span></a>
+        <a class="item" href="https://arxiv.org/abs/2606.24014" data-title="reinforcement learning towards broadly and persistently beneficial models"><span class="item-title">Reinforcement Learning Towards Broadly and Persistently Beneficial Models</span><span class="item-host">arxiv.org</span></a>
+        <a class="item" href="https://openai.com/index/deployment-simulation/" data-title="predicting model behavior before release by simulating deployment | openai"><span class="item-title">Predicting model behavior before release by simulating deployment | OpenAI</span><span class="item-host">openai.com</span></a>
+        <a class="item" href="https://yannx1e.github.io/IW-OPD/" data-title="on the position bias of on-policy distillation"><span class="item-title">On the Position Bias of On-Policy Distillation</span><span class="item-host">yannx1e.github.io</span></a>
+        <a class="item" href="https://github.com/FrontisAI/NatureBench" data-title="github - frontisai/naturebench: naturebench: can coding agents match the published sota of nature-family papers? · github"><span class="item-title">GitHub - FrontisAI/NatureBench: NatureBench: Can Coding Agents Match the Published SOTA of Nature-Family Papers? · GitHub</span><span class="item-host">github.com</span></a>
+        <a class="item" href="https://harvey-fin.github.io/seeing-is-not-reasoning/" data-title="seeing is not reasoning: how vlms and their benchmarks lean on text"><span class="item-title">Seeing Is Not Reasoning: How VLMs and Their Benchmarks Lean on Text</span><span class="item-host">harvey-fin.github.io</span></a>
+        <a class="item" href="https://arxiv.org/abs/2606.27326" data-title="hallucination in world models is predictable and preventable"><span class="item-title">Hallucination in World Models is Predictable and Preventable</span><span class="item-host">arxiv.org</span></a>
+        <a class="item" href="https://snorkel.ai/research-paper/os-world-2/" data-title="osworld 2.0: benchmarking computer use agents on long-horizon real-world tasks"><span class="item-title">OSWorld 2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks</span><span class="item-host">snorkel.ai</span></a>
+        <a class="item" href="https://kyutai.org/fid-lottery/" data-title="the fid lottery — quantifying hidden randomness in generative model evaluation"><span class="item-title">The FID Lottery — Quantifying Hidden Randomness in Generative Model Evaluation</span><span class="item-host">kyutai.org</span></a>
+        <a class="item" href="https://frontisai.github.io/Awesome-Self-Improving-Agents/" data-title="agents in the era of experience"><span class="item-title">Agents in the Era of Experience</span><span class="item-host">frontisai.github.io</span></a>
+    </section>
+    <section class="section" data-section="视觉、多模态与生成" id="sec-3">
+      <h2>视觉、多模态与生成 <em>18</em></h2>
+        <a class="item" href="https://jzhao2024.github.io/notes/2026/08/08/diffusion-language-models.html" data-title="some theoretical and practical thoughts on diffusion language models | junbo zhao (jake)"><span class="item-title">Some Theoretical and Practical Thoughts on Diffusion Language Models | Junbo Zhao (Jake)</span><span class="item-host">jzhao2024.github.io</span></a>
+        <a class="item" href="https://storage.googleapis.com/marin-public/held/harrier-k40-cluster-overview/2026.08.18/index.html?revision=uniform-sampling#cluster-15" data-title="harrier k40 domain and quality overview"><span class="item-title">Harrier K40 domain and quality overview</span><span class="item-host">storage.googleapis.com</span></a>
+        <a class="item" href="https://github.com/MiniMax-AI/MiniMax-Music3" data-title="github - minimax-ai/minimax-music3"><span class="item-title">GitHub - MiniMax-AI/MiniMax-Music3</span><span class="item-host">github.com</span></a>
+        <a class="item" href="https://github.com/docwriter-org/plain-writing-skill" data-title="github - docwriter-org/plain-writing-skill: a plain-language writing skill for ai agents, with a revision view that shows what changed."><span class="item-title">GitHub - docwriter-org/plain-writing-skill: A plain-language writing skill for AI agents, with a revision view that shows what changed.</span><span class="item-host">github.com</span></a>
+        <a class="item" href="https://nvlabs.github.io/Sana/Sol-Engine/LTX25/" data-title="accelerating ltx-2.5 with the sol video inference engine | nvidia"><span class="item-title">Accelerating LTX-2.5 with the Sol Video Inference Engine | NVIDIA</span><span class="item-host">nvlabs.github.io</span></a>
+        <a class="item" href="https://vista-research.github.io/" data-title="vista: a visual harness for reasoning in an interactive world"><span class="item-title">VISTA: A Visual Harness for Reasoning in an Interactive World</span><span class="item-host">vista-research.github.io</span></a>
+        <a class="item" href="https://heheyas.github.io/context-scaling/" data-title="scaling properties of text conditioning in visual generation"><span class="item-title">Scaling Properties of Text Conditioning in Visual Generation</span><span class="item-host">heheyas.github.io</span></a>
+        <a class="item" href="https://zju3dv.github.io/INTACT-JEPA/" data-title="intact: isomorphic intent-to-action learning for search-free world models"><span class="item-title">INTACT: Isomorphic Intent-to-Action Learning for Search-Free World Models</span><span class="item-host">zju3dv.github.io</span></a>
+        <a class="item" href="https://rethinking-cfg-opd.github.io/" data-title="rethinking classifier-free guidance in on-policy diffusion distillation"><span class="item-title">Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation</span><span class="item-host">rethinking-cfg-opd.github.io</span></a>
+        <a class="item" href="https://junlinhan.github.io/projects/physics_of_mm_pretrain/" data-title="towards physics of multimodal pretraining: knowledge flow, modality synergy, early unification, and recipes"><span class="item-title">Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes</span><span class="item-host">junlinhan.github.io</span></a>
+        <a class="item" href="https://huggingface.co/spaces/davanstrien/bl-images-search" data-title="bl images search"><span class="item-title">Bl images search</span><span class="item-host">huggingface.co</span></a>
+        <a class="item" href="https://research.nvidia.com/labs/genair/pdd/" data-title="fastgen-pdd: parallel decoding distillation for image and video generation"><span class="item-title">FastGen-PDD: Parallel Decoding Distillation for Image and Video Generation</span><span class="item-host">research.nvidia.com</span></a>
+        <a class="item" href="https://research.nvidia.com/labs/eai/blogs/autoregressive-video-gen/" data-title="autoregressive video gen | efficient ai"><span class="item-title">Autoregressive Video Gen | Efficient AI</span><span class="item-host">research.nvidia.com</span></a>
+        <a class="item" href="https://bfl.ai/blog/flux-3" data-title="flux 3: multimodal video, image &amp; audio"><span class="item-title">FLUX 3: Multimodal Video, Image &amp; Audio</span><span class="item-host">bfl.ai</span></a>
+        <a class="item" href="https://www.inductionlabs.com/news/scaling-video-pretraining" data-title="scaling video pretraining with imagination models"><span class="item-title">Scaling Video Pretraining with Imagination Models</span><span class="item-host">inductionlabs.com</span></a>
+        <a class="item" href="https://tongyilab.substack.com/p/qwen-audio-30-tts-more-multilingual" data-title="qwen audio 30 tts more multilingual"><span class="item-title">Qwen audio 30 tts more multilingual</span><span class="item-host">tongyilab.substack.com</span></a>
+        <a class="item" href="https://seriality-gap.jdiazchao.com/" data-title="the seriality gap in video diffusion models"><span class="item-title">The Seriality Gap in Video Diffusion Models</span><span class="item-host">seriality-gap.jdiazchao.com</span></a>
+        <a class="item" href="https://arxiv.org/abs/2606.13795" data-title="diffusion policy optimization without drifting apart"><span class="item-title">Diffusion Policy Optimization without Drifting Apart</span><span class="item-host">arxiv.org</span></a>
+    </section>
+    <section class="section" data-section="机器人与具身智能" id="sec-4">
+      <h2>机器人与具身智能 <em>4</em></h2>
+        <a class="item" href="https://www.enigma.inc/posts/obsessed-encoder" data-title="enigma: robots that feel right"><span class="item-title">Enigma: Robots that feel right</span><span class="item-host">enigma.inc</span></a>
+        <a class="item" href="https://www.powerofusnewsletter.com/p/why-social-norms-fall-apart-when" data-title="the robot cooperation problem"><span class="item-title">The Robot Cooperation Problem</span><span class="item-host">powerofusnewsletter.com</span></a>
+        <a class="item" href="https://research.nvidia.com/labs/gear/robottt/" data-title="robottt: context scaling for robot policies"><span class="item-title">RoboTTT: Context Scaling for Robot Policies</span><span class="item-host">research.nvidia.com</span></a>
+        <a class="item" href="https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/" data-title="pretrained to imagine, fine-tuned to act: the rise of world-action models | nvidia technical blog"><span class="item-title">Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models | NVIDIA Technical Blog</span><span class="item-host">developer.nvidia.com</span></a>
+    </section>
+    <section class="section" data-section="检索、知识与数据" id="sec-5">
+      <h2>检索、知识与数据 <em>36</em></h2>
+        <a class="item" href="https://nightingal3.github.io/blog/2026/08/09/research-retrospective/" data-title="when we did research by hand"><span class="item-title">When We Did Research By Hand</span><span class="item-host">nightingal3.github.io</span></a>
+        <a class="item" href="https://www.anthropic.com/research/Claude-accelerates-protein-design" data-title="claude accelerates protein design"><span class="item-title">Claude accelerates protein design</span><span class="item-host">anthropic.com</span></a>
+        <a class="item" href="https://github.com/DechenZhang/VALG-ML-Theory-Agent" data-title="github - dechenzhang/valg-ml-theory-agent: valg: an agentic system for ml theory research"><span class="item-title">GitHub - DechenZhang/VALG-ML-Theory-Agent: VALG: An Agentic System for ML Theory Research</span><span class="item-host">github.com</span></a>
+        <a class="item" href="https://svivek.com/writing/2026-08-18-why-i-read-papers.html" data-title="why do i read research papers? :: vivek srikumar"><span class="item-title">Why do I read research papers? :: Vivek Srikumar</span><span class="item-host">svivek.com</span></a>
+        <a class="item" href="https://meta-circle.com/blog/comfyresearch-see-how-learning-happens" data-title="comfyresearch see how learning happens"><span class="item-title">Comfyresearch see how learning happens</span><span class="item-host">meta-circle.com</span></a>
+        <a class="item" href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" data-title="introducing muse glimmer open agentic model"><span class="item-title">Introducing muse glimmer open agentic model</span><span class="item-host">research.meta.ai</span></a>
+        <a class="item" href="https://www.primeintellect.ai/blog/measuring-autonomous-research" data-title="measuring autonomous ai research"><span class="item-title">Measuring Autonomous AI Research</span><span class="item-host">primeintellect.ai</span></a>
+        <a class="item" href="https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games" data-title="exploring new frontiers of ai and games research — google deepmind"><span class="item-title">Exploring new frontiers of AI and games research — Google DeepMind</span><span class="item-host">deepmind.google</span></a>
+        <a class="item" href="https://www.1kpapers.com/" data-title="the year in ai papers: essential research from 2025–2026"><span class="item-title">The Year in AI Papers: Essential Research from 2025–2026</span><span class="item-host">1kpapers.com</span></a>
+        <a class="item" href="https://littlelearner-ll.github.io/" data-title="littlelearner: language models under pedagogically-controlled knowledge exposure"><span class="item-title">LittleLearner: Language Models Under Pedagogically-Controlled Knowledge Exposure</span><span class="item-host">littlelearner-ll.github.io</span></a>
+        <a class="item" href="https://research.snyk.io/blog/stealing-reasoning-traces/" data-title="stealing reasoning traces from proprietary llm apis"><span class="item-title">Stealing Reasoning Traces from Proprietary LLM APIs</span><span class="item-host">research.snyk.io</span></a>
+        <a class="item" href="https://www.normaltech.ai/p/ai-agents-cant-yet-do-open-ended" data-title="ai agents can&#x27;t yet do open-ended ai research"><span class="item-title">AI agents can&#x27;t yet do open-ended AI research</span><span class="item-host">normaltech.ai</span></a>
+        <a class="item" href="https://blog.tilderesearch.com/blog/online-kl-shampoo" data-title="online kl shampoo | tilde"><span class="item-title">Online KL Shampoo | Tilde</span><span class="item-host">blog.tilderesearch.com</span></a>
+        <a class="item" href="https://blog.tilderesearch.com/blog/one-layer-deeper" data-title="(some of) the models, they just don&#x27;t want to learn | tilde"><span class="item-title">(Some of) The Models, They Just Don&#x27;t Want to Learn | Tilde</span><span class="item-host">blog.tilderesearch.com</span></a>
+        <a class="item" href="https://zvec.org/en/blog/2026-08-04-zvec-diskann/" data-title="diskann: scaling vector databases to hundreds of millions of vectors"><span class="item-title">DiskANN: Scaling Vector Databases to Hundreds of Millions of Vectors</span><span class="item-host">zvec.org</span></a>
+        <a class="item" href="https://recursive-knowledge.github.io/knowledge-centric-self-improvement/" data-title="knowledge-centric self-improvement"><span class="item-title">Knowledge-Centric Self-Improvement</span><span class="item-host">recursive-knowledge.github.io</span></a>
+        <a class="item" href="https://research-arena.ai/" data-title="researcharena"><span class="item-title">ResearchArena</span><span class="item-host">research-arena.ai</span></a>
+        <a class="item" href="https://ifm-research.notion.site/Towards-Looped-Models-Done-Right-3ade511912ec8128987dfeb7a5580043" data-title="notion | where teams and agents work together"><span class="item-title">Notion | Where teams and agents work together</span><span class="item-host">ifm-research.notion.site</span></a>
+        <a class="item" href="https://hy.tencent.ai/research/elr?langVersion=en" data-title="elr"><span class="item-title">Elr</span><span class="item-host">hy.tencent.ai</span></a>
+        <a class="item" href="https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2" data-title="introducing muse code and muse spark 1 2"><span class="item-title">Introducing muse code and muse spark 1 2</span><span class="item-host">research.meta.ai</span></a>
+        <a class="item" href="https://hazyresearch.stanford.edu/blog/2026-08-05-retire-the-abstractions" data-title="retire the abstractions"><span class="item-title">Retire the Abstractions</span><span class="item-host">hazyresearch.stanford.edu</span></a>
+        <a class="item" href="https://www.fermionresearch.com/models/" data-title="meet the neutrino-1 family"><span class="item-title">Meet the Neutrino-1 family</span><span class="item-host">fermionresearch.com</span></a>
+        <a class="item" href="https://01.me/research/interaction-scaling/#idea" data-title="grounding the loop on both sides — interaction scaling"><span class="item-title">Grounding the Loop on Both Sides — Interaction Scaling</span><span class="item-host">01.me</span></a>
+        <a class="item" href="https://meta-circle.com/blog/ophis-a-new-paradigm-for-autoresearch" data-title="ophis a new paradigm for autoresearch"><span class="item-title">Ophis a new paradigm for autoresearch</span><span class="item-host">meta-circle.com</span></a>
+        <a class="item" href="https://hy.tencent.com/research/hyra" data-title="腾讯混元"><span class="item-title">腾讯混元</span><span class="item-host">hy.tencent.com</span></a>
+        <a class="item" href="https://oaklab.ai/posts/learning-from-experience-instead-of-curated-datasets" data-title="learning from experience instead of curated datasets"><span class="item-title">Learning from experience instead of curated datasets</span><span class="item-host">oaklab.ai</span></a>
+        <a class="item" href="https://sai.science/icml" data-title="icml 2026 paper reviews and research reproduction"><span class="item-title">ICML 2026 Paper Reviews and Research Reproduction</span><span class="item-host">sai.science</span></a>
+        <a class="item" href="https://www.cerebras.ai/blog/how-we-built-our-knowledge-base" data-title="how we built our knowledge base"><span class="item-title">How we built our knowledge base</span><span class="item-host">cerebras.ai</span></a>
+        <a class="item" href="https://chimchim89.github.io/late-interaction-basics/" data-title="blog | why timing is everything in semantic search"><span class="item-title">Blog | Why Timing Is Everything in Semantic Search</span><span class="item-host">chimchim89.github.io</span></a>
+        <a class="item" href="https://x.com/atasteoff/status/2074800880017342665" data-title="a taxonomy of self-evolving agents"><span class="item-title">A Taxonomy of Self-evolving Agents</span><span class="item-host">x.com</span></a>
+        <a class="item" href="https://www.deeplearningdaily.com/beyond-lora-can-you-beat-the-most-popular-fine-tuning-technique/" data-title="beyond lora: can you beat the most popular fine-tuning technique? – deep learning daily"><span class="item-title">Beyond LoRA: Can you beat the most popular fine-tuning technique? – Deep Learning Daily</span><span class="item-host">deeplearningdaily.com</span></a>
+        <a class="item" href="https://vuink.com/post/nyvfnjhssyrf-d-dtvguho-d-dvb/blog/job-search" data-title="notes on the industry job search | vuink.com"><span class="item-title">Notes on the Industry Job Search | Vuink.com</span><span class="item-host">vuink.com</span></a>
+        <a class="item" href="https://www.letta.com/blog/towards-agents-that-learn/" data-title="memory models: towards agents that learn | letta"><span class="item-title">Memory Models: Towards Agents That Learn | Letta</span><span class="item-host">letta.com</span></a>
+        <a class="item" href="https://www.llm-checklist.com/" data-title="guide-llm"><span class="item-title">GUIDE-LLM</span><span class="item-host">llm-checklist.com</span></a>
+        <a class="item" href="https://cameronrwolfe.substack.com/p/agentic-rl" data-title="agentic rl: frameworks and best practices"><span class="item-title">Agentic RL: Frameworks and Best Practices</span><span class="item-host">cameronrwolfe.substack.com</span></a>
+        <a class="item" href="https://www.perplexity.ai/sr-Cyrl-ME/hub/blog/self-improving-memory-for-agents" data-title="self-improving memory for agents"><span class="item-title">Self-improving Memory for Agents</span><span class="item-host">perplexity.ai</span></a>
+    </section>
+    <section class="section" data-section="系统、推理与效率" id="sec-6">
+      <h2>系统、推理与效率 <em>27</em></h2>
+        <a class="item" href="https://scotthao.com/writing/distributed-locks" data-title="formally verified distributed locks for sandboxes - scott hao"><span class="item-title">Formally verified distributed locks for sandboxes - Scott Hao</span><span class="item-host">scotthao.com</span></a>
+        <a class="item" href="https://docs.pytorch.org/devlogs/eager/2026-08-09-pinned-memory-allocator/" data-title="pinned memory: what it is for, and why nobody gives it back — pytorch devlog"><span class="item-title">Pinned memory: what it is for, and why nobody gives it back — PyTorch DevLog</span><span class="item-host">docs.pytorch.org</span></a>
+        <a class="item" href="https://inco.ai/blog/dflash2/" data-title="dflash 2: keep drafting parallel"><span class="item-title">DFlash 2: Keep Drafting Parallel</span><span class="item-host">inco.ai</span></a>
+        <a class="item" href="https://yifanzhang-pro.github.io/Pretraining-RL-Science/" data-title="reliable rl scaling requires accounting for prefill-decode kernel mismatch"><span class="item-title">Reliable RL Scaling Requires Accounting for Prefill-Decode Kernel Mismatch</span><span class="item-host">yifanzhang-pro.github.io</span></a>
+        <a class="item" href="https://www.lmsys.org/blog/2026-08-21-sglang-fast-recovery" data-title="fast engine recovery: sub-second engine restart for sglang via weight cache daemon"><span class="item-title">Fast Engine Recovery: Sub-Second Engine Restart for SGLang via Weight Cache Daemon</span><span class="item-host">lmsys.org</span></a>
+        <a class="item" href="https://ezyang.github.io/interactive-parallelize-transformer/#D=6144&amp;F=3072&amp;L=60&amp;E=129&amp;k=5&amp;Sexp=1" data-title="how to parallelize a transformer for training — an explorable explanation"><span class="item-title">How to Parallelize a Transformer for Training — an explorable explanation</span><span class="item-host">ezyang.github.io</span></a>
+        <a class="item" href="https://aleph-alpha.com/en/blog/inference-performance-from-first-principles/" data-title="inference performance from first principles — aleph alpha"><span class="item-title">Inference Performance from First Principles — Aleph Alpha</span><span class="item-host">aleph-alpha.com</span></a>
+        <a class="item" href="https://gtsam.org/2026/08/20/cuda-backend.html" data-title="gtsam goes gpu: a cuda backend for nonlinear optimization"><span class="item-title">GTSAM Goes GPU: A CUDA Backend for Nonlinear Optimization</span><span class="item-host">gtsam.org</span></a>
+        <a class="item" href="https://github.com/Snowflake-AI-Research/Arctic-Platform" data-title="github - snowflake-ai-research/arctic-platform: arctic training and inference platform"><span class="item-title">GitHub - Snowflake-AI-Research/Arctic-Platform: Arctic Training and Inference Platform</span><span class="item-host">github.com</span></a>
+        <a class="item" href="https://github.com/NVIDIA/TensorRT-Model-Connect" data-title="github - nvidia/tensorrt-model-connect: from pytorch model to end-to-end tensorrt inference experience in two commands—ai-native, cross-platform, and built for the best possible user experience."><span class="item-title">GitHub - NVIDIA/TensorRT-Model-Connect: From PyTorch model to end-to-end TensorRT inference experience in two commands—AI-native, cross-platform, and built for the best possible user experience.</span><span class="item-host">github.com</span></a>
+        <a class="item" href="https://bair.berkeley.edu/blog/2026/07/29/cuda-to-mlx-k-search/" data-title="cuda to mlx k search"><span class="item-title">Cuda to mlx k search</span><span class="item-host">bair.berkeley.edu</span></a>
+        <a class="item" href="https://cursor.com/blog/mixture-of-kittens" data-title="mixture-of-kittens: our open-source moe megakernel for nvl72s · cursor"><span class="item-title">Mixture-of-Kittens: our open-source MoE megakernel for NVL72s · Cursor</span><span class="item-host">cursor.com</span></a>
+        <a class="item" href="https://www.lmsys.org/blog/2026-07-29-mxfp8-nvfp4-rl" data-title="towards blackwell-native 8-bit and 4-bit rl: end-to-end mxfp8 and nvfp4 rl in miles"><span class="item-title">Towards Blackwell-Native 8-bit and 4-bit RL: End-to-End MXFP8 and NVFP4 RL in Miles</span><span class="item-host">lmsys.org</span></a>
+        <a class="item" href="https://gepa-ai.github.io/gepa/blog/2026/07/30/parallel-proposals/" data-title="batching the reflective optimization loop: parallel proposals make gepa faster and better"><span class="item-title">Batching the Reflective Optimization Loop: Parallel Proposals Make GEPA Faster and Better</span><span class="item-host">gepa-ai.github.io</span></a>
+        <a class="item" href="https://handbook.modular.com/" data-title="llm inference handbook"><span class="item-title">LLM Inference Handbook</span><span class="item-host">handbook.modular.com</span></a>
+        <a class="item" href="https://asari.ai/blog/inference-optimization" data-title="asari ai"><span class="item-title">Asari AI</span><span class="item-host">asari.ai</span></a>
+        <a class="item" href="https://epoch.ai/publications/parallelization-constraints-could-delay-a-technological-singularity" data-title="will parallelization limits delay an intelligence explosion?"><span class="item-title">Will parallelization limits delay an intelligence explosion?</span><span class="item-host">epoch.ai</span></a>
+        <a class="item" href="https://rocm.blogs.amd.com/software-tools-optimization/gluon-attention-decode-mi450/README.html" data-title="attention decode on amd mi450 gpus: a gluon kernel optimization guide"><span class="item-title">Attention Decode on AMD MI450 GPUs: A Gluon Kernel Optimization Guide</span><span class="item-host">rocm.blogs.amd.com</span></a>
+        <a class="item" href="https://yichuan-w.github.io/blog/GDN-train-inference-mismatch-asyncRL/" data-title="defending against the training–inference numeric mismatch in rl (especially linear attention) — and whether it helps async rl - yichuan wang&#x27;s homepage"><span class="item-title">Defending Against the Training–Inference Numeric Mismatch in RL (Especially Linear Attention) — and Whether It Helps Async RL - Yichuan Wang&#x27;s Homepage</span><span class="item-host">yichuan-w.github.io</span></a>
+        <a class="item" href="https://lightseek.org/blog/tokenspeed-inkling.html#flat-cache-layout-for-heterogeneous-states" data-title="tml inkling at day 0: fp4 inference on nvidia and amd with tokenspeed | lightseek foundation"><span class="item-title">TML Inkling at Day 0: FP4 Inference on NVIDIA and AMD with TokenSpeed | LightSeek Foundation</span><span class="item-host">lightseek.org</span></a>
+        <a class="item" href="https://kvcache-ai.github.io/ktransformers/" data-title="introduction - ktransformers"><span class="item-title">Introduction - Ktransformers</span><span class="item-host">kvcache-ai.github.io</span></a>
+        <a class="item" href="https://developer.nvidia.com/blog/ai-model-co-design-hardware-friendly-llm-design/?linkId=100000430616047" data-title="ai model co-design: hardware-friendly llm design | nvidia technical blog"><span class="item-title">AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog</span><span class="item-host">developer.nvidia.com</span></a>
+        <a class="item" href="https://www.aryatschand.com/blog/blog-tpu-gpu-comparison.html" data-title="comparing nvidia gpu vs amd gpu vs google tpu architectures from a programmer&#x27;s perspective - arya tschand"><span class="item-title">Comparing Nvidia GPU vs AMD GPU vs Google TPU Architectures from a Programmer&#x27;s Perspective - Arya Tschand</span><span class="item-host">aryatschand.com</span></a>
+        <a class="item" href="https://www.aleksagordic.com/blog/collective-operations" data-title="inside tpu and gpu clusters: the anatomy of collective communication - aleksa gordić"><span class="item-title">Inside TPU and GPU Clusters: The Anatomy of Collective Communication - Aleksa Gordić</span><span class="item-host">aleksagordic.com</span></a>
+        <a class="item" href="https://github.com/sunrainyg/RandOpt/tree/iterative-randopt" data-title="what is iterative randopt, and why iterative?"><span class="item-title">What is Iterative RandOpt, and why iterative?</span><span class="item-host">github.com</span></a>
+        <a class="item" href="https://research.nvidia.com/labs/eai/post/kv-cache-compression-and-its-infra-problems/" data-title="kv cache compression and its infra problems | efficient ai"><span class="item-title">KV Cache Compression and Its Infra Problems | Efficient AI</span><span class="item-host">research.nvidia.com</span></a>
+        <a class="item" href="https://newsletter.semianalysis.com/p/rl-systems-mind-the-gap-matching" data-title="rl systems mind the gap: matching trainer and generator throughput"><span class="item-title">RL Systems Mind the Gap: Matching Trainer and Generator Throughput</span><span class="item-host">newsletter.semianalysis.com</span></a>
+    </section>
+    <section class="section" data-section="研究方法、职业与科学写作" id="sec-7">
+      <h2>研究方法、职业与科学写作 <em>8</em></h2>
+        <a class="item" href="https://eytanadar.medium.com/ai-native-phd-students-f9f6eebc1f91" data-title="ai native phd students f9f6eebc1f91"><span class="item-title">Ai native phd students f9f6eebc1f91</span><span class="item-host">eytanadar.medium.com</span></a>
+        <a class="item" href="https://unlearning-tutorial.github.io/" data-title="unlearning data at scale"><span class="item-title">Unlearning Data at Scale</span><span class="item-host">unlearning-tutorial.github.io</span></a>
+        <a class="item" href="https://guidelight.ai/blog/control-assessment-august-2026" data-title="guidelight&#x27;s control assessment of frontier ai companies"><span class="item-title">Guidelight&#x27;s Control Assessment of Frontier AI Companies</span><span class="item-host">guidelight.ai</span></a>
+        <a class="item" href="https://epoch.ai/publications/ai-energy" data-title="topic overview: ai energy use"><span class="item-title">Topic Overview: AI Energy Use</span><span class="item-host">epoch.ai</span></a>
+        <a class="item" href="https://www.writingruxandrabio.com/p/intelligence-is-not-the-main-bottleneck" data-title="intelligence is not the main bottleneck"><span class="item-title">Intelligence is not the main bottleneck</span><span class="item-host">writingruxandrabio.com</span></a>
+        <a class="item" href="https://gael-varoquaux.info/health_ml_tutorial/index.html" data-title="an introduction to machine learning for health and epidemiology"><span class="item-title">An introduction to Machine Learning for health and epidemiology</span><span class="item-host">gael-varoquaux.info</span></a>
+        <a class="item" href="https://rezabyt.github.io/blogposts/sigreg-tutorial.html" data-title="sigreg from first principles"><span class="item-title">SIGReg from First Principles</span><span class="item-host">rezabyt.github.io</span></a>
+        <a class="item" href="https://t.co/AdN1sHMg1I" data-title="icml 2026 seoul guide"><span class="item-title">ICML 2026 Seoul Guide</span><span class="item-host">t.co</span></a>
+    </section>
+    <section class="section" data-section="其他跨领域内容" id="sec-8">
+      <h2>其他跨领域内容 <em>116</em></h2>
+        <a class="item" href="https://newsletter.forethought.org/p/notes-on-implications-of-scale-dependent" data-title="notes on implications of scale-dependent algorithms"><span class="item-title">Notes on Implications of Scale-Dependent Algorithms</span><span class="item-host">newsletter.forethought.org</span></a>
+        <a class="item" href="https://huggingface.co/blog/multi-vector-encoder" data-title="multi vector encoder"><span class="item-title">Multi vector encoder</span><span class="item-host">huggingface.co</span></a>
+        <a class="item" href="https://aimslab.stanford.edu/blog/compass-and-certificate" data-title="compass and certificate"><span class="item-title">Compass and certificate</span><span class="item-host">aimslab.stanford.edu</span></a>
+        <a class="item" href="https://ryjohnson09.github.io/quarto-git-sandbox/" data-title="building interactive git exercises"><span class="item-title">Building interactive Git exercises</span><span class="item-host">ryjohnson09.github.io</span></a>
+        <a class="item" href="https://magazine.sebastianraschka.com/p/claude-watermarking" data-title="how claude watermarks ai-generated text"><span class="item-title">How Claude Watermarks AI-Generated Text</span><span class="item-host">magazine.sebastianraschka.com</span></a>
+        <a class="item" href="https://spade-rl.github.io/" data-title="spade: self-play in adaptive synthetic executable environments"><span class="item-title">SPADE: Self-Play in Adaptive Synthetic Executable Environments</span><span class="item-host">spade-rl.github.io</span></a>
+        <a class="item" href="https://www.interconnects.ai/p/lessons-from-the-hacks" data-title="lessons from the hacks"><span class="item-title">Lessons from the hacks</span><span class="item-host">interconnects.ai</span></a>
+        <a class="item" href="https://economicsofai.substack.com/p/when-intelligence-is-abundant-attention" data-title="when intelligence is abundant attention"><span class="item-title">When intelligence is abundant attention</span><span class="item-host">economicsofai.substack.com</span></a>
+        <a class="item" href="https://www.lesswrong.com/posts/bhtYqD4FdK6AqhFDF/fitness-seekers-generalizing-the-reward-seeking-threat-model" data-title="fitness seekers generalizing the reward seeking threat model"><span class="item-title">Fitness seekers generalizing the reward seeking threat model</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://kiddyboots216.github.io/mismatch/" data-title="0 train-infer mismatch for open-weight moe rl in open-source code"><span class="item-title">0 train-infer mismatch for Open-weight MoE RL in Open-source code</span><span class="item-host">kiddyboots216.github.io</span></a>
+        <a class="item" href="https://www.lesswrong.com/posts/nv8oedrnLXKRzNEL9/r-lens-making-j-lens-more-faithful-on-early-layers" data-title="r lens making j lens more faithful on early layers"><span class="item-title">R lens making j lens more faithful on early layers</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://sand.ai/blog/magi-2-preview" data-title="magi 2 preview"><span class="item-title">Magi 2 preview</span><span class="item-host">sand.ai</span></a>
+        <a class="item" href="https://proofsandprompts.com/2026/08/09/the-ai-dissenter-viewpoint/" data-title="the ai dissenter viewpoint"><span class="item-title">The AI dissenter viewpoint</span><span class="item-host">proofsandprompts.com</span></a>
+        <a class="item" href="https://openai.com/index/how-enterprises-put-ai-to-work/" data-title="how enterprises put ai to work"><span class="item-title">How enterprises put ai to work</span><span class="item-host">openai.com</span></a>
+        <a class="item" href="https://probxiv.com/" data-title="probxiv"><span class="item-title">ProbXiv</span><span class="item-host">probxiv.com</span></a>
+        <a class="item" href="https://www.seangoedecke.com/how-to-keep-thinking/" data-title="how to keep thinking"><span class="item-title">How to keep thinking</span><span class="item-host">seangoedecke.com</span></a>
+        <a class="item" href="https://huggingface.co/blog/icml-2026-open-reproductions" data-title="icml 2026 open reproductions"><span class="item-title">Icml 2026 open reproductions</span><span class="item-host">huggingface.co</span></a>
+        <a class="item" href="https://haruhisa-enomoto.github.io/quotient-submodule-equidistribution-essay/" data-title="i quit math, then wrote a paper with ai"><span class="item-title">I Quit Math, Then Wrote a Paper with AI</span><span class="item-host">haruhisa-enomoto.github.io</span></a>
+        <a class="item" href="https://yoonholee.com/blog/2026/taste/" data-title="what is taste?"><span class="item-title">What Is Taste?</span><span class="item-host">yoonholee.com</span></a>
+        <a class="item" href="https://www.oreilly.com/radar/why-open-source-matters-for-ai/" data-title="why open source matters for ai"><span class="item-title">Why Open Source Matters for AI</span><span class="item-host">oreilly.com</span></a>
+        <a class="item" href="https://transluce.org/scaling-activation-oracles" data-title="scaling activation oracles to trillion-parameter models"><span class="item-title">Scaling Activation Oracles to Trillion-Parameter Models</span><span class="item-host">transluce.org</span></a>
+        <a class="item" href="https://www.twozeros.eu/projects/verifier-frontier" data-title="yannick detrois — ai/ml scientist &amp; engineer"><span class="item-title">Yannick Detrois — AI/ML Scientist &amp; Engineer</span><span class="item-host">twozeros.eu</span></a>
+        <a class="item" href="https://about.fb.com/news/2026/08/the-future-is-for-everyone/" data-title="the future is for everyone"><span class="item-title">The future is for everyone</span><span class="item-host">about.fb.com</span></a>
+        <a class="item" href="https://wandb.ai/marin-community/marin_moe/reports/535B-A23B-18T-Token-Hero-Run-Scaling-Ladder--VmlldzoxNzc2MDM5Ng" data-title="535b-a23b 18t token hero run + scaling ladder"><span class="item-title">535B-A23B 18T Token Hero Run + Scaling Ladder</span><span class="item-host">wandb.ai</span></a>
+        <a class="item" href="https://djdumpling.github.io/2026/08/09/megagem.html" data-title="learning megagem, from self-play to price discovery"><span class="item-title">Learning MegaGem, from self-play to price discovery</span><span class="item-host">djdumpling.github.io</span></a>
+        <a class="item" href="https://blog.ml.cmu.edu/2026/08/10/forking-sequences-part-i-statistically-and-computationally-efficient-multi-horizon-forecasting/" data-title="forking sequences part i statistically and computationally efficient multi horizon forecasting"><span class="item-title">Forking sequences part i statistically and computationally efficient multi horizon forecasting</span><span class="item-host">blog.ml.cmu.edu</span></a>
+        <a class="item" href="https://github.com/gvzdv/claudish-to-english" data-title="github - gvzdv/claudish-to-english"><span class="item-title">GitHub - gvzdv/claudish-to-english</span><span class="item-host">github.com</span></a>
+        <a class="item" href="https://danluu.com/pl-tokens/" data-title="how does programming language affect token efficiency and correctness?"><span class="item-title">How does programming language affect token efficiency and correctness?</span><span class="item-host">danluu.com</span></a>
+        <a class="item" href="https://ornith.ai/ornith_1_5.html" data-title="ornith-1.5: from self-scaffolding to self-improvement"><span class="item-title">Ornith-1.5: From Self-Scaffolding to Self-Improvement</span><span class="item-host">ornith.ai</span></a>
+        <a class="item" href="https://www.argmin.net/p/microconferences" data-title="microconferences"><span class="item-title">Microconferences</span><span class="item-host">argmin.net</span></a>
+        <a class="item" href="https://digbench.ai/" data-title="dig.bench"><span class="item-title">dig.bench</span><span class="item-host">digbench.ai</span></a>
+        <a class="item" href="https://rtmccoy.com/posts/theory_of_mind.html" data-title="theory of mind"><span class="item-title">Theory of mind</span><span class="item-host">rtmccoy.com</span></a>
+        <a class="item" href="https://www.jagged-judges.com/" data-title="jagged judges: epistemic stability under silence, pressure, and persistence"><span class="item-title">Jagged Judges: Epistemic Stability Under Silence, Pressure, and Persistence</span><span class="item-host">jagged-judges.com</span></a>
+        <a class="item" href="https://www.ai-observatory.org/" data-title="the ai observatory — interactive companion"><span class="item-title">The AI Observatory — interactive companion</span><span class="item-host">ai-observatory.org</span></a>
+        <a class="item" href="https://kindxiaoming.github.io/blog/2026/tycho/" data-title="ai finally enters its tycho stage | ziming liu"><span class="item-title">AI finally enters its Tycho stage | Ziming Liu</span><span class="item-host">kindxiaoming.github.io</span></a>
+        <a class="item" href="https://blog.cosmos-institute.org/p/of-swarms-and-sand-gods" data-title="of swarms and sand gods"><span class="item-title">Of Swarms and Sand Gods</span><span class="item-host">blog.cosmos-institute.org</span></a>
+        <a class="item" href="https://www.lesswrong.com/posts/L23poLi8MRgS6mXYF/rl-creates-split-personas" data-title="rl creates split personas"><span class="item-title">Rl creates split personas</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://openai.com/index/introducing-ai-futures/" data-title="introducing ai futures"><span class="item-title">Introducing ai futures</span><span class="item-host">openai.com</span></a>
+        <a class="item" href="https://cursor.com/blog/git-at-any-scale" data-title="git at any scale · cursor"><span class="item-title">Git at any scale · Cursor</span><span class="item-host">cursor.com</span></a>
+        <a class="item" href="https://www.datologyai.com/blog/datasmith" data-title="datologyai: train better models, faster and smaller"><span class="item-title">DatologyAI: Train Better Models, Faster and Smaller</span><span class="item-host">datologyai.com</span></a>
+        <a class="item" href="https://stankerstjens.github.io/could-a-computer-scientist-build-a-brain/" data-title="could a computer scientist build a brain?"><span class="item-title">Could a computer scientist build a brain?</span><span class="item-host">stankerstjens.github.io</span></a>
+        <a class="item" href="https://www.tokenize.rs/claude" data-title="reconstructing claude"><span class="item-title">Reconstructing Claude</span><span class="item-host">tokenize.rs</span></a>
+        <a class="item" href="https://brentfitzgerald.com/posts/the-human-is-the-loop/" data-title="the human is the loop"><span class="item-title">The human is the loop</span><span class="item-host">brentfitzgerald.com</span></a>
+        <a class="item" href="https://wenwen-d.github.io/blog/harness-delta-attribution/" data-title="harness-delta attribution: what evolves when we talk about harness evolution?"><span class="item-title">Harness-Delta Attribution: What Evolves When We Talk About Harness Evolution?</span><span class="item-host">wenwen-d.github.io</span></a>
+        <a class="item" href="https://jchencxh.github.io/blog/filling-the-hierarchy-part-1/" data-title="are all scalable objectives alike?"><span class="item-title">Are all scalable objectives alike?</span><span class="item-host">jchencxh.github.io</span></a>
+        <a class="item" href="https://papers.baulab.info/" data-title="famous deep learning papers"><span class="item-title">Famous Deep Learning Papers</span><span class="item-host">papers.baulab.info</span></a>
+        <a class="item" href="https://subspace-notes.luckyiyi.chatgpt.site/" data-title="subspace-notes.luckyiyi.chatgpt.site"><span class="item-title">subspace-notes.luckyiyi.chatgpt.site</span><span class="item-host">subspace-notes.luckyiyi.chatgpt.site</span></a>
+        <a class="item" href="https://statsmllib.github.io/index.html" data-title="statsmllib — probability, statistics, and machine learning in lean 4"><span class="item-title">StatsMLlib — Probability, Statistics, and Machine Learning in Lean 4</span><span class="item-host">statsmllib.github.io</span></a>
+        <a class="item" href="https://moondream.ai/blog/photon-2-launch" data-title="photon 2 launch"><span class="item-title">Photon 2 launch</span><span class="item-host">moondream.ai</span></a>
+        <a class="item" href="https://www.lesswrong.com/posts/cb5quszpxCbFDGk68/model-self-identification-could-be-subliminally-transferred" data-title="model self identification could be subliminally transferred"><span class="item-title">Model self identification could be subliminally transferred</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://the-puzzler.github.io/?p=practical-notes-on-lejepa" data-title="the-puzzler"><span class="item-title">the-puzzler</span><span class="item-host">the-puzzler.github.io</span></a>
+        <a class="item" href="https://allenai.org/blog/infinigram-books" data-title="infinigram books"><span class="item-title">Infinigram books</span><span class="item-host">allenai.org</span></a>
+        <a class="item" href="https://ddkang.substack.com/p/pervasive-annotation-errors-break" data-title="pervasive annotation errors break"><span class="item-title">Pervasive annotation errors break</span><span class="item-host">ddkang.substack.com</span></a>
+        <a class="item" href="https://huggingface.co/spaces/veri-safe/SWD-Blog#1-introduction" data-title="swd blog"><span class="item-title">SWD Blog</span><span class="item-host">huggingface.co</span></a>
+        <a class="item" href="https://humanaigc.github.io/wan-animate-2/" data-title="animate anyone 2"><span class="item-title">Animate Anyone 2</span><span class="item-host">humanaigc.github.io</span></a>
+        <a class="item" href="https://www.lesswrong.com/posts/vLFh8HP3hyNy9MCwe/returning-to-arc" data-title="returning to arc"><span class="item-title">Returning to arc</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://vivekvkashyap.github.io/posts/rl-infra-orchestrator-part-1.html" data-title="rl infra orchestrator - part 1: main loop — vivek kashyap"><span class="item-title">RL Infra Orchestrator - Part 1: Main Loop — Vivek Kashyap</span><span class="item-host">vivekvkashyap.github.io</span></a>
+        <a class="item" href="https://apertus-ai.org/articles/2026-07-apertus-1-5/" data-title="2026 07 apertus 1 5"><span class="item-title">2026 07 apertus 1 5</span><span class="item-host">apertus-ai.org</span></a>
+        <a class="item" href="https://www.gpeyre.com/mathematical-nexus/" data-title="mathematical nexus collection"><span class="item-title">Mathematical Nexus Collection</span><span class="item-host">gpeyre.com</span></a>
+        <a class="item" href="https://matraix.ai/" data-title="matraix — simulate before reality"><span class="item-title">MatrAIx — Simulate Before Reality</span><span class="item-host">matraix.ai</span></a>
+        <a class="item" href="https://reilabs.org/blog/introducing-adapt-1-preview" data-title="introducing adapt 1 preview"><span class="item-title">Introducing adapt 1 preview</span><span class="item-host">reilabs.org</span></a>
+        <a class="item" href="https://www.erichgrunewald.com/posts/why-i-think-you-should-almost-never-use-ai-to-write-anything-substantive/" data-title="why you should almost never use ai to write anything substantive"><span class="item-title">Why You Should Almost Never Use AI to Write Anything Substantive</span><span class="item-host">erichgrunewald.com</span></a>
+        <a class="item" href="https://deep-diver.github.io/icml2026-explorer/" data-title="icml 2026 paper explorer"><span class="item-title">ICML 2026 Paper Explorer</span><span class="item-host">deep-diver.github.io</span></a>
+        <a class="item" href="https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/" data-title="introducing mai cyber 1 flash inside mdash"><span class="item-title">Introducing mai cyber 1 flash inside mdash</span><span class="item-host">microsoft.ai</span></a>
+        <a class="item" href="https://infinitefaculty.substack.com/p/symbols-neural-networks-and-mathematical" data-title="symbols neural networks and mathematical"><span class="item-title">Symbols neural networks and mathematical</span><span class="item-host">infinitefaculty.substack.com</span></a>
+        <a class="item" href="https://allenai.org/blog/tutormoments" data-title="tutormoments"><span class="item-title">Tutormoments</span><span class="item-host">allenai.org</span></a>
+        <a class="item" href="https://askchem.org/" data-title="askchem.org"><span class="item-title">askchem.org</span><span class="item-host">askchem.org</span></a>
+        <a class="item" href="https://transluce.org/user-awareness" data-title="user awareness in frontier models"><span class="item-title">User awareness in frontier models</span><span class="item-host">transluce.org</span></a>
+        <a class="item" href="https://davidpreichert.substack.com/p/if-you-havent-recently-used-claude" data-title="if you havent recently used claude"><span class="item-title">If you havent recently used claude</span><span class="item-host">davidpreichert.substack.com</span></a>
+        <a class="item" href="https://thinkingmachines.ai/blog/a-safe-path-to-open-weights/" data-title="a safe path to open weights"><span class="item-title">A safe path to open weights</span><span class="item-host">thinkingmachines.ai</span></a>
+        <a class="item" href="https://www.pradheep.dev/blogs/goodharts-gambit" data-title="goodhart"><span class="item-title">Goodhart</span><span class="item-host">pradheep.dev</span></a>
+        <a class="item" href="https://www.lesswrong.com/posts/sFhW3ZnPMJdnB4Dd6/thousand-dimensional-structure-1" data-title="thousand dimensional structure 1"><span class="item-title">Thousand dimensional structure 1</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://transluce.org/foundation-models-for-oversight" data-title="foundation models for oversight"><span class="item-title">Foundation Models for Oversight</span><span class="item-host">transluce.org</span></a>
+        <a class="item" href="https://rdi.berkeley.edu/blog/auto-software-dev/" data-title="center for responsible, decentralized intelligence at berkeley"><span class="item-title">Center for Responsible, Decentralized Intelligence at Berkeley</span><span class="item-host">rdi.berkeley.edu</span></a>
+        <a class="item" href="https://paxmachina.ai/welcome-to-pax-machina" data-title="pax machina: new institutions for powerful ai · pax machina"><span class="item-title">Pax Machina: New Institutions for Powerful AI · Pax Machina</span><span class="item-host">paxmachina.ai</span></a>
+        <a class="item" href="https://naomibashkansky.com/blog/telepathy/" data-title="why i’m leaving openai to build telepathy"><span class="item-title">Why I’m leaving OpenAI to build telepathy</span><span class="item-host">naomibashkansky.com</span></a>
+        <a class="item" href="https://artifactshub.ai/" data-title="artifacts hub"><span class="item-title">Artifacts Hub</span><span class="item-host">artifactshub.ai</span></a>
+        <a class="item" href="https://mingtian.ai/blog/SpreadMLEtoIMLE" data-title="from spread mle to implicit mle"><span class="item-title">From Spread MLE to Implicit MLE</span><span class="item-host">mingtian.ai</span></a>
+        <a class="item" href="https://openai.com/index/ten-advances-in-mathematics/" data-title="ten advances in mathematics"><span class="item-title">Ten advances in mathematics</span><span class="item-host">openai.com</span></a>
+        <a class="item" href="https://blog.exe.dev/devtools-must-be-open-source" data-title="devtools must be open source - exe.dev blog"><span class="item-title">Devtools must be open source - exe.dev blog</span><span class="item-host">blog.exe.dev</span></a>
+        <a class="item" href="https://flueframework.com/blog/flue-2/" data-title="flue 2.0 | flue"><span class="item-title">Flue 2.0 | Flue</span><span class="item-host">flueframework.com</span></a>
+        <a class="item" href="https://blog.fnil.net/bigtable-at-twenty/" data-title="think and act as one • bigtable at twenty: what stayed and what got rebuilt"><span class="item-title">Think and Act as One • Bigtable at Twenty: What Stayed and What Got Rebuilt</span><span class="item-host">blog.fnil.net</span></a>
+        <a class="item" href="https://thinkingmachines.ai/news/inkling-small/" data-title="inkling small"><span class="item-title">Inkling small</span><span class="item-host">thinkingmachines.ai</span></a>
+        <a class="item" href="https://frontisai.github.io/OpenRSI/" data-title="openrsi · frontis-ma1"><span class="item-title">OpenRSI · Frontis-MA1</span><span class="item-host">frontisai.github.io</span></a>
+        <a class="item" href="https://www.haoyizhu.site/blog/sparse-linear-attention/" data-title="sparse linear attention: 当稀疏遇上线性注意力 · haoyi zhu"><span class="item-title">Sparse Linear Attention: 当稀疏遇上线性注意力 · Haoyi Zhu</span><span class="item-host">haoyizhu.site</span></a>
+        <a class="item" href="https://rsibench.co/" data-title="rsibench.co"><span class="item-title">rsibench.co</span><span class="item-host">rsibench.co</span></a>
+        <a class="item" href="https://aweers.de/blog/2026/potential/" data-title="potential"><span class="item-title">Potential</span><span class="item-host">aweers.de</span></a>
+        <a class="item" href="https://riddlehe.github.io/blog/kl-gradient-estimators.html" data-title="computing the gradient of the kl penalty — muyu he"><span class="item-title">Computing the Gradient of the KL Penalty — Muyu He</span><span class="item-host">riddlehe.github.io</span></a>
+        <a class="item" href="https://www.cmpnd.ai/blog/let-the-model-write-the-code.html" data-title="introducing flex: let the model write the code — cmpnd"><span class="item-title">Introducing Flex: Let the Model Write the Code — cmpnd</span><span class="item-host">cmpnd.ai</span></a>
+        <a class="item" href="https://www.turing.com/blog/introducing-terminal-bench-3-0" data-title="introducing terminal bench 3 0"><span class="item-title">Introducing terminal bench 3 0</span><span class="item-host">turing.com</span></a>
+        <a class="item" href="https://www.noahpinion.blog/p/the-end-of-the-age-of-heroes" data-title="the end of the age of heroes"><span class="item-title">The end of the age of heroes</span><span class="item-host">noahpinion.blog</span></a>
+        <a class="item" href="https://systempromptindex.ai/" data-title="systempromptindex.ai"><span class="item-title">systempromptindex.ai</span><span class="item-host">systempromptindex.ai</span></a>
+        <a class="item" href="https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/" data-title="some notes about anthropics new results"><span class="item-title">Some notes about anthropics new results</span><span class="item-host">blog.cryptographyengineering.com</span></a>
+        <a class="item" href="https://web.stanford.edu/~cgpotts/blog/cot/" data-title="cot"><span class="item-title">Cot</span><span class="item-host">web.stanford.edu</span></a>
+        <a class="item" href="https://www.gensi-thuair.com/portal/blogdetail/RIPO" data-title="ripo"><span class="item-title">RIPO</span><span class="item-host">gensi-thuair.com</span></a>
+        <a class="item" href="https://www.lesswrong.com/posts/Jc9YZEmqHgocAKiaH/does-distilling-claude-carry-the-persona-with-it" data-title="does distilling claude carry the persona with it"><span class="item-title">Does distilling claude carry the persona with it</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://ddkang.substack.com/p/provable-generalization-bounds-for" data-title="provable generalization bounds for"><span class="item-title">Provable generalization bounds for</span><span class="item-host">ddkang.substack.com</span></a>
+        <a class="item" href="https://genomicsxai.github.io/blogs/2026-010/" data-title="chorus: chatting with genomic oracles"><span class="item-title">Chorus: chatting with genomic oracles</span><span class="item-host">genomicsxai.github.io</span></a>
+        <a class="item" href="https://jonlib.com/papers/organization-design/interactive/" data-title="organization design for complex worlds — an interactive walkthrough"><span class="item-title">Organization Design for Complex Worlds — an interactive walkthrough</span><span class="item-host">jonlib.com</span></a>
+        <a class="item" href="https://www.lesswrong.com/posts/r7FBQ8XDs6qBYc4K4/an-analysis-of-ai-generated-content-at-the-mechanistic" data-title="an analysis of ai generated content at the mechanistic"><span class="item-title">An analysis of ai generated content at the mechanistic</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://sites.google.com/view/continual-learning/resources" data-title="resources"><span class="item-title">Resources</span><span class="item-host">sites.google.com</span></a>
+        <a class="item" href="https://poolside.ai/blog/introducing-laguna-s-2-1" data-title="introducing laguna s 2.1"><span class="item-title">Introducing Laguna S 2.1</span><span class="item-host">poolside.ai</span></a>
+        <a class="item" href="https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation" data-title="kimi k3: the open-weights escalation"><span class="item-title">Kimi K3: The open-weights escalation</span><span class="item-host">interconnects.ai</span></a>
+        <a class="item" href="https://www.lesswrong.com/posts/tEFD2bgNWZ6XcurKA/the-most-forbidden-technique-is-not-always-forbidden-1" data-title="the most forbidden technique is not always forbidden 1"><span class="item-title">The most forbidden technique is not always forbidden 1</span><span class="item-host">lesswrong.com</span></a>
+        <a class="item" href="https://microsoft.github.io/SkillOpt/blog/gating-reflection-safe-updates/" data-title="expanded skillopt ablations, skill-aware reflection, and skillopt-sleep"><span class="item-title">Expanded SkillOpt Ablations, Skill-Aware Reflection, and SkillOpt-Sleep</span><span class="item-host">microsoft.github.io</span></a>
+        <a class="item" href="https://turntrout.com/why-i-left-google-deepmind" data-title="why i left google deepmind"><span class="item-title">Why I Left Google DeepMind</span><span class="item-host">turntrout.com</span></a>
+        <a class="item" href="https://21yrm.github.io/Apple-PI-homepage/" data-title="apple-π: law-grounded physical intelligence"><span class="item-title">Apple-π: Law-Grounded Physical Intelligence</span><span class="item-host">21yrm.github.io</span></a>
+        <a class="item" href="https://invertedpassion.substack.com/p/why-frontier-labs-are-scaling-pilled" data-title="why frontier labs are scaling pilled"><span class="item-title">Why frontier labs are scaling pilled</span><span class="item-host">invertedpassion.substack.com</span></a>
+        <a class="item" href="https://atakantekparmak.github.io/blog/inductive-value-loading-2/" data-title="inductive value loading 2: j-lens analysis — atakan tekparmak"><span class="item-title">Inductive Value Loading 2: J-Lens Analysis — Atakan Tekparmak</span><span class="item-host">atakantekparmak.github.io</span></a>
+        <a class="item" href="https://schema-harness.github.io/" data-title="frontier models with our harness achieve ~99% on arc-agi-3 public — schema"><span class="item-title">Frontier Models with Our Harness Achieve ~99% on ARC-AGI-3 Public — Schema</span><span class="item-host">schema-harness.github.io</span></a>
+        <a class="item" href="https://latent-thought-flows.vercel.app/" data-title="latent-thought-flows.vercel.app"><span class="item-title">latent-thought-flows.vercel.app</span><span class="item-host">latent-thought-flows.vercel.app</span></a>
+        <a class="item" href="https://mireshghallah.github.io/blog/keep_paying_the_humans.html" data-title="keep paying the humans: notes from an anti-debate"><span class="item-title">Keep paying the humans: notes from an anti-debate</span><span class="item-host">mireshghallah.github.io</span></a>
+        <a class="item" href="https://dhruvbpai.github.io/blog/estimators-for-sparsity/" data-title="estimators for sparsity — dhruv pai"><span class="item-title">Estimators for Sparsity — Dhruv Pai</span><span class="item-host">dhruvbpai.github.io</span></a>
+        <a class="item" href="https://hitsz-tmg.github.io/Lychee-FD/" data-title="lychee-fd"><span class="item-title">Lychee-FD</span><span class="item-host">hitsz-tmg.github.io</span></a>
+        <a class="item" href="https://github.com/jagilley/forward-self-models" data-title="forward self-models learn an empirical approximation of neural network computation"><span class="item-title">Forward Self-Models Learn an Empirical Approximation of Neural Network Computation</span><span class="item-host">github.com</span></a>
+        <a class="item" href="https://modal.com/blog/spec-is-all-u-need" data-title="speculation is all you need"><span class="item-title">Speculation Is All You Need</span><span class="item-host">modal.com</span></a>
+    </section>
+  </div>
+  <script>
+    const q = document.getElementById("q");
+    const buttons = [...document.querySelectorAll(".chip, .chip-all")];
+    let activeSection = "";
+
+    function filter() {
+      const query = q.value.trim().toLowerCase();
+      let shown = 0;
+      document.querySelectorAll(".section").forEach((section) => {
+        const name = section.dataset.section;
+        const sectionMatch = !activeSection || activeSection === name;
+        let sectionShown = 0;
+        section.querySelectorAll(".item").forEach((item) => {
+          const hit = !query || item.dataset.title.includes(query) || item.href.toLowerCase().includes(query);
+          const visible = sectionMatch && hit;
+          item.classList.toggle("hidden", !visible);
+          if (visible) {
+            sectionShown += 1;
+            shown += 1;
+          }
+        });
+        section.classList.toggle("hidden", sectionShown === 0);
+      });
+      document.body.classList.toggle("is-empty", shown === 0);
+    }
+
+    q.addEventListener("input", filter);
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeSection = button.dataset.section || "";
+        buttons.forEach((b) => b.classList.toggle("active", b === button));
+        filter();
+      });
+    });
+  </script>
+</body>
+</html>
